@@ -2,7 +2,6 @@
  * Page content
  */
 .page-content {
-  padding: $spacing-unit 0;
   flex: 1;
 }
 
@@ -21,7 +20,7 @@
 
   > li {
     margin-bottom: $spacing-unit;
-    border-bottom: solid 0.75px #7c879a;
+    border-bottom: solid 0.75px $grey-color-light;
   }
 }
 

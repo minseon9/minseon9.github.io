@@ -1,0 +1,27 @@
+/**
+ * Home content
+ */
+.home {
+  display: grid;
+
+  .about {
+    display: grid;
+    padding: 5%;
+    margin-bottom: 5%;
+    border-bottom: dotted 1px $grey-color-light;
+
+    img {
+      display: block;
+      padding: 2%;
+      margin-left: auto;
+      margin-right: auto;
+      border-radius: 50%;
+    }
+
+    span {
+      text-align: center;
+      @include relative-font-size(1);
+    }
+  }
+}
+
