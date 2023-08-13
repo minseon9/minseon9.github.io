@@ -1,0 +1,31 @@
+---
+layout: post
+title:  "TODO List"
+date:   2023-08-13 23:30:14 +0900
+description: "Github Pages에 만들 todo list" 
+categories: todo
+---
+### Todo List
+
+- [ ] Post Tag
+- [ ] View all Posts
+- [ ] Post Category (e.g. diary, tech ...)
+- [ ] 관련 문서 링크
+- [ ] Post History 
+- [ ] Search Bar  
+- [ ] Github 연동 (e.g. pr, 댓글 ...)
+<br />
+<br />
+
+---  
+
+<br />
+### Doing
+<br />
+<br />
+
+---  
+<br />
+### Done
+<br />
+<br />
