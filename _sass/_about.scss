@@ -1,0 +1,51 @@
+/**
+ * About
+ */
+.about {
+  margin-top: $spacing-unit;
+}
+
+.about-title {
+  @include relative-font-size(2.625);
+  letter-spacing: -1px;
+  line-height: 1;
+
+  @include media-query($on-laptop) {
+    @include relative-font-size(2.25);
+  }
+}
+
+.about-content {
+  flex: 1;
+  display: grid;
+  margin-bottom: $spacing-unit;
+
+  span {
+    @include relative-font-size(1);
+    margin-bottom: $spacing-unit;
+  }
+
+  h2 {
+    @include relative-font-size(2);
+
+    @include media-query($on-laptop) {
+      @include relative-font-size(1.75);
+    }
+  }
+
+  h3 {
+    @include relative-font-size(1.625);
+
+    @include media-query($on-laptop) {
+      @include relative-font-size(1.375);
+    }
+  }
+
+  h4 {
+    @include relative-font-size(1.25);
+
+    @include media-query($on-laptop) {
+      @include relative-font-size(1.125);
+    }
+  }
+}
