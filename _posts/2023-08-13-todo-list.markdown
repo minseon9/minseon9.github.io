@@ -1,31 +1,29 @@
 ---
 layout: post
 title:  "TODO List"
-date:   2023-08-13 23:30:14 +0900
+date:   2023-08-15 18:57:14 +0900
 description: "Github Pages에 만들 todo list" 
 categories: todo
 ---
 ### Todo List
+[여기](https://johngrib.github.io/wiki/my-wiki/)를 참고해 만들기로 했다.
+우선 하기로 한 것들을 선정했다.
 
+- [ ] Vimwiki
+  - 문서를 쉽게 추가할 수 있어야 한다.
 - [ ] Post Tag
-- [ ] View all Posts
+  - 글 별로 Tag를 달 수 있으면 좋겠다.
+  - Jekyll의 [Tags plugin](https://jekyllrb.com/docs/plugins/tags/) 참고
 - [ ] Post Category (e.g. diary, tech ...)
+  - Tag와 별개로 Category 별로 문서를 정돈하고 싶다.
+  - tech 카테고리 안에 'msa'같은 tag가 붙는 형식 ?
 - [ ] 관련 문서 링크
+  - 상위 문서와 하위 문서로 관련 문서가 아래 표시되었으면 좋겠다. 일종의 파도타기
+- [ ] 최근 게시물
+  - Home에서는 최근 문서만 보여줌.
+- [ ] View all Posts
+  - 모든 문서를 볼 수 있는 Page
 - [ ] Post History 
-- [ ] Search Bar  
-- [ ] Github 연동 (e.g. pr, 댓글 ...)
-<br />
-<br />
-
----  
-
-<br />
-### Doing
-<br />
-<br />
-
----  
-<br />
-### Done
+  - Post의 변경 일자, 변경한 사람 등을 공개
 <br />
 <br />
