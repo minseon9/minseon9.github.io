@@ -1,6 +1,10 @@
 /**
  * Posts
  */
+.post {
+  margin: $spacing-unit 0 $spacing-unit 0;
+}
+
 .post-header {
   margin-bottom: $spacing-unit;
 }
