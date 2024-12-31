@@ -1,0 +1,16 @@
+# Authors
+
+Ian(Minseong Lee):
+  name        : "Ian(Minseong Lee)"
+  bio         : "TBC"
+  avatar      : "/assets/images/bio-photo-2.jpg"
+  links:
+    - label: "Email"
+      icon: "fas fa-fw fa-envelope-square"
+      url: "mailto:dlaepuel@gmail.com"
+    - label: "Website"
+      icon: "fas fa-fw fa-link"
+      url: "https://minseon9.github.io/"
+    - label: "Twitter"
+      icon: "fab fa-fw fa-twitter-square"
+      url: "https://twitter.com/extravagantman"
