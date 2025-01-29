@@ -22,13 +22,13 @@ title_separator          : "-"
 subtitle                 : # site tagline that appears below site title in masthead
 name                     : "Ian(Minseong Lee)"
 description              : "Memory Record."
-url                      : # the base hostname & protocol for your site e.g. "https://mmistakes.github.io"
+url                      : "https://minseon9.github.io/"
 baseurl                  : "/" # the subpath of your site, e.g. "/blog"
-repository               : # GitHub username/repo-name e.g. "mmistakes/minimal-mistakes"
+repository               : "minseon9/minseon9.github.io"
 teaser                   : # path of fallback teaser image, e.g. "/assets/images/500x300.png"
-logo                     : # path of logo image to display in the masthead, e.g. "/assets/images/88x88.png"
+logo                     : "/assets/images/my-portrait.png"
 masthead_title           : # overrides the website title displayed in the masthead, use " " for no title
-breadcrumbs              : # true, false (default)
+breadcrumbs              : true
 words_per_minute         : 200
 enable_copy_code_button  : # true, false (default)
 copyright                : # "copyright" name, defaults to site.title
@@ -114,33 +114,26 @@ analytics:
 # Site Author
 author:
   name             : "Ian(Minseong Lee)"
-  avatar           : "/assets/images/bio-photo.jpg"
+  avatar           : "/assets/images/my-portrait-transparent.png"
   bio              : "person."
-  location         : "Republic of Korea(South Korea)"
-  email            : "dlaepuel@gmail.com"
+  location         : "Republic of Korea"
   links:
-    - label: "Email"
-      icon: "fas fa-fw fa-envelope-square"
-      url: "dlaepuel@gmail.com"
-    - label: "Website"
-      icon: "fas fa-fw fa-link"
-      url: "https://github.minseon9.io"
     - label: "GitHub"
-      icon: "fab fa-fw fa-github"
+      icon: "fab fa-fw fa-github-square"
       url: "https://github.com/minseon9"
+    - label: "LinkedIn"
+      icon: "fab fa-fw fa-linkedin"
+      url: "https://linkedin.com/in/miseong-ian"
 
 # Site Footer
 footer:
   links:
     - label: "GitHub"
-      icon: "fab fa-fw fa-github"
+      icon: "fab fa-fw fa-github-square"
       url: "https://github.com/minseon9"
     - label: "Email"
       icon: "fas fa-fw fa-envelope-square"
       url: "mailto:dlaepuel@gmail.com"
-    - label: "Website"
-      icon: "fas fa-fw fa-link"
-      url: "https://minseon9.github.io/"
     - label: "LinkedIn"
       icon: "fab fa-fw fa-linkedin"
       url: "https://linkedin.com/in/miseong-ian"
@@ -207,6 +200,7 @@ kramdown:
 sass:
   sass_dir: _sass
   style: compressed # https://sass-lang.com/documentation/file.SASS_REFERENCE.html#output_style
+  # style: expanded
 
 
 # Outputting
@@ -247,6 +241,7 @@ plugins:
   - jekyll-gist
   - jekyll-feed
   - jekyll-include-cache
+
 
 # mimic GitHub Pages with --safe
 whitelist:
@@ -304,6 +299,7 @@ defaults:
       layout: single
       author_profile: true
       read_time: true
+      show_date: true
       comments: # true
       share: true
       related: true
