@@ -25,12 +25,8 @@ const dataList = list.map(function collectData(file) {
 
 /*
 Categories:
-  Category1
-    - category: Category 1
-      tags:
-        - tag1
-        - tag2
- */
+    - {category: Test1, tags: [test, test2]}
+*/
 const categoriesTags = { Categories: []};
 
 const tagMap = {};
@@ -90,7 +86,7 @@ saveCategoriesTags(categoriesTags);
 // savePageList(pageMap);
 
 function saveCategoriesTags(categoriesTags) {
-    fs.writeFile("./_data/categoriesTags.yml", YAML.stringify(categoriesTags), function(err) {
+    fs.writeFile("./_data/categories-tags.yml", YAML.stringify(categoriesTags), function(err) {
         if(err) {
             return console.log(err);
         }

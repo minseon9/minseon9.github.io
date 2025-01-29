@@ -1,11 +1,3 @@
-# Categories and Tags Map
-
 Categories:
-  - category: Category 1
-    tags:
-      - tag1
-      - tag2
-  - category: Category 2
-    tags:
-      - tag3
-      - tag4
+    - {category: Test1, tags: [test, test2]}
+    - {category: Test2, tags: [test, test2]}
