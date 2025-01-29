@@ -15,6 +15,7 @@
   //   -webkit-transform: translate3d(0, 0, 0);
   //   transform: translate3d(0, 0, 0);
   // }
+  //max-height: 10px; /* Change to your desired max height */
 
   @include breakpoint($large) {
     float: inline-start;
@@ -28,7 +29,9 @@
     }
 
     &.sticky {
-      overflow-y: auto;
+      overflow-y: scroll;
+      scrollbar-width: thin;
+
       /* calculate height of nav list
          viewport height - nav height - masthead x-padding
       */
@@ -124,8 +127,8 @@
 .author__avatar {
   display: table-cell;
   vertical-align: top;
-  width: 36px;
-  height: 36px;
+  width: 50px;
+  height: 50px;
 
   @include breakpoint($large) {
     display: block;
@@ -135,7 +138,8 @@
 
   img {
     max-width: 110px;
-    border-radius: 50%;
+    border-radius: 30%;
+    background-color: #ffba33;
 
     @include breakpoint($large) {
       padding: 5px;
@@ -319,6 +323,57 @@
       text-decoration: underline;
     }
   }
+}
+
+
+/*
+   Categories and Tags
+   ========================================================================== */
+.categories{
+  padding-top: 0.5em;
+  margin-right: 0.5em;
+  border-top: 2.5px solid $border-color;
+}
+
+.category_title {
+  margin-top: 0.6em;
+  margin-bottom: 0;
+
+  a {
+    font-size: 0.7em;
+    color: inherit;
+    text-decoration: none;
+  }
+}
+
+.categories__index {
+  margin: 0 1.414em 0 0.5em;
+  padding: 0;
+  list-style: none;
+
+  .tags__index {
+    margin: 0;
+    padding: 0;
+    font-size: 0.55em;
+    list-style: none;
+
+    a {
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      padding: 0.25em 0;
+      -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+      justify-content: space-between;
+      color: inherit;
+      text-decoration: none;
+      border-bottom: 1px solid $border-color;
+    }
+  }
+}
+
+.tags__count {
+  color: $muted-text-color;
 }
 
 /*
