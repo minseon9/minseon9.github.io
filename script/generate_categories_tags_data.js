@@ -35,7 +35,6 @@ dataList.forEach(function collectTagMap(data) {
     if(!data.categories) {
         return;
     }
-    console.log(data)
     categoryMap = {}
     data.categories.forEach((category) => {
         if (!categoryMap[category]) {
