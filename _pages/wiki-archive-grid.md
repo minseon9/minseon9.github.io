@@ -1,7 +1,7 @@
 ---
 title: "Wiki (grid view)"
 permalink: /wiki-grid/
-layout: posts
+layout: wiki
 entries_layout: grid
 author_profile: true
 ---

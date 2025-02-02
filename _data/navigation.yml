@@ -4,7 +4,7 @@ main:
     url: https://mmistakes.github.io/minimal-mistakes/about/
   - title: "Wiki"
     url: /wiki/
-  - title: "Posts"
-    url: /posts/
+  - title: "Blog"
+    url: /blog/
   - title: "Projects"
     url: /projects/

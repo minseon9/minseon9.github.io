@@ -289,12 +289,45 @@ compress_html:
     envs: development
 
 
+# Collections
+collections:
+  wiki:
+    output: true
+    permalink: /:collection/:path
+  projects:
+    output: true
+    permalink: /:collection/:path
+
 # Defaults
 defaults:
   # _posts
   - scope:
       path: ""
       type: posts
+    values:
+      layout: single
+      author_profile: true
+      read_time: true
+      show_date: true
+      comments: # true
+      share: true
+      related: true
+  # _wiki
+  - scope:
+      path: ""
+      type: wiki
+    values:
+      layout: single
+      author_profile: true
+      read_time: true
+      show_date: true
+      comments: # true
+      share: true
+      related: true
+  # _projects
+  - scope:
+      path: ""
+      type: projects
     values:
       layout: single
       author_profile: true

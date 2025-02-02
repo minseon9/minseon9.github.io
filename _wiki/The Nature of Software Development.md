@@ -1,11 +1,10 @@
 ---
-layout      : wiki
 title       : The Nature of Software Development
 summary     : 
 date        : 2025-02-02 18:11:19 +0900
 updated     : 2025-02-02 18:33:35 +0900
 categories  : Book 
-tags        : software development
+tags        : 
 toc         : true
 public      : true
 parent      : 

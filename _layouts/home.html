@@ -6,15 +6,18 @@ layout: archive
 
 <h3 class="archive__subtitle">{{ site.data.ui-text[site.locale].recent_posts | default: "Recent Posts" }}</h3>
 
-{% if paginator %}
-  {% assign posts = paginator.posts %}
-{% else %}
-  {% assign posts = site.posts %}
-{% endif %}
+{% assign wiki = site.wiki  %}
+
 
 {% assign entries_layout = page.entries_layout | default: 'list' %}
 <div class="entries-{{ entries_layout }}">
-  {% include documents-collection.html entries=posts type=entries_layout %}
+  {% include documents-collection.html entries=wiki type=entries_layout sort_by=updated sort_order=reverse limit=5 %}
+
+
+  {% if wiki.size > 5 %}
+    <a href="/wiki/"> See all posts </a>
+  {% endif %}
 </div>
+
 
 {% include paginator.html %}

@@ -1,6 +1,6 @@
 ---
 title: "Wiki"
 permalink: /wiki/
-layout: posts
+layout: wiki
 author_profile: true
 ---
