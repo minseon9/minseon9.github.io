@@ -2,17 +2,19 @@
 title       : The Nature of Software Development
 summary     : 
 date        : 2025-02-02 18:11:19 +0900
-updated     : 2025-02-02 18:33:35 +0900
+updated     : 2025-02-04 01:31:51 +0900
 categories  : Book 
 tags        : 
 toc         : true
-public      : true
+public      : false
 parent      : 
 latex       : false
 resource    : 719AB61B-A77F-415E-A249-F1AB8362303A
 ---
 * TOC
 {:toc}
+
+# Introduction
 
 마냥 좋은 길로 갈 수는 없다. 무조건이다.
 언젠가는, 아니 바로 당장이라도 뜨거운 용암에 빠질 수 있다.
@@ -26,7 +28,7 @@ To your organization? To the tema? What value does it deliver to you?
 
 사용자(고객)에게 전달해야 할 가치(value)에만 몰입하는 경우가 있다.
 사용자에게 큰 가치를 제공할 수 있지만, 팀에게 좋지 않은 결정도 존재.
-가령, 웹에서 제공하던 서비스를 모바일에서도 제공하면 더 많은 사용자를 데려올 수 있겠지만, 서비스가 이원화됨에 따라 더 많은 공수가 드는 것도 사실이다.
+가령, 웹에서 제공하던 서비스를 모바일에서도 제공하면 서비스에서 더 많은 가치를 제공할 수 있겠지만, 서비스가 이원화됨에 따라 더 많은 공수가 드는 것도 사실이다.
 이런 결정이 팀 속도를 늦추고 앞으로의 중요한 가치를 제공하는데 장애물이 될 수도 있다.
 
 
@@ -53,4 +55,17 @@ estimation을 높이기 위한(사흘 걸릴 것은 이틀로 줄이기 위한) 
 (**본인은 장기적으로는 해야하는 노력이라고 생각한다. 이를 부정하는 것은 아니겠지만)
 좋은 성과를 만드는 것은 estimation을 높이는게 아니라, 어떤 일을 먼저하고 뒤로 미룰 것인 지에 대한 결정에서 비롯한다.
 (**항상 좋은 성과를 만들 수는 없다. 용암에 빠지기도 하겠지만, 돌아오기 위한 노력을 항상해야한다.)
+
+
+# Chapture 6 Building the Product, Feature by Feature
+
+> Build a tiny product, completely, in each small cycle.
+"completely"는 어느 정도의 완결성을 의미하는 것이며, "tiny"는 얼마나 작아야하는가. 
+우리가 2~3주만에 내놓을 수 있는 정도로 작아야 한다면, 그것이 completely할 수 있는가?
+
+> We need to sharpen our vision of what the product must do - and what's just "nice to have."
+Nice to Have라는 명목하에 미뤄두기만 하는 일감이 생기기도 한다. 
+가치 자체를 보여줄 수 있으니, 당장의 사용성의 불편함을 감수하고 내보내야하는가?
+가치를 보여주고, 만일 사용성 개선이 그 다음으로 해야할 높은 가치를 가진 일이라면 그 작업을 하면 되는 것인가?
+
 
