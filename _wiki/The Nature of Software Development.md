@@ -2,7 +2,7 @@
 title       : The Nature of Software Development
 summary     : 
 date        : 2025-02-02 18:11:19 +0900
-updated     : 2025-02-04 01:31:51 +0900
+updated     : 2025-02-09 18:18:34 +0900
 categories  : Book 
 tags        : 
 toc         : true
@@ -16,56 +16,97 @@ resource    : 719AB61B-A77F-415E-A249-F1AB8362303A
 
 # Introduction
 
-마냥 좋은 길로 갈 수는 없다. 무조건이다.
-언젠가는, 아니 바로 당장이라도 뜨거운 용암에 빠질 수 있다.
-명심해야할 것은 지금 용암에 빠져있음을 인지하는 것과, 좋은 길은 있으며 그곳으로 돌아가야한다는 것이다.
+> If there is a path - and I hpe to show you that there is - **we will wander off of it. Yes, we will.**
+
+> What we can do is remain awre that there is a path.
 
 
-# Chpater 1 Value Is What We Want
+--- 
 
-What kinds of value does your project delier to its user?
-To your organization? To the tema? What value does it deliver to you?
+# Chpater 2 Value Is What We Want
 
-사용자(고객)에게 전달해야 할 가치(value)에만 몰입하는 경우가 있다.
-사용자에게 큰 가치를 제공할 수 있지만, 팀에게 좋지 않은 결정도 존재.
-가령, 웹에서 제공하던 서비스를 모바일에서도 제공하면 서비스에서 더 많은 가치를 제공할 수 있겠지만, 서비스가 이원화됨에 따라 더 많은 공수가 드는 것도 사실이다.
-이런 결정이 팀 속도를 늦추고 앞으로의 중요한 가치를 제공하는데 장애물이 될 수도 있다.
+> What kinds of value does your project delier to its user? **To your organization? To the tema? What value does it deliver to you?**
 
+--- 
 
 # Chapter 5 Planning Feature by Feature
 
-estimation은 그 자체가 목적이 되어서는 안된다.
-스프린트를 하면서 일감에 대한 estimation을 하곤 한다.
-난감했던 적이 하루 이틀이 아니다.
-estimation을 잘하기 위해 많은 시간을 사용했다. planning pocker를 하고, 너무 차이가 나면 그것에 대해 이야기하고, 조정하고 결정한다. 
-정말로 걸린 시간을 비교하는 것도 여간 쉬운 일이 아니다. 결과적으로 estimation 자체가 무의미한 세르모니로 치부된다.
+### Planning is indispendable. 
+> Plans are useless, but planing is indispensable.
 
-사람이라면 estimation을 잘할 수 없다.
+> We do need to plan. We don't need a detailed list of what will happen and when.
 
-일감을 작게 나눈다. 나눈 일감은 그 자체로 가치를 가져야한다. 그리고 그 가치를 빠르게 내보낸다(ship).
-가치를 눈으로 보여주고 증명한다. 잘못된 길이라면 수정하고 계획을 조정하기 쉽다.
-그렇다면 얼마나 작게 나눠야할까?
+> It's important to identify key features that we'll need to have early, as well as features we can't live without.
+> We need to defer implementing low-value iedas indefinitely.
 
-estimation을 바탕으로 팀이 꾸준한 속도로 일할 수 있는 정도를 파악한다.
-처음부터 모든 계획을 세울 수 없다.
-일단 시작하고, 작은 단위로 나아가면서 계속해서 계획해야한다.
-계획하는 것은 중요하나, 계획 그 자체는 쓸모없다. (Plans are useless, but planning is indisplensable)
+> So let's do plan but at the same time stay loose andready for change.
 
-estimation을 높이기 위한(사흘 걸릴 것은 이틀로 줄이기 위한) 노력은 그 다지 좋은 접근은 아니다.
-(**본인은 장기적으로는 해야하는 노력이라고 생각한다. 이를 부정하는 것은 아니겠지만)
-좋은 성과를 만드는 것은 estimation을 높이는게 아니라, 어떤 일을 먼저하고 뒤로 미룰 것인 지에 대한 결정에서 비롯한다.
-(**항상 좋은 성과를 만들 수는 없다. 용암에 빠지기도 하겠지만, 돌아오기 위한 노력을 항상해야한다.)
+### Detailed plans are useless.
+> Well, yes, software people are terrible at estimating, because humans are terrible at estimating.
+> Let's not just try harder. Let's find a better way.
 
+책에서 추천하는 것은각 일감이 언제 끝날 지 estimation하는 것이 아니라, 정해진 기간과 예산 안에서 얼마나 많은 일을 끝낼 수 있는 지 estimation하는 것이다.
+
+
+### How much work should the team take on?
+> The point isn't to make good estimates - **the point is to do good work aat a consistent pacs.**
+
+
+### Estimation is risky! 
+> We have an almost irresistible desire to imprive them, or to compare them.
+> Keep in mind that business and management get the best results by selecting the work to be done and the work to be deferred.
+
+
+### Planning with "stretch goals" is destructuve.
+> During planning, especially short-term planning, it's tempting to set up "stretch goals" or to "encourage" the team to do "just one more feature."
+> Hurrying, they'll inject more defects.
+
+--- 
 
 # Chapture 6 Building the Product, Feature by Feature
 
-> Build a tiny product, completely, in each small cycle.
-"completely"는 어느 정도의 완결성을 의미하는 것이며, "tiny"는 얼마나 작아야하는가. 
-우리가 2~3주만에 내놓을 수 있는 정도로 작아야 한다면, 그것이 completely할 수 있는가?
+### Build a tiny product, completely, in each small cycle.
 
+### Refine the product vision.
 > We need to sharpen our vision of what the product must do - and what's just "nice to have."
-Nice to Have라는 명목하에 미뤄두기만 하는 일감이 생기기도 한다. 
-가치 자체를 보여줄 수 있으니, 당장의 사용성의 불편함을 감수하고 내보내야하는가?
-가치를 보여주고, 만일 사용성 개선이 그 다음으로 해야할 높은 가치를 가진 일이라면 그 작업을 하면 되는 것인가?
 
+### Eliminate the test-and-fix finish.
+> For feature-by-featyre development to work, the software needs to be nearly free of defects at the end of every two-week iteration
+> To be sure we're free of defects, we need to check everything, all the time.
+
+--- 
+
+# Chapture 7 Buld Features and Foundation in Parallel
+
+### Refine each feature in multiple iterations.
+> **We can repeat the in every iteration, making priority decisions as we go, until time and money tell us that it's time to stop or switch attention to a new product.**
+
+--- 
+
+# Chapture 8 Bug-Free and Well Designed
+
+### Defect repair adds unknown delay. Repair as you go to provide clarity on what's done.
+> no one sees a roach on the floor of a restaurant and says "There goes the roach/" It's the smae with bug
+
+### If we don't know in the wats' done, and how well it's done, wei;; have no choice but to ship late with visible defects. That's bad business.
+> **"Bug triage?" No, thanks.**
+
+### At the end of every iteration, we need business-level tests to verify that we have received what we asked for.
+> We need to know whether the new ones work, and we need to be sure that old ones haven't broken.
+
+### Failure to keep the design good enough will slow progress, or even stop it!
+> Testing and refactoring work together to make feature-by-feature development possible.
+
+--- 
+
+### Chapter 10 Value -- What is it?
+> **If we are to survive as a company or individuals, we need to look deeply at value, and to choose the things that matter, among all the things we might do.**
+> Choosing value is choosing what matters to you.
+> Value ... is what you want.
+
+--- 
+
+### Chapter 14 Creating Teams That Thrive
+> In some teams, the Product Champion brings in defined solutions rather than concerns or problems. This can work but it's far from ideal.
+> Your team will be slower to gain a sense of purpose if they are spoon-fed solutions rather than being allowed to creatively slove problems.
 
