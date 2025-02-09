@@ -1,4 +1,5 @@
 ---
+layout      : single
 title       : The Nature of Software Development
 summary     : 
 date        : 2025-02-02 18:11:19 +0900
@@ -10,6 +11,7 @@ public      : false
 parent      : 
 latex       : false
 resource    : 719AB61B-A77F-415E-A249-F1AB8362303A
+classes:    wide
 ---
 
 WIP
