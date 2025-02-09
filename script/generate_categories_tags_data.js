@@ -29,60 +29,31 @@ Categories:
 */
 const categoriesTags = { Categories: []};
 
-const tagMap = {};
+const tagMap = new Map();
+const categoryMap = new Map();
 
 dataList.forEach(function collectTagMap(data) {
     if(!data.categories) {
         return;
     }
-    categoryMap = {}
     data.categories.forEach((category) => {
-        if (!categoryMap[category]) {
-             categoriesTags.Categories.push({
+        if (!categoryMap.get(category)) {
+            categoriesTags.Categories.push({
                 category: category,
                 tags: []
             });
 
-            categoryMap[category] = true
+            categoryMap.set(category, true)
         }
 
+
         categoriesTags.Categories.find((item) => item.category === category).tags.push(...data.tags)
-        //  categories.Categories[category].push({
-        //     fileName: data.fileName,
-        //     updated: data.updated || data.date,
-        // });
     });
 });
 
 categoriesTags.Categories.forEach(item => item.tags.sort())
 
 saveCategoriesTags(categoriesTags);
-// saveTagMap(tagMap);
-//
-//
-// const tagList = Object.keys(tagMap).sort(function sortByTagName(a, b) {
-//     return a.toLowerCase().localeCompare(b.toLowerCase());
-// });
-//
-// saveTagList(tagList)
-//
-// const pageMap = {};
-// dataList.sort(function(a, b) {
-//     return a.modified < b.modified;
-// }).forEach(function(page) {
-//
-//     pageMap[page.fileName] = {
-//         type: page.type,
-//         title: page.title,
-//         summary: page.summary,
-//         parent: page.parent,
-//         url: page.url,
-//         updated: page.updated || page.date,
-//     };
-//
-// });
-//
-// savePageList(pageMap);
 
 function saveCategoriesTags(categoriesTags) {
     fs.writeFile("./_data/categories-tags.yml", YAML.stringify(categoriesTags), function(err) {
@@ -92,34 +63,7 @@ function saveCategoriesTags(categoriesTags) {
         console.log("categories-tags saved.");
     });
 }
-//
-// function saveTagMap(tagMap) {
-//     fs.writeFile("./_data/tags.yml", YAML.stringify(tagMap), function(err) {
-//         if(err) {
-//             return console.log(err);
-//         }
-//         console.log("tag saved.");
-//     });
-// }
-//
-// function saveTagList(tagList) {
-//     fs.writeFile("./_data/tagList.yml", YAML.stringify(tagList), function(err) {
-//         if(err) {
-//             return console.log(err);
-//         }
-//         console.log("tagList saved.");
-//     });
-// }
-//
-// function savePageList(pageMap) {
-//     fs.writeFile("./_data/pageMap.yml", YAML.stringify(pageMap), function(err) {
-//         if(err) {
-//             return console.log(err);
-//         }
-//         console.log("pageMap saved.");
-//     });
-// }
-//
+
 function parseInfo(file, info) {
     if(info == null) {
         return undefined;
