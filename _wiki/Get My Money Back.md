@@ -47,7 +47,7 @@ resource    : F84084FB-5A9C-4BF4-9587-34598651C233
 
 등록 면허세와 등기촉탁 수수료를 지불해야하니, 공동 인증서 혹은 금융 인증서를 미리 준비해두는 것이 좋다.
 <figure>
- <img src="/assets/images/GetMyMoneyBack/민사%20신청%20화면.png">  
+ <img src="/assets/images/GetMyMoneyBack/민사 신청 화면.png">  
 </figure>
 위 메뉴 중 "서류 제출 > 민사 서류 > 민사 신청" 으로 가면 주택임차권등기명령신청서가 보인다.  
 해당 신청서를 제출하여 임차권등기명령을 신청한다.
@@ -66,16 +66,16 @@ resource    : F84084FB-5A9C-4BF4-9587-34598651C233
 ### 등록 면허세
 우선 사건을 등록하는 것에 대한 세금인 **등록 면허세**을 지불해야한다.
 <figure>
- <img src="/assets/images/GetMyMoneyBack/등록면허세%20화면.png">  
+ <img src="/assets/images/GetMyMoneyBack/등록면허세 화면.png">  
 </figure>
 
 등록 면허세는 서울 사람 기준 [서울시ETAX](https://etax.seoul.go.kr/MainAction.tran)에 들어가 `신고납부 > 등록면허세 > 등록면허세(등록분)`에서 지불한다.  
 <figure>
- <img src="/assets/images/GetMyMoneyBack/서울시ETAX%20등록면허세(등록분)%20신고%20납부%20화면.png">  
+ <img src="/assets/images/GetMyMoneyBack/서울시ETAX 등록면허세(등록분) 신고 납부 화면.png">  
 </figure>
 과세 내역 외에는 개인 정보를 입력하는 부분이다.  
 <figure>
- <img src="/assets/images/GetMyMoneyBack/등록면허세(등록분)%20납부%20화면.png">  
+ <img src="/assets/images/GetMyMoneyBack/등록면허세(등록분) 납부 화면.png">  
 </figure>
 물건구분은 대부분 부동산, 등기종류는 임차권설정을 선택한다.  
 그 외에는 개인 정보들을 알맞게 입력한다.
@@ -83,7 +83,7 @@ resource    : F84084FB-5A9C-4BF4-9587-34598651C233
 그렇게 납부를 하고 나면 납부(영수증) 확인에 들어가 납부내역을 확인한다.
 납부 확인서에 있는 납세 번호를 그대로 입력하면 된다.
 <figure>
- <img src="/assets/images/GetMyMoneyBack/등록면허세(등록분)%20납부확인서.png">  
+ <img src="/assets/images/GetMyMoneyBack/등록면허세(등록분) 납부확인서.png">  
 </figure>
 
 납부 확인을 했을 때 확인이 안될 때는 납세 번호를 제대로 입력했는 지 확인해보거나, 조금 기다리면 확인될 것이다.   
@@ -94,24 +94,24 @@ resource    : F84084FB-5A9C-4BF4-9587-34598651C233
 법원에서 임차권 등기명령신청을 인용하면 등기소에 주택임차권을 등기부등본에 기록하라는 명령이 떨어진다.  
 그 등기촉탁에 대한 수수료이다.  
 <figure>
- <img src="/assets/images/GetMyMoneyBack/등기촉탁수수료%20화면.png">  
+ <img src="/assets/images/GetMyMoneyBack/등기촉탁수수료 화면.png">  
 </figure>
 
 요것은 또 [인터넷 등기소](https://www.iros.go.kr/index.jsp)에 가서 납부해야한다.  
 이쯤 되면 변호사 전화번호가 궁금해진다.  
 인터넷 등기소 상단 메뉴에 `등기지원 서비스 > 전자 납부 > 부동산등기 신청수수료` 로 들어가 신규 납부를 작성하한다.
 <figure>
- <img src="/assets/images/GetMyMoneyBack/인터넷%20등기소%20전자%20납부.png">  
+ <img src="/assets/images/GetMyMoneyBack/인터넷 등기소 전자 납부.png">  
 </figure>
 
 메뉴로 들어가면 내역을 확인하는 화면처럼 보여서 잘못들어왔다 싶지만, 하단에 신규납부작성 버튼이 있다.  
 <figure>
- <img src="/assets/images/GetMyMoneyBack/부동산등기%20신청%20수수료%20납부%20신규%20작성.png">  
+ <img src="/assets/images/GetMyMoneyBack/부동산등기 신청 수수료 납부 신규 작성.png">  
 </figure>
 
 신규 작성을 누르면 아래 화면이 나온다.  
 <figure>
- <img src="/assets/images/GetMyMoneyBack/부동산등기%20신청%20수수료%20전자%20납부%20화면.png">  
+ <img src="/assets/images/GetMyMoneyBack/부동산등기 신청 수수료 전자 납부 화면.png">  
 </figure>
 등기소는 임차권등기명령신청을 하는 법원의 등기소를 선택한다.  
 집행법원제출 용도로 선택하고, 수수료를 직접 입력해야한다.  
@@ -126,7 +126,7 @@ resource    : F84084FB-5A9C-4BF4-9587-34598651C233
 그렇게 납부를 하고, 영수필확인서를 뽑으면 납부 번호가 있다.
 납부 번호를 동일하게 입력하고 납부 확인을 누르면 납부 내역이 나올 것이다.  
 <figure>
- <img src="/assets/images/GetMyMoneyBack/등기촉탁수수료%20영수필확인서.png">  
+ <img src="/assets/images/GetMyMoneyBack/등기촉탁수수료 영수필확인서.png">  
 </figure>
 
 다른 개인 정보는 잘 입력하면 된다.  
@@ -180,18 +180,18 @@ resource    : F84084FB-5A9C-4BF4-9587-34598651C233
 보정도 전자 소송에서 비교적 간단하게 할 수 있다.  
 먼저 `나의 전자 소송 > 나의 사건 관리 > 진행중사건`을 들어가서 조회를 누르면 진행 중인 주택임차권등기명령 신청 사건이 보일 것이다.  
 <figure>
- <img src="/assets/images/GetMyMoneyBack/전자소송%20진행중사건.png">  
+ <img src="/assets/images/GetMyMoneyBack/전자소송 진행중사건.png">  
 </figure>
 
 보정하려는 사건에서 메뉴 선택을 누르면, 아래처럼 바로가기할 수 있는 메뉴들이 보인다. 이 중, 소송 서류 제출을 선택한다.
 <figure>
- <img src="/assets/images/GetMyMoneyBack/진행중사건%20메뉴%20선택.png">  
+ <img src="/assets/images/GetMyMoneyBack/진행중사건 메뉴 선택.png">  
 </figure>
 
 이동한 화면에서 전체 서류 중 보정서를 선택하면 보정서를 제출하는 창구로 바로 이동하게 되어 있다.  
 여기서 보정하려는 내용과 첨부할 자료들을 추가한 후 제출하면 된다.  
 <figure>
- <img src="/assets/images/GetMyMoneyBack/민사%20서류%20보정서%20메뉴%20화면.png">  
+ <img src="/assets/images/GetMyMoneyBack/민사 서류 보정서 메뉴 화면.png">  
 </figure>
 
 나의 경우는 임차권 등기 신청 취지를 보정하고, 주택 임대차 계약 신고필증을 서류로 추가해야했다.  
@@ -205,7 +205,7 @@ FYI) [여기](https://ecfs.scourt.go.kr/psp/index.on?m=PSP720M24)서 양식을 �
 보정하려는 내용을 작성했고, 첨부 파일로 올릴 것은 별첨으로 기재했다.  
 아래 첨부파일 업로드하는 부분에서 보정서와 주택 임대차 계약 신고필증을 함께 업로드했다.
 <figure>
- <img src="/assets/images/GetMyMoneyBack/보정서%20첨부자료%20제출%20화면.png">  
+ <img src="/assets/images/GetMyMoneyBack/보정서 첨부자료 제출 화면.png">  
 </figure>  
 
 그리고 다시 기다림.  
