@@ -47,7 +47,7 @@ resource    : F84084FB-5A9C-4BF4-9587-34598651C233
 
 등록 면허세와 등기촉탁 수수료를 지불해야하니, 공동 인증서 혹은 금융 인증서를 미리 준비해두는 것이 좋다.
 <figure>
- <img src="/assets/images/GetMyMoneyBack/민사 신청 화면.png">  
+ <img src="/assets/images/GetMyMoneyBack/민사 신청 화면.png">  
 </figure>
 위 메뉴 중 "서류 제출 > 민사 서류 > 민사 신청" 으로 가면 주택임차권등기명령신청서가 보인다.  
 해당 신청서를 제출하여 임차권등기명령을 신청한다.
@@ -66,7 +66,7 @@ resource    : F84084FB-5A9C-4BF4-9587-34598651C233
 ### 등록 면허세
 우선 사건을 등록하는 것에 대한 세금인 **등록 면허세**을 지불해야한다.
 <figure>
- <img src="/assets/images/GetMyMoneyBack/등록면허세 화면.png">  
+ <img src="/assets/images/GetMyMoneyBack/등록면허세 화면.png">  
 </figure>
 
 등록 면허세는 서울 사람 기준 [서울시ETAX](https://etax.seoul.go.kr/MainAction.tran)에 들어가 `신고납부 > 등록면허세 > 등록면허세(등록분)`에서 지불한다.  
