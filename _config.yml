@@ -115,15 +115,15 @@ analytics:
 author:
   name             : "Ian"
   avatar           : "/assets/images/my-portrait-transparent.png"
-  bio              : "person."
+  bio              : "개발 좋아하는 사람"
   location         : "Seoul, Korea"
   links:
     - label: "GitHub"
       icon: "fab fa-fw fa-github-square"
       url: "https://github.com/minseon9"
-    - label: "LinkedIn"
-      icon: "fab fa-fw fa-linkedin"
-      url: "https://linkedin.com/in/miseong-ian"
+#    - label: "LinkedIn"
+#      icon: "fab fa-fw fa-linkedin"
+#      url: "https://linkedin.com/in/miseong-ian"
 
 # Site Footer
 footer:
