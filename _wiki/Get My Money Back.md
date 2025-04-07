@@ -1,9 +1,9 @@
 ---
-layout      : wiki
+layout      : single
 title       : Get my money back
 summary     : 전세금 탈환기
 date        : 2025-03-23 00:46:24 +0900
-updated     : 2025-03-29 01:49:00 +0900
+updated     : 2025-04-07 22:42:30 +0900
 categories  : Life
 tags        : 
 toc         : true
@@ -219,6 +219,7 @@ FYI) [여기](https://ecfs.scourt.go.kr/psp/index.on?m=PSP720M24)서 양식을 �
 # 마치며  
 시작부터 참 다사다난한 2025년이다.
 
-개발 공부나 프로젝트 이야기를 남기려고 만든 블로그의 첫 글이 전세금 탈환기라니.   
+개발 이야기와 나의 삶을 기록하려고 블로그의 첫 글이 전세금 탈환기라니.   
 이 글이 누구에게도 필요하지 않은 세상이라면 참 좋겠지만,  
 필요한 누군가에게 작은 도움이 되었으면 한다.  
+
