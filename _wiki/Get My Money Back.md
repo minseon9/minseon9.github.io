@@ -3,7 +3,7 @@ layout      : single
 title       : Get my money back
 summary     : 전세금 탈환기
 date        : 2025-03-23 00:46:24 +0900
-updated     : 2025-04-07 22:42:30 +0900
+updated     : 2025-04-07 23:11:55 +0900
 categories  : Life
 tags        : 
 toc         : true
@@ -12,9 +12,6 @@ parent      :
 latex       : false
 resource    : F84084FB-5A9C-4BF4-9587-34598651C233
 ---
-* TOC
-{:toc}  
-
 지소쿠리 클럽의 노래 제목이다.  
 
 {% include video id="dg_a3J8sBfg" provider="youtube" %}  
