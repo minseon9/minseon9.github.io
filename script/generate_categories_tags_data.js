@@ -92,9 +92,6 @@ function parseInfo(file, info) {
     //     obj.url = '/wiki/' + obj.fileName;
     // }
 
-    if(obj.category) {
-        obj.category = obj.category.split(/\s+/);
-    }
 
     if(obj.tags) {
         obj.tags = obj.tags.split(/\s+/);

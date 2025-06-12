@@ -1,4 +1,3 @@
 Categories:
-    - {category: [ToyProject], tags: [Kotlin, Spring]}
-    - {category: [Book], tags: ['2025']}
-    - {category: [Book], tags: []}
+    - {category: ToyProject, tags: [Kotlin, Spring]}
+    - {category: Book, tags: ['2025']}
