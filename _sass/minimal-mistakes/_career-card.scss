@@ -1,0 +1,179 @@
+/**
+ * Career Timeline (Experience)
+ * Inspired by _archive.scss 구조와 네이밍
+ */
+.career-timeline {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+  margin: 2.5em 0 2em 0;
+  position: relative;
+}
+.career-item {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  position: relative;
+  z-index: 1;
+  border-bottom: 1.5px solid #ececec;
+  padding-bottom: 32px;
+  margin-bottom: 32px;
+}
+.career-item:last-child {
+  border-bottom: none;
+  margin-bottom: 0;
+  padding-bottom: 0;
+}
+.career-left {
+  width: 120px;
+  min-width: 120px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  margin-right: 32px;
+  position: relative;
+}
+.career-logo {
+  object-fit: contain;
+  display: block;
+  position: relative;
+  margin: 1em 0 0.5em 0;
+  z-index: 3;
+}
+.career-period {
+  font-size: 0.5em;
+  color: #888;
+  text-align: center;
+  margin-bottom: 0.2em;
+  margin-top: 0.2em;
+}
+
+/* 공통 섹션 스타일 */
+.career-section {
+  margin: 0 0 1.1em 0;
+  padding: 0 0 0 1em;
+  font-size: 0.85em;
+}
+.career-section strong {
+  color: #013220;
+  font-weight: 600;
+  font-size: 1em;
+  display: inline-block;
+  margin-bottom: 0.3em;
+}
+.career-section ul {
+  margin: 0.2em 0 0 0;
+  padding: 0 0 0 1.2em;
+  list-style: disc inside;
+}
+.career-section li {
+  margin-bottom: 0.2em;
+  font-size: 0.97em;
+}
+
+/* 태그/스킬 스타일 */
+.career-tags {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4em 0;
+  margin: 0.3em 0 0.7em 0;
+  padding: 0;
+}
+.career-tag-group {
+  display: block;
+  margin-bottom: 0.5em;
+}
+.career-tag-type {
+  font-weight: 600;
+  font-size: 0.85em;
+  border-radius: 8px;
+  padding: 0.2em 0.7em;
+  margin-right: 0.5em;
+  margin-bottom: 0.2em;
+  display: inline-block;
+}
+.career-tag-type.backend {
+  background: #e6f2e6;
+  color: #013220;
+}
+.career-tag-type.frontend {
+  background: #e6eaff;
+  color: #1a237e;
+}
+.career-tag-type.database {
+  background: #fff3e0;
+  color: #e65100;
+}
+.career-tag-type.devops {
+  background: #e0f7fa;
+  color: #006064;
+}
+.career-tag-type.etc {
+  background: #f3e6f2;
+  color: #6a1b9a;
+}
+.career-tag-skill {
+  background: #f3f3f3;
+  color: #444;
+  font-size: 0.85em;
+  border-radius: 8px;
+  padding: 0.2em 0.7em;
+  margin-right: 0.3em;
+  margin-bottom: 0.2em;
+  display: inline-block;
+  border: 1px solid #e0e0e0;
+}
+
+.career-right {
+  flex: 1;
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 0 12px 12px rgba(0,0,0,0.04);
+  padding: 1.1em 1.5em 1.1em 1.5em;
+  position: relative;
+  font-size: 0.98em;
+}
+.career-title {
+  font-size: 1.08em;
+  font-weight: bold;
+  margin-bottom: 0.2em;
+}
+.career-position {
+  font-size: 0.98em;
+  font-weight: bold;
+  color: #444;
+  margin-bottom: 0.2em;
+}
+.career-company-small {
+  font-size: 0.88em;
+  color: #aaa;
+  margin-bottom: 0.7em;
+  margin-top: -0.2em;
+}
+@media (max-width: 800px) {
+  .career-item {
+    flex-direction: column;
+    align-items: stretch;
+  }
+  .career-left {
+    flex-direction: row;
+    width: 100%;
+    min-width: 0;
+    margin-right: 0;
+    margin-bottom: 0.5em;
+    justify-content: flex-start;
+    gap: 16px;
+  }
+  .career-right {
+    padding: 1em 0.7em 1em 0.7em;
+  }
+}
+
+.career-project-desc {
+  display: block;
+  padding-left: 1.5em;
+  color: #888;
+  font-size: 0.9em;
+  margin-top: 0.1em;
+  margin-bottom: 0.4em;
+} 

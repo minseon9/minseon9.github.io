@@ -1,0 +1,60 @@
+---
+layout: single
+author_profile: True
+classes: wide
+---
+
+{{ content }}
+
+<hr style="margin: 2.5em 0 2em 0; border: none; border-top: 1.5px solid #eee;" />
+
+<h2 style="margin-bottom:1.5em; color:#444; font-size:1.3em;">Experience 👨🏻‍💻</h2>
+<div class="career-timeline">
+  {% assign careers = site.career | sort: 'order' | reverse %}
+  {% for career in careers %}
+    <div class="career-item">
+      <div class="career-left">
+        <div class="career-timeline-branch">
+          {% if career.logo %}
+            <img src="{{ career.logo }}" alt="{{ career.company }} 로고" class="career-logo" />
+          {% endif %}
+        </div>
+        <div class="career-period">@{{ career.start_date }} -> {{ career.end_date }}</div>
+      </div>
+      <div class="career-right">
+        {% if career.position %}
+          <div class="career-position">{{ career.position }}</div>
+          <div class="career-company-small">{{ career.company }}</div>
+        {% endif %}
+        {% if career.projects %}
+          <div class="career-section">
+            <strong>Projects</strong>
+            <ul>
+              {% for project in career.projects %}
+                <li>
+                  {% if project.bold %}<strong>{{ project.title }}</strong>{% else %}{{ project.title }}{% endif %}
+                  {% if project.desc %}<br /><span class="career-project-desc">{{ project.desc }}</span>{% endif %}
+                </li>
+              {% endfor %}
+            </ul>
+          </div>
+        {% endif %}
+        {% if career.skills %}
+          <div class="career-section">
+            <strong>Skills</strong>
+            <div class="career-tags">
+              {% for career_skill in career.skills %}
+                <div class="career-tag-group">
+                  <span class="career-tag-type {{ career_skill.type | downcase }}">{{ career_skill.type }}</span>
+                  {% for skill in career_skill.skills %}
+                    <span class="career-tag-skill">{{ skill }}</span>
+                  {% endfor %}
+                </div>
+              {% endfor %}
+            </div>
+          </div>
+        {% endif %}
+      </div>
+    </div>
+  {% endfor %}
+</div>

@@ -1,0 +1,16 @@
+<div class="career-card">
+  <img src="{{ page.logo }}" alt="{{ page.company }} 로고" class="career-logo" />
+  <div class="career-header">
+    <span class="career-company">{{ page.company }}</span>
+    <span class="career-period">{{ page.period }}</span>
+  </div>
+  <div class="career-position">{{ page.position }}</div>
+  <ul class="career-projects">
+    {% for project in page.projects %}
+      <li>
+        <strong>{{ project.title }}</strong>
+        <span>{{ project.desc }}</span>
+      </li>
+    {% endfor %}
+  </ul>
+</div> 
