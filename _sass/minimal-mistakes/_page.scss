@@ -318,6 +318,17 @@ body {
   padding-inline: 0.5em;
 }
 
+.page__meta-tag {
+  background: #f3f3f3;
+  color: #444;
+  font-size: 0.85em;
+  border-radius: 8px;
+  padding: 0.2em 0.7em;
+  margin-right: 0.3em;
+  margin-bottom: 0.2em;
+  display: inline-block;
+  border: 1px solid #e0e0e0;
+}
 /*
    Page taxonomy
    ========================================================================== */

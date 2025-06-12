@@ -4,7 +4,7 @@ title       : The Nature of Software Development
 summary     : 
 date        : 2025-02-02 18:11:19 +0900
 updated     : 2025-02-09 19:21:06 +0900
-categories  : Book 
+category    : Book 
 tags        : 
 toc         : true
 public      : false
