@@ -23,6 +23,7 @@ const dataList = list.map(function collectData(file) {
 
 });
 
+console.log(dataList)
 /*
 Categories:
     - {category: Test1, tags: [test, test2]}
@@ -33,22 +34,19 @@ const tagMap = new Map();
 const categoryMap = new Map();
 
 dataList.forEach(function collectTagMap(data) {
-    if(!data.categories) {
+    if(!data.category) {
         return;
     }
-    data.categories.forEach((category) => {
-        if (!categoryMap.get(category)) {
-            categoriesTags.Categories.push({
-                category: category,
-                tags: []
-            });
 
-            categoryMap.set(category, true)
-        }
+    if (!categoryMap.get(data.category)) {
+        categoriesTags.Categories.push({
+            category: data.category,
+            tags: []
+        });
+        categoryMap.set(data.category, true)
+    }
 
-
-        categoriesTags.Categories.find((item) => item.category === category).tags.push(...data.tags)
-    });
+    categoriesTags.Categories.find((item) => item.category === data.category).tags.push(...data.tags)
 });
 
 categoriesTags.Categories.forEach(item => item.tags.sort())
@@ -94,8 +92,8 @@ function parseInfo(file, info) {
     //     obj.url = '/wiki/' + obj.fileName;
     // }
 
-    if(obj.categories) {
-        obj.categories = obj.categories.split(/\s+/);
+    if(obj.category) {
+        obj.category = obj.category.split(/\s+/);
     }
 
     if(obj.tags) {
