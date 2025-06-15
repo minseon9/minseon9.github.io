@@ -23,7 +23,6 @@ const dataList = list.map(function collectData(file) {
 
 });
 
-console.log(dataList)
 /*
 Categories:
     - {category: Test1, tags: [test, test2]}
