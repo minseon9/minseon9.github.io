@@ -5,7 +5,7 @@ summary     :
 date        : 2025-06-15 17:32:25 +0900
 updated     : 2025-06-15 17:57:24 +0900
 categories  : Leetcode
-tags        : Arrary "Hash Table"
+tags        : Arrary HashTable
 toc         : true
 public      : true
 parent      : 
