@@ -4,7 +4,7 @@ title       : Code Translator
 summary     : 
 date        : 2025-06-15 18:23:46 +0900
 updated     : 2025-06-15 19:46:23 +0900
-category  : AI
+category    : AI
 tags        : Cursor Prompt
 toc         : true
 public      : true
@@ -71,7 +71,7 @@ Custom Mode를 잘 설정해두면 Prompt를 매번 입력하지 않아도 어�
  <img src="/assets/images/Code%20Translator/code-translator-mode.png" style="width:200px; height:400px;">
 </figure>
 `Preferences` > `Cursor Setting` > `Chat` > `Custom Modes`를 ON으로 변경하면 사용할 수 있다. 
-Advanced options 에서 가장 하단에 위 프롬프트를 넣어두고, `"단순히 이 코드 java로 바꿔줘"` 라고 요구하면 된다.  
+Advanced options 에서 가장 하단에 위 프롬프트를 넣어두고, 단순히 `"이 코드 java로 바꿔줘"` 라고 요구하면 된다.  
 데이터 구조나 타입에서 어떤 것들을 고려해야하는 지,
 혹은 변경하려는 언어에서 지원하지 않는 것은 어떤 대안들이 있는 지 등등을 쭉 설명해준다.  
 가령, javascript에서는 question mark로 Optional Chaining을 지원하는데, python에서는 다른 대안이 있는 지 알려준다.  
