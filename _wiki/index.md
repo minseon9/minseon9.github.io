@@ -15,3 +15,6 @@
 
 # AI
 [[Code Translator]]
+
+# Leetcode
+[[TwoSum]]

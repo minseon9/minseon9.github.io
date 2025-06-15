@@ -3,7 +3,7 @@ layout      : single
 title       : Code Translator
 summary     : 
 date        : 2025-06-15 18:23:46 +0900
-updated     : 2025-06-15 19:43:29 +0900
+updated     : 2025-06-15 19:46:23 +0900
 categories  : AI
 tags        : Cursor Prompt
 toc         : true
@@ -81,7 +81,7 @@ Advanced options 에서 가장 하단에 위 프롬프트를 넣어두고, `"단
 
 
 ## 실례
-TwoSum 문제를 Python으로 푼 다음, Code Translator에게 Kotlin으로 변환을 부탁한 내용이다.  
+[TwoSum](https://minseon9.github.io/wiki/TwoSuM) 문제를 Python으로 푼 다음, Code Translator에게 Kotlin으로 변환을 부탁한 내용이다.  
 Python의 `list[int]`는 Kotlin의 `List<Int>` 또는 `IntArray`으로 변환하는데, 왜 IntArrary를 사용했는 지도 설명해준다.  
 무조건 정답이라고 할 수는 없겠다. 동료와 의견을 나누듯 이런 저런 대화를 하며 좋은 방법을 찾아나가는데도 큰 도움을 얻는다.  
 
