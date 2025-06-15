@@ -1,6 +1,6 @@
 ---
 layout      : single
-title       : Code Translator
+title       : 코드 변환기로 새로운 언어 익히기
 summary     : 
 date        : 2025-06-15 18:23:46 +0900
 updated     : 2025-06-15 19:46:23 +0900
