@@ -4,7 +4,7 @@ title       : Code Translator
 summary     : 
 date        : 2025-06-15 18:23:46 +0900
 updated     : 2025-06-15 19:46:23 +0900
-categories  : AI
+category  : AI
 tags        : Cursor Prompt
 toc         : true
 public      : true
