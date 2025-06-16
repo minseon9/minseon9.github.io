@@ -8,10 +8,9 @@ layout: archive
 
 {% assign wiki = site.wiki  %}
 
-
 {% assign entries_layout = page.entries_layout | default: 'list' %}
 <div class="entries-{{ entries_layout }}">
-  {% include documents-collection.html entries=wiki type=entries_layout sort_by=updated sort_order=reverse limit=5 %}
+  {% include documents-collection.html entries=wiki type=entries_layout limit=5 sort_by='updated' sort_order='reverse' %}
 
 
   {% if wiki.size > 5 %}

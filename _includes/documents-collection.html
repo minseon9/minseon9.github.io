@@ -1,4 +1,4 @@
-{% assign entries = include.entries | default: site[include.collection] | where_exp: "post", "post.hidden != true" %}
+{% assign entries = include.entries | default: site[include.collection] | where_exp: "wiki", "wiki.public != false" %}
 
 {% if include.sort_by %}
   {% assign entries = entries | sort: include.sort_by %}
@@ -13,7 +13,6 @@
 {% else %}
   {% assign limit = entries.size %}
 {% endif %}
-
 
 {%- for post in entries limit: limit -%}
   {% include archive-single.html type=include.type %}
