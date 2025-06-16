@@ -2,4 +2,5 @@ Categories:
     - {category: ToyProject, tags: [Kotlin, Spring]}
     - {category: Book, tags: ['2025']}
     - {category: AI, tags: [Cursor, Prompt]}
+    - {category: Language, tags: [Kotlin]}
     - {category: Leetcode, tags: [Arrary, HashTable]}
