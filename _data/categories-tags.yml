@@ -3,3 +3,4 @@ Categories:
     - {category: Book, tags: ['2025']}
     - {category: Leetcode, tags: [Arrary, HashTable, LinkedList]}
     - {category: AI, tags: [Cursor, Prompt]}
+    - {category: Language, tags: [Kotlin]}
