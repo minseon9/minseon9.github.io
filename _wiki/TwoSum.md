@@ -3,7 +3,7 @@ layout      : single
 title       : Two Sum(Eazy)
 summary     : 
 date        : 2025-06-15 17:32:25 +0900
-updated     : 2025-06-15 17:57:24 +0900
+updated     : 2025-06-16 13:11:44 +0900
 category    : Leetcode
 tags        : Arrary HashTable
 toc         : true
@@ -81,5 +81,5 @@ class Solution:
 ```
 
 ## Leetcode Solution Link
-[O(1) Time Complexity HashMap Solution](https://leetcode.com/problems/two-sum/solutions/6845845/o1-time-complexity-hashmap-solution-by-l-j1g9)
+[O(n) Time Complexity HashMap Solution](https://leetcode.com/problems/two-sum/solutions/6845845/o1-time-complexity-hashmap-solution-by-l-j1g9)
 
