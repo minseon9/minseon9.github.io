@@ -11,3 +11,7 @@
 # Toy Project
 ## Mapa
 [[1.ProjectSetting]]
+
+
+## Dot
+[[setup script]]
