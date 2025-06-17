@@ -19,6 +19,7 @@
 # Leetcode
 [[TwoSum]]
 [[AddTwoNumbers]]
+[[LongestSubstringWithoutRepeatingCharacters]]
 
 # Language
 ## Kotlin
