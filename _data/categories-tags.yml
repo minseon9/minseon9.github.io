@@ -1,6 +1,6 @@
 Categories:
     - {category: ToyProject, tags: [Kotlin, Spring]}
     - {category: Book, tags: ['2025']}
-    - {category: Leetcode, tags: [Arrary, HashTable, LinkedList, SlidingWindow, substring]}
+    - {category: Leetcode, tags: [Arrary, BinarySearch, HashTable, LinkedList, SlidingWindow, median, substring]}
     - {category: AI, tags: [Cursor, Prompt]}
     - {category: Language, tags: [Kotlin]}
