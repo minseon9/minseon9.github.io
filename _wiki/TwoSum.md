@@ -3,9 +3,9 @@ layout      : single
 title       : Two Sum(Eazy)
 summary     : 
 date        : 2025-06-15 17:32:25 +0900
-updated     : 2025-06-16 13:11:44 +0900
+updated     : 2025-06-18 21:56:10 +0900
 category    : Leetcode
-tags        : Arrary HashTable
+tags        : Array HashTable
 toc         : true
 public      : true
 parent      : 
