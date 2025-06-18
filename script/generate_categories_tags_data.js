@@ -45,7 +45,15 @@ dataList.forEach(function collectTagMap(data) {
         categoryMap.set(data.category, true)
     }
 
-    categoriesTags.Categories.find((item) => item.category === data.category).tags.push(...data.tags)
+    const category = categoriesTags.Categories.find((item) => item.category === data.category)
+    const tags = category.tags
+    for (const tag of data.tags) {
+        if (tags.includes(tag)) {
+            return;
+        }
+
+        category.tags.push(tag)
+    }
 });
 
 categoriesTags.Categories.forEach(item => item.tags.sort())
