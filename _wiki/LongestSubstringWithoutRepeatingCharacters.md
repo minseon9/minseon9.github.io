@@ -1,9 +1,9 @@
 ---
 layout      : single
-title       : Longest Substring Without Repeating Characters
+title       : Longest Substring Without Repeating Characters(Med.)
 summary     : 
 date        : 2025-06-17 12:05:14 +0900
-updated     : 2025-06-17 13:36:10 +0900
+updated     : 2025-06-18 09:31:15 +0900
 category    : Leetcode
 tags        : substring HashTable SlidingWindow
 toc         : true
