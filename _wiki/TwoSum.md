@@ -1,6 +1,6 @@
 ---
 layout      : single
-title       : Two Sum(Eazy)
+title       : Two Sum(Easy)
 summary     : 
 date        : 2025-06-15 17:32:25 +0900
 updated     : 2025-06-18 21:56:10 +0900
