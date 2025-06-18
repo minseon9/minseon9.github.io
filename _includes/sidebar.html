@@ -31,7 +31,7 @@
         <a href="#{{ item[0] | slugify }}">
           {{ tag }}
           <span class="tags__count">
-            {{site.wiki | where: "category", {{item.category}} | where_exp: "wiki", "wiki.tags contains tag" | size }}
+            {{site.wiki | where: "category", item.category | where_exp: "wiki", "wiki.tags contains tag" | size }}
           </span>
         </a>
       </li>
