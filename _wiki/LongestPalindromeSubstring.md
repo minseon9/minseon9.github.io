@@ -3,9 +3,9 @@ layout      : single
 title       : Longest Palindrome Substring(Med.)
 summary     : 
 date        : 2025-06-20 01:44:02 +0900
-updated     : 2025-06-20 03:41:45 +0900
-category    : 
-tags        : 
+updated     : 2025-06-20 03:44:47 +0900
+category    : Leetcode
+tags        : Manacher'sAlgorithm HashTable palindrome
 toc         : true
 public      : true
 parent      : 
