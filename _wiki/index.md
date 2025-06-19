@@ -21,6 +21,7 @@
 [[AddTwoNumbers]]
 [[LongestSubstringWithoutRepeatingCharacters]]
 [[MedianOfTwoSortedArray]]
+[[LongestPalindromicSubstring]]
 
 
 # Language
