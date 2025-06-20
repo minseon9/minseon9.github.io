@@ -3,9 +3,9 @@ layout      : single
 title       : Longest Palindrome Substring(Med.)
 summary     : 
 date        : 2025-06-20 01:44:02 +0900
-updated     : 2025-06-20 03:44:47 +0900
+updated     : 2025-06-20 16:27:54 +0900
 category    : Leetcode
-tags        : Manacher'sAlgorithm HashTable palindrome
+tags        : Manacher'sAlgorithm palindrome
 toc         : true
 public      : true
 parent      : 
@@ -75,69 +75,60 @@ panlindrome은 길이가 짝수일 수도, 홀수일 수도 있다.
 ### Kotlin
 ```kotlin
 class Solution {
-    private val DIVIDER = "$"
+    private val DIVIDER = '$'
 
     fun longestPalindrome(s: String): String {
-        val refinedString = refineString(s)
+        val refined= refineString(s)
+        val n = refined.length
+        val palindromeLengths = IntArray(n) { 0 }
 
-        val palindromeLengthMap = mutableMapOf<Int, Int>()
-        var searchedEndIndex = 0
-        var searchedCenterIndex = 0
-        var maxLength = 0
-        var maxLengthIndex = 0
-        for(index in refinedString.indices) {
-            if (index > searchedEndIndex) {
-                palindromeLengthMap[index] = 0
-            } else {
-                palindromeLengthMap[index] = minOf(searchedEndIndex - index, palindromeLengthMap.get(2 * searchedCenterIndex - index) ?: 0)
-            }
+        var searchedEnd = 0
+        var searchedCenter = 0
+        var maxLen = 0
+        var maxLenIndex = 0
 
-            var left = index - palindromeLengthMap.get(index)!!
-            var right = index + palindromeLengthMap.get(index)!!
+        for (i in 0 until n) {
+            palindromeLengths[i] = if (i >= searchedEnd) 0
+            else minOf(searchedEnd - i, palindromeLengths[2 * searchedCenter - i])
+
             while (true) {
-                if (left < 0 || right >= refinedString.length) break
-
-                if (refinedString[left] == refinedString[right]) {
-                    palindromeLengthMap[index] = palindromeLengthMap.get(index)!! + 1
-                }
-                else break
-
-                left--
-                right++
+                val left = i - palindromeLengths[i]
+                val right = i + palindromeLengths[i]
+                if (left < 0 || right >= n) break
+                if (refined[left] == refined[right]) {
+                    palindromeLengths[i]++
+                } else break
             }
 
-            if (searchedEndIndex < index) {
-                searchedEndIndex = index + palindromeLengthMap.get(index)!!
-                searchedCenterIndex = index
+            if (i + palindromeLengths[i] > searchedEnd) {
+                searchedEnd = i + palindromeLengths[i]
+                searchedCenter = i
             }
-
-            if (maxLength < palindromeLengthMap.get(index)!!) {
-                maxLength = palindromeLengthMap.get(index)!!
-                maxLengthIndex = index
+            if (palindromeLengths[i] > maxLen) {
+                maxLen = palindromeLengths[i]
+                maxLenIndex = i
             }
         }
-
-        [[return]] getLongestPalindrome(refinedString,palindromeLengthMap, maxLengthIndex)
+        return getLongestPalindrome(refined, palindromeLengths, maxLenIndex)
     }
 
 
     fun refineString(s: String): String {
-        var refinedString = ""
+        val builder = StringBuilder()
         for (char in s) {
-            refinedString = refinedString.plus(char).plus(DIVIDER)
+            builder.append(char).append(DIVIDER)
         }
-
-        return refinedString
+        return builder.toString()
     }
 
-    fun getLongestPalindrome(refinedString: String, palindromeLengthMap: MutableMap<Int, Int>, maxLengthIndex: Int): String {
-        val maxLength = palindromeLengthMap.get(maxLengthIndex)!!
-        val longestPalindrome = refinedString.substring(maxLengthIndex - maxLength + 1, maxLengthIndex + maxLength)
+    fun getLongestPalindrome(refined: String, palindromeLengths: IntArray, centerIndex: Int): String {
+        val maxLen = palindromeLengths[centerIndex]
+        val start = centerIndex - maxLen + 1
+        val end = centerIndex + maxLen
 
-        return longestPalindrome.replace(DIVIDER, "")
+        return refined.substring(start, end).filter {it != DIVIDER }
     }
 }
-
 ```
 ### Python
 ```python
