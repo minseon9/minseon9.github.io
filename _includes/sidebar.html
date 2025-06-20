@@ -21,14 +21,14 @@
     Contents
     {% for item in site.data.categories-tags['Categories'] %}
     <div class="category_title">
-      <a href="#{{ item[0] | slugify }}">
+      <a href="{{ site.wiki_archive.path | relative_url }}#{{ item.category }}">
         <strong>{{item.category}}</strong>
       </a>
     </div>
     <ul class="categories__index">
       {% for tag in item.tags %}
       <li class="tags__index">
-        <a href="#{{ item[0] | slugify }}">
+        <a href="{{ site.tag_archive.path | relative_url }}#{{ tag }}">
           {{ tag }}
           <span class="tags__count">
             {{site.wiki | where: "category", item.category | where_exp: "wiki", "wiki.tags contains tag" | size }}

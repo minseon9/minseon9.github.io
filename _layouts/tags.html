@@ -4,4 +4,42 @@ layout: archive
 
 {{ content }}
 
-{% include posts-taxonomy.html taxonomies=site.tags %}
+{%- comment -%}
+  태그별로 wiki 문서들을 그룹핑해서 보여줌
+{%- endcomment -%}
+{% assign all_tagged_wikis = "" | split: "" %}
+{% for wiki in site.wiki %}
+  {% if wiki.tags %}
+    {% for tag in wiki.tags %}
+      {% assign all_tagged_wikis = all_tagged_wikis | push: tag %}
+    {% endfor %}
+  {% endif %}
+{% endfor %}
+{% assign unique_tags = all_tagged_wikis | uniq %}
+
+<ul class="taxonomy__index">
+  {% for tag in unique_tags %}
+    <li>
+      <a href="#{{ tag | slugify }}">
+        <strong>{{ tag }}</strong>
+        <span class="taxonomy__count">
+          {{ site.wiki | where_exp: "item", "item.tags contains tag" | size }}
+        </span>
+      </a>
+    </li>
+  {% endfor %}
+</ul>
+
+{% assign entries_layout = page.entries_layout | default: 'list' %}
+{% for tag in unique_tags %}
+  <section id="{{ tag | slugify }}" class="taxonomy__section">
+    <h2 class="archive__subtitle">{{ tag }}</h2>
+    <div class="entries-{{ entries_layout }}">
+      {% assign tagged_wikis = site.wiki | where_exp: "item", "item.tags contains tag" %}
+      {% for post in tagged_wikis %}
+        {% include archive-single.html type=entries_layout %}
+      {% endfor %}
+    </div>
+    <a href="#page-title" class="back-to-top">{{ site.data.ui-text[site.locale].back_to_top | default: 'Back to Top' }} &uarr;</a>
+  </section>
+{% endfor %}
