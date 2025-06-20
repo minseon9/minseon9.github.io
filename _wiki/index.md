@@ -22,6 +22,7 @@
 [[LongestSubstringWithoutRepeatingCharacters]]
 [[MedianOfTwoSortedArray]]
 [[LongestPalindromeSubstring]]
+[[ReversedInteger]]
 
 
 # Language
