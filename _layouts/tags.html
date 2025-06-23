@@ -4,9 +4,6 @@ layout: archive
 
 {{ content }}
 
-{%- comment -%}
-  태그별로 wiki 문서들을 그룹핑해서 보여줌
-{%- endcomment -%}
 {% assign all_tagged_wikis = "" | split: "" %}
 {% for wiki in site.wiki %}
   {% if wiki.tags %}
@@ -20,7 +17,7 @@ layout: archive
 <ul class="taxonomy__index">
   {% for tag in unique_tags %}
     <li>
-      <a href="#{{ tag | slugify }}">
+      <a href="#{{ tag }}">
         <strong>{{ tag }}</strong>
         <span class="taxonomy__count">
           {{ site.wiki | where_exp: "item", "item.tags contains tag" | size }}
@@ -32,7 +29,7 @@ layout: archive
 
 {% assign entries_layout = page.entries_layout | default: 'list' %}
 {% for tag in unique_tags %}
-  <section id="{{ tag | slugify }}" class="taxonomy__section">
+  <section id="{{ tag }}" class="taxonomy__section">
     <h2 class="archive__subtitle">{{ tag }}</h2>
     <div class="entries-{{ entries_layout }}">
       {% assign tagged_wikis = site.wiki | where_exp: "item", "item.tags contains tag" %}
