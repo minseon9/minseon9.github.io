@@ -3,9 +3,9 @@ layout      : single
 title       : Median of Two Sorted Arrays(Hard)
 summary     : 
 date        : 2025-06-18 18:45:00 +0900
-updated     : 2025-06-18 22:02:30 +0900
+updated     : 2025-06-23 12:12:09 +0900
 category    : Leetcode
-tags        : median BinarySearch
+tags        : Array BinarySearch DivideAndConquer
 toc         : true
 public      : true
 parent      : 

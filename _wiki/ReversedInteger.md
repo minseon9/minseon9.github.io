@@ -3,9 +3,9 @@ layout      : single
 title       : Reversed Integer(Med.)
 summary     : 
 date        : 2025-06-20 17:31:31 +0900
-updated     : 2025-06-21 02:02:48 +0900
+updated     : 2025-06-23 12:14:45 +0900
 category    : Leetcode
-tags        : overflow
+tags        : Math
 toc         : true
 public      : true
 parent      : 

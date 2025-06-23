@@ -3,9 +3,9 @@ layout      : single
 title       : Add Two Numbers(Med.)
 summary     : 
 date        : 2025-06-16 13:05:32 +0900
-updated     : 2025-06-16 13:11:35 +0900
+updated     : 2025-06-23 12:09:51 +0900
 category    : Leetcode
-tags        : LinkedList 
+tags        : LinkedList Math
 toc         : true
 public      : true
 parent      : 

@@ -23,6 +23,7 @@
 [[MedianOfTwoSortedArray]]
 [[LongestPalindromeSubstring]]
 [[ReversedInteger]]
+[[MergeSortedArray]]
 
 
 # Language
