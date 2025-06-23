@@ -1,6 +1,6 @@
 Categories:
     - {category: ToyProject, tags: [Kotlin, Spring]}
     - {category: Book, tags: ['2025']}
-    - {category: Leetcode, tags: [Array, BinarySearch, HashTable, LinkedList, 'Manacher''sAlgorithm', SlidingWindow, median, overflow, palindrome, substring]}
+    - {category: Leetcode, tags: [Array, BinarySearch, DivideAndConquer, DynamicProgramming, LinkedList, 'Manacher''sAlgorithm', Math, String, TowPointers]}
     - {category: AI, tags: [Cursor, Prompt]}
     - {category: Language, tags: [Kotlin]}
