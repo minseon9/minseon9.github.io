@@ -1,5 +1,7 @@
 #!/bin/sh
 
+set -e
+
 node ./script/generate_categories_tags_data.js
 git add ./_data
 
