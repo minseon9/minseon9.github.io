@@ -24,6 +24,7 @@
 [[LongestPalindromeSubstring]]
 [[ReversedInteger]]
 [[MergeSortedArray]]
+[[RemoveDuplicatesFromSortedArray]]
 
 
 # Language
