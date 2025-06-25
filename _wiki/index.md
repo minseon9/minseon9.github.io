@@ -25,6 +25,7 @@
 [[ReversedInteger]]
 [[MergeSortedArray]]
 [[RemoveDuplicatesFromSortedArray]]
+[[BinaryTreeInorderTraversal]]
 
 
 # Language
