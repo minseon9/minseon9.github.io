@@ -30,7 +30,8 @@
 # Language
 ## Kotlin
 [[nullable 처리 연산자]]
-[[parameter reference]]
+[[StringBuilder와 성능 비교]]
+[[it 변수에 대해]]
 
 
 
