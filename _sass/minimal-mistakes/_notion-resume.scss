@@ -1,0 +1,338 @@
+// Notion Resume 스타일
+.resume {
+  /* 1. 페이지 전체 좌우 여백 */
+  padding-left: 10vw;
+  padding-right: 10vw;
+  box-sizing: border-box;
+  
+  /* 1. 전체 폰트 크기 더 축소 */
+  font-size: 0.82em;
+
+  html, body {
+    margin: 0;
+    padding: 0;
+  }
+  body {
+    margin: 1.5em auto;
+    max-width: 700px; /* 콘텐츠가 페이지의 절반 정도만 차지하도록 */
+    color: rgb(55, 53, 47);
+    line-height: 1.35;
+    white-space: pre-wrap;
+    font-size: 0.82em;
+  }
+  a, a.visited {
+    color: inherit;
+    text-decoration: underline;
+  }
+  .resume__title {
+    font-size: 1.7rem;
+    font-weight: 700;
+    margin-top: 0;
+    margin-bottom: 1.5em;
+  }
+  .resume__section-title {
+    font-size: 1.1rem;
+    margin-top: 1em;
+    margin-bottom: 0.5em;
+  }
+  .resume__subtitle {
+    font-size: 0.95rem;
+    margin-top: 1.0em;
+    margin-bottom: 0.2em;
+  }
+  .resume__column-list {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+  }
+  .resume__column {
+    padding: 0 0.7em;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+  }
+  .resume__column:first-child { padding-left: 0; }
+  .resume__column:last-child { padding-right: 0; }
+  /* 3. About me와 Contact 단차 맞춤: h2 margin-top 0, column 내부 상단 정렬 */
+  .resume__contact-title, .resume__about-title {
+    margin-top: 0;
+    margin-bottom: 0.3em;
+    padding: 0;
+    font-weight: 600;
+    font-size: 1.5em;
+  }
+  .resume__contact, .resume__about {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    padding-top: 0;
+  }
+  /* Contact 영역 폰트 더 축소, 개행 절대 방지 */
+  .resume__contact {
+    font-size: 0.8em;
+    padding-right: 1.2em;
+    margin-right: 1.2em;
+  }
+  .resume__contact-item {
+    white-space: nowrap !important;
+    overflow: visible;
+    text-overflow: initial;
+    word-break: keep-all !important;
+    font-size: 1.0em;
+    margin-bottom: 0.2em;
+    margin-top: 1em;
+    padding: 0;
+    line-height: 1.2;
+  }
+  .resume__contact-github img {
+    vertical-align: middle;
+    margin-right: 0.2em;
+  }
+  /* About me 콘텐츠 시작 라인 맞춤 */
+  .resume__about {
+    font-size: 0.8em;
+    padding-left: 1.2em;
+    min-width: 0;
+  }
+  .resume__about-callout {
+    margin-top: 0;
+    margin-bottom: 0.2em;
+    padding-left: 1.3em;
+    padding-right: 1.3em;
+    font-size: 1.0em;
+    line-height: 1.3;
+    border-radius: 1em;
+    border: 1.5px solid rgba(55,53,47,0.12);
+    padding-top: 0;
+  }
+  .resume__cover-image {
+    display: block;
+    object-fit: cover;
+    width: 100%;
+    max-height: 30vh;
+  }
+  .resume__callout {
+    border-radius: 1em;
+    border: 1.5px solid rgba(55,53,47,0.12);
+  }
+  .resume__image {
+    border: none;
+    margin: 1em 0;
+    padding: 0;
+    border-radius: 0;
+    text-align: center;
+  }
+  .resume__list {
+    padding-inline-start: 1.2em;
+    margin-bottom: 0.2em;
+  }
+  .resume__list > li {
+    list-style: disc;
+    padding-left: 0.1em;
+    margin-bottom: 0.1em;
+  }
+  .resume__olist {
+    padding-inline-start: 1.1em;
+    margin-bottom: 0.2em;
+  }
+  .resume__olist > li {
+    padding-left: 0.1em;
+    margin-bottom: 0.1em;
+  }
+  hr {
+    background: transparent;
+    display: block;
+    width: 100%;
+    height: 1px;
+    visibility: visible;
+    border: none;
+    border-bottom: 1px solid rgba(55, 53, 47, 0.09);
+    margin: 0.7em 0;
+  }
+  mark {
+    background-color: transparent;
+  }
+  /* 2. Contact 주소 말줄임 해제, 전체 보이게 */
+  .resume__contact-item {
+    white-space: normal;
+    overflow: visible;
+    text-overflow: initial;
+    word-break: break-all;
+  }
+  /* 4. Contact와 About me 사이 흐릿한 가로선 및 간격 */
+  .resume__column-list {
+    align-items: flex-start;
+  }
+  .resume__contact {
+    padding-right: 2em;
+    margin-right: 2em;
+  }
+  .resume__about {
+    padding-left: 2em;
+  }
+  @media (max-width: 700px) {
+    .resume__column-list {
+      flex-direction: column;
+    }
+    .resume__contact {
+      border-right: none;
+      border-bottom: 1.5px solid rgba(55,53,47,0.08);
+      padding-right: 0;
+      margin-right: 0;
+      margin-bottom: 1em;
+      max-width: 100%;
+    }
+    .resume__about {
+      padding-left: 0;
+    }
+  }
+  /* 기타 필요한 스타일은 추가로 분리 */
+
+  /* bulleted-list: notion 스타일의 리스트 */
+  .resume__bulleted-list {
+    list-style-type: disc;
+    padding-left: 1.2em;
+    margin: 1.0em 0 0.1em 0;
+  }
+  .resume__bulleted-list > li {
+    margin-bottom: 0.1em;
+    font-size: 1em;
+    line-height: 1.3;
+    list-style-type: disc;
+    padding-left: 0.2em;
+  }
+  .resume__bulleted-list .resume__bulleted-list {
+    list-style-type: circle;
+    padding-left: 1.2em;
+    margin-top: 0.1em;
+    margin-bottom: 0.1em;
+  }
+
+  /* 2. highlight-gray: 배경 없이 글자색만 회색 */
+  .resume__highlight-gray {
+    background: none !important;
+    color: #888 !important;
+    border-radius: 0;
+    padding: 0;
+    font-weight: 400;
+  }
+  mark.resume__highlight-gray {
+    background: none !important;
+    color: #888 !important;
+    border-radius: 0;
+    padding: 0;
+  }
+  .resume__block-color-default {
+    color: #37352f;
+  }
+  .resume__image img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 0.5em;
+  }
+  .resume__callout {
+    display: flex;
+    align-items: flex-start;
+    gap: 0.7em;
+  }
+
+  /* 주요 resume 섹션 공통 스타일 */
+  .resume-section {
+    font-size: 0.8em;
+    margin-bottom: 2.4em;
+  }
+  .resume-section .resume__column-list {
+    align-items: flex-start !important;
+    min-height: 100px;
+  }
+  .resume-section .resume__column:first-child {
+    height: auto;
+    display: block;
+    align-items: initial;
+    justify-content: initial;
+  }
+  .resume-section .resume__subsubtitle {
+    font-size: 0.85rem;
+    margin-top: 1.0em;
+    margin-bottom: 0.4em;
+    font-weight: 600;
+  }
+  .resume-section p {
+    margin: 0.2em 0 0.2em 0;
+    line-height: 1.3;
+    font-size: 1em;
+  }
+  .resume-section .resume__list, .resume-section .resume__olist {
+    padding-inline-start: 1.2em;
+    margin-bottom: 0.2em;
+  }
+  .resume-section .resume__list > li, .resume-section .resume__olist > li {
+    margin-bottom: 0.1em;
+    font-size: 1em;
+    line-height: 1.3;
+  }
+  .resume-section .resume__column:first-child {
+    margin-right: 2.1em;
+  }
+  .resume-section[class*='awards-column-list'] .resume__column-list {
+    align-items: stretch !important;
+    min-height: 100px;
+  }
+  .resume-section[class*='awards-column-list'] .resume__column:first-child {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .resume-section[class*='awards-column-list'] .resume__column:first-child p {
+    margin: 0;
+    align-self: center;
+  }
+}
+
+.resume__divider {
+  width: 40%;
+  height: 1.5px;
+  background: rgba(55,53,47,0.12);
+  border: none;
+  margin-top: 4em;
+  margin-bottom: 4em;
+  border-radius: 1em;
+  display: block;
+}
+
+.resume__divider--small {
+  width: 20%;
+  height: 1px;
+  background: rgba(55,53,47,0.10);
+  border: none;
+  margin: 0.7em auto;
+  border-radius: 1em;
+  display: block;
+}
+
+.resume__period {
+  display: block;
+  margin-bottom: 1em;
+  color: #888;
+  font-size: 1em;
+  font-style: normal;
+  font-weight: 400;
+}
+
+// 2. Skills 섹션 리스트 간격 조정
+.resume__skills-list {
+  margin-top: 0.0em; // 소제목과 리스트 간격 좁게
+  margin-bottom: 0.1em; // 리스트 사이 간격 넓게
+}
+.resume__skills-list:not(:last-child) {
+  margin-top: 0.0em; // 소제목과 리스트 간격 좁게
+  margin-bottom: 0.0em;
+}
+
+// 3. Awards/Certificate 날짜 세로 중앙 정렬
+.resume__awards-date {
+  color: #888 !important;
+  padding-top: 25px;
+}

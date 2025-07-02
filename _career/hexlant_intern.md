@@ -2,7 +2,7 @@
 layout: career
 company: "Hexlant"
 logo: "/assets/images/career/hexlant-logo.png"
-
+order: 1
 start_date: "March, 2020"
 end_date: "March, 2021"
 position: "산학 협력 & 인턴"

@@ -1,16 +1,25 @@
-<div class="career-card">
-  <img src="{{ page.logo }}" alt="{{ page.company }} 로고" class="career-logo" />
-  <div class="career-header">
-    <span class="career-company">{{ page.company }}</span>
-    <span class="career-period">{{ page.period }}</span>
+---
+layout: default
+---
+<div class="career-title-wrapper">
+  <h1 id="page-title" class="page__title" style="margin-bottom: 1.5rem;">Career</h1>
+  <div class="career-tabs">
+    <button class="career-tab active" onclick="showCareerTab('resume')">Resume</button>
+    <button class="career-tab" onclick="showCareerTab('portfolio')">Portfolio</button>
   </div>
-  <div class="career-position">{{ page.position }}</div>
-  <ul class="career-projects">
-    {% for project in page.projects %}
-      <li>
-        <strong>{{ project.title }}</strong>
-        <span>{{ project.desc }}</span>
-      </li>
-    {% endfor %}
-  </ul>
-</div> 
+</div>
+<div id="career-resume" class="career-tab-content" style="display:block;">
+  {% include resume.html %}
+</div>
+<div id="career-portfolio" class="career-tab-content" style="display:none;">
+  {% include portfolio.html %}
+</div>
+<script>
+function showCareerTab(tab) {
+  document.getElementById('career-resume').style.display = (tab === 'resume') ? 'block' : 'none';
+  document.getElementById('career-portfolio').style.display = (tab === 'portfolio') ? 'block' : 'none';
+  var tabs = document.querySelectorAll('.career-tab');
+  tabs[0].classList.toggle('active', tab === 'resume');
+  tabs[1].classList.toggle('active', tab === 'portfolio');
+}
+</script>

@@ -1,0 +1,183 @@
+// Notion Portfolio 스타일
+.portfolio {
+  /* 1. 페이지 전체 좌우 여백 */
+  padding-left: 10vw;
+  padding-right: 10vw;
+  box-sizing: border-box;
+  font-size: 0.7em;
+
+  .portfolio__section-title {
+    font-size: 1.1rem;
+    font-weight: 700;
+    margin-top: 0;
+    margin-bottom: 2em;
+  }
+
+  .portfolio__project {
+    margin-bottom: 1.1em;
+  }
+
+  .portfolio__column-list {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    width: 100%;
+    gap: 4.2em; /* 좌우 column 간격 2배로 넓힘 */
+  }
+  .portfolio__column {
+    padding: 0 0.7em;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    font-size: 1em;
+  }
+  .portfolio__column:first-child { padding-left: 0; }
+  .portfolio__column:last-child { padding-right: 0; }
+
+  .portfolio__image {
+    border: none;
+    margin: 1em 0 1.2em 0;
+    padding: 0;
+    border-radius: 0;
+    text-align: center;
+    img {
+      max-width: 100%;
+      height: auto;
+      border-radius: 0.5em;
+    }
+  }
+  .portfolio__role {
+    font-size: 1em;
+    font-weight: 600;
+    margin-bottom: 0.2em;
+    margin-top: 0.5em;
+  }
+  .portfolio__period {
+    color: #888;
+    font-size: 1em;
+    margin-bottom: 0.5em;
+    margin-top: 0.1em;
+  }
+  .portfolio__skills {
+    font-size: 1em;
+    color: #555;
+    margin-bottom: 0.5em;
+    margin-top: 0.1em;
+    word-break: keep-all;
+  }
+  .portfolio__title {
+    font-size: 1.2em;
+    font-weight: 700;
+    margin-top: 0.2em;
+    margin-bottom: 0.4em;
+  }
+  .portfolio__desc {
+    font-size: 1em;
+    margin-bottom: 0.75em;
+    margin-top: 0.1em;
+    line-height: 1.4;
+  }
+  .portfolio__subtitle {
+    font-weight: bold;
+    margin-top: 0.5em;
+    margin-bottom: 0.2em;
+    font-size: 1em;
+    letter-spacing: -0.01em;
+  }
+  .portfolio__bulleted-list {
+    list-style-type: disc;
+    padding-left: 1.2em;
+    margin: 0.3em 0 0.3em 0;
+    font-size: 1em;
+    line-height: 1.4;
+  }
+  .portfolio__bulleted-list > li {
+    margin-bottom: 0.1em;
+    font-size: 1em;
+    line-height: 1.4;
+    list-style-type: disc;
+    padding-left: 0.2em;
+  }
+  .portfolio__bulleted-list .portfolio__bulleted-list {
+    list-style-type: circle;
+    padding-left: 1.2em;
+    margin-top: 0.1em;
+    margin-bottom: 0.1em;
+  }
+  .portfolio__bulleted-list .portfolio__bulleted-list > li {
+    list-style-type: circle;
+    position: relative;
+  }
+  .portfolio__bulleted-list .portfolio__bulleted-list > li::marker {
+    color: #fff;
+    font-size: 0.9em;
+  }
+  .portfolio__bulleted-list .portfolio__bulleted-list > li::before {
+    content: '';
+    display: inline-block;
+    width: 0.3em;
+    height: 0.3em;
+    margin-right: 0.5em;
+    border-radius: 50%;
+    border: 1.5px solid #888;
+    background: #fff;
+    vertical-align: middle;
+    position: relative;
+    top: -1px;
+  }
+  .portfolio__bulleted-list .portfolio__bulleted-list > li {
+    list-style: none;
+    padding-left: 0.2em;
+  }
+  .portfolio__highlight-gray {
+    background: none !important;
+    color: #888 !important;
+    border-radius: 0;
+    padding: 0;
+    font-weight: 400;
+  }
+  mark.portfolio__highlight-gray {
+    background: none !important;
+    color: #888 !important;
+    border-radius: 0;
+    padding: 0;
+  }
+  .portfolio__divider {
+    width: 100%;
+    height: 1.5px;
+    background: rgba(220,220,220,0.35);
+    border: none;
+    margin-top: 2.2em;
+    margin-bottom: 2.2em;
+    border-radius: 1em;
+    display: block;
+  }
+  .portfolio__company-divider {
+    width: 80%;
+    height: 2.5px;
+    background: rgba(55,53,47,0.18);
+    border: none;
+    margin: 3em auto 3em auto;
+    border-radius: 1em;
+    display: block;
+  }
+
+  @media (max-width: 700px) {
+    padding-left: 2vw;
+    padding-right: 2vw;
+    .portfolio__column-list {
+      flex-direction: column;
+      gap: 0;
+    }
+    .portfolio__column {
+      width: 100% !important;
+      padding-left: 0;
+      padding-right: 0;
+      margin-bottom: 1em;
+    }
+    .portfolio__image {
+      margin: 0.5em 0 1em 0;
+    }
+  }
+} 

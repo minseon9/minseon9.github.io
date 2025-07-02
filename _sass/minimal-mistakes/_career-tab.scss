@@ -1,0 +1,47 @@
+.career-title-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 2rem;
+}
+
+#page-title.page__title {
+  text-align: center;
+  padding-top: 2rem;
+}
+
+.career-tabs {
+  display: flex;
+  gap: 0.5rem;
+  margin-bottom: 2.5rem;
+  border-bottom: 1.5px solid #e0e0e0;
+  width: 40%;
+  justify-content: center;
+}
+.career-tab {
+  background: none;
+  border: none;
+  font-size: 0.8rem;
+  font-weight: 500;
+  color: #888;
+  padding: 0.5rem 1.5rem 0.5rem 1.5rem;
+  cursor: pointer;
+  border-radius: 0;
+  border-bottom: 3px solid transparent;
+  transition: color 0.2s, border-bottom 0.2s, background 0.2s;
+}
+.career-tab.active {
+  color: #222;
+  border-bottom: 3px solid #222;
+  background: #fff;
+}
+.career-tab:not(.active):hover {
+  background: #f3f3f3;
+  color: #444;
+}
+.career-tab-content {
+  background: #fff;
+  border-radius: 0 0 8px 8px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+  padding: 2rem 1rem;
+} 
