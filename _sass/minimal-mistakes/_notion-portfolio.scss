@@ -1,8 +1,8 @@
 // Notion Portfolio 스타일
 .portfolio {
   /* 1. 페이지 전체 좌우 여백 */
-  padding-left: 10vw;
-  padding-right: 10vw;
+  padding-left: 15vw;
+  padding-right: 15vw;
   box-sizing: border-box;
   font-size: 0.7em;
 
@@ -13,34 +13,15 @@
     margin-bottom: 1.5em;
   }
 
-  .portfolio__section-title {
-    font-size: 1.1rem;
-    font-weight: 700;
-    margin-top: 0;
-    margin-bottom: 2em;
-  }
-
-  .portfolio__project {
+  .ortfolio__project {
     margin-bottom: 1.1em;
   }
 
-  .portfolio__column-list {
-    display: flex;
-    justify-content: space-between;
-    align-items: flex-start;
-    width: 100%;
-    gap: 4.2em; /* 좌우 column 간격 2배로 넓힘 */
+  .portfolio__column-list, .portfolio__column, .portfolio__image, .portfolio__role, .portfolio__period, .portfolio__skills {
+    /* column 레이아웃 관련 스타일 제거 */
+    all: unset;
+    display: revert;
   }
-  .portfolio__column {
-    padding: 0 0.7em;
-    box-sizing: border-box;
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    font-size: 1em;
-  }
-  .portfolio__column:first-child { padding-left: 0; }
-  .portfolio__column:last-child { padding-right: 0; }
 
   .portfolio__image {
     border: none;
@@ -74,9 +55,9 @@
     word-break: keep-all;
   }
   .portfolio__project-title {
-    font-size: 1.2em;
+    font-size: 1.5em;
     font-weight: 700;
-    margin-top: 0.2em;
+    margin-top: 0.6em;
     margin-bottom: 0.4em;
   }
   .portfolio__desc {
@@ -87,14 +68,14 @@
   }
   .portfolio__subtitle {
     font-weight: bold;
-    margin-top: 0.5em;
+    margin-top: 1em;
     margin-bottom: 0.2em;
-    font-size: 1em;
+    font-size: 1.2em;
     letter-spacing: -0.01em;
   }
   .portfolio__bulleted-list {
     list-style-type: disc;
-    padding-left: 1.2em;
+    padding-left: 0;
     margin: 0.3em 0 0.3em 0;
     font-size: 1em;
     line-height: 1.4;
@@ -104,17 +85,18 @@
     font-size: 1em;
     line-height: 1.4;
     list-style-type: disc;
-    padding-left: 0.2em;
+    padding-left: 0;
   }
   .portfolio__bulleted-list .portfolio__bulleted-list {
     list-style-type: circle;
-    padding-left: 1.2em;
+    padding-left: 0;
     margin-top: 0.1em;
     margin-bottom: 0.1em;
   }
   .portfolio__bulleted-list .portfolio__bulleted-list > li {
     list-style-type: circle;
     position: relative;
+    padding-left: 0;
   }
   .portfolio__bulleted-list .portfolio__bulleted-list > li::marker {
     color: #fff;
@@ -169,6 +151,29 @@
     border-radius: 1em;
     display: block;
   }
+  .portfolio__company-title {
+    font-size: 1.69em;
+    font-weight: 700;
+    margin-top: 2em;
+    margin-bottom: 3em;
+    color: #222;
+    text-align: center;
+  }
+  .portfolio__section {
+    margin-bottom: 0;
+  }
+  .portfolio__section > ul {
+    margin-left: 1.5em;
+    margin-top: 0.2em;
+    margin-bottom: 0.2em;
+  }
+  .portfolio__section > p + ul {
+    margin-left: 2.2em;
+  }
+  .portfolio__skills {
+    margin-bottom: 2em !important;
+    /* 기존보다 4배(0.5em * 4) = 2em */
+  }
 
   @media (max-width: 700px) {
     padding-left: 2vw;
@@ -187,4 +192,23 @@
       margin: 0.5em 0 1em 0;
     }
   }
+
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 70vw;
+}
+
+// 모든 포트폴리오 섹션(성과 포함) ul/li 동일 스타일 적용
+.portfolio__section ul {
+  margin: 0 0 0.3em 1.2em !important;
+  padding: 0 !important;
+}
+.portfolio__section ul li {
+  margin-bottom: 0.3em !important;
+  padding-left: 0;
+  line-height: 1.5;
+}
+
+.portfolio strong {
+  font-weight: 600;
 } 
