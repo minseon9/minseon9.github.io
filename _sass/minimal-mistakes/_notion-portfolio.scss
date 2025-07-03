@@ -6,6 +6,13 @@
   box-sizing: border-box;
   font-size: 0.7em;
 
+  .portfolio__title {
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin-top: 0;
+    margin-bottom: 1.5em;
+  }
+
   .portfolio__section-title {
     font-size: 1.1rem;
     font-weight: 700;
@@ -66,7 +73,7 @@
     margin-top: 0.1em;
     word-break: keep-all;
   }
-  .portfolio__title {
+  .portfolio__project-title {
     font-size: 1.2em;
     font-weight: 700;
     margin-top: 0.2em;
