@@ -32,3 +32,10 @@
 ## Kotlin
 [[nullable 처리 연산자]]
 [[parameter reference]]
+
+
+# Application Architecture
+[[Inversion of Control]]
+
+
+
