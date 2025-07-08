@@ -3,4 +3,5 @@ Categories:
     - {category: Book, tags: ['2025']}
     - {category: Leetcode, tags: [Array, BinarySearch, BinaryTree, DFS, DivideAndConquer, DynamicProgramming, LinkedList, 'Manacher''sAlgorithm', Math, Stack, String, TowPointers, Tree]}
     - {category: AI, tags: [Cursor, Prompt]}
+    - {category: '''Application Architecture''', tags: []}
     - {category: Language, tags: [Kotlin]}
