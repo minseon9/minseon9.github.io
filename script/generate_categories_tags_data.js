@@ -23,6 +23,7 @@ const dataList = list.map(function collectData(file) {
 
 });
 
+
 /*
 Categories:
     - {category: Test1, tags: [test, test2]}
@@ -49,7 +50,7 @@ dataList.forEach(function collectTagMap(data) {
     const tags = category.tags
     for (const tag of data.tags) {
         if (tags.includes(tag)) {
-            return;
+            continue;
         }
 
         category.tags.push(tag)
