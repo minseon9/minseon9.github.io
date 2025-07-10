@@ -41,12 +41,6 @@ var store = [{
         "url": "/wiki/The%20Nature%20of%20Software%20Development",
         "teaser": null
       },{
-        "title": "Kotlin Spring Toy Project Setting",
-        "excerpt":"Kotlin Spring을 사용한 토이 프로젝트를 시작한다. Kotlin도 Spring도 프로덕트 레벨까지 사용해본 적 없기에, 배포를 목적으로 한다. Project Setting Installation Kotlin 새로운 언어를 사용함에 앞서서 Version Manager를 설치한다. Java에서는 jenv와 SDKMAN이 대세인 듯 하다. 여기서는 Kotlin을 사용할 것이라 SDKMAN을 선택했다. Github에서의 활동도 훨신 활동적이라 시작하기에 좋은 듯 하다. Kotlin 외에 다른...","categories": ["ToyProject"],
-        "tags": ["Kotlin","Spring"],
-        "url": "/wiki/1.ProjectSetting",
-        "teaser": null
-      },{
         "title": "Two Sum(Easy)",
         "excerpt":"Two Sum 문제 풀이 상세 Code Kotlin Python Leetcode Solution Link Reference Two Sum 문제는 단순하다. integet 배열(nums)이 주어지고, integer의 목표값(target)이 주어진다. 배열에서 합이 target이 되는 두 element의 index를 반환하면 된다. 가령 Input: nums = [3,2,4], target = 6 Output: [1,2] 문제 풀이 문제는 a+b=x인 a,b를 찾는 것이다. 2가지 관점에서...","categories": ["Leetcode"],
         "tags": ["Array","HashTable"],
