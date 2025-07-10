@@ -1,0 +1,1253 @@
+<!doctype html>
+<!--
+  Minimal Mistakes Jekyll Theme 4.26.2 by Michael Rose
+  Copyright 2013-2024 Michael Rose - mademistakes.com | @mmistakes
+  Free for personal and commercial use under the MIT license
+  https://github.com/mmistakes/minimal-mistakes/blob/master/LICENSE
+-->
+
+<html lang="en-US" class="no-js">
+  <head>
+    <meta charset="utf-8">
+
+<!-- begin _includes/seo.html --><title>Longest Palindrome Substring(Med.) - Ian’s Blog</title>
+<meta name="description" content="">
+
+
+  <meta name="author" content="Ian">
+  
+  <meta property="article:author" content="Ian">
+  
+
+
+<meta property="og:type" content="article">
+<meta property="og:locale" content="en_US">
+<meta property="og:site_name" content="Ian's Blog">
+<meta property="og:title" content="Longest Palindrome Substring(Med.)">
+<meta property="og:url" content="https://minseon9.github.io//wiki/LongestPalindromeSubstring">
+
+
+  <meta property="og:description" content="">
+
+
+
+
+
+
+
+  <meta property="article:published_time" content="2025-06-19T16:44:02+00:00">
+
+
+
+
+
+  
+
+  
+
+
+<link rel="canonical" href="https://minseon9.github.io//wiki/LongestPalindromeSubstring">
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- end _includes/seo.html -->
+
+
+
+  <link href="/feed.xml" type="application/atom+xml" rel="alternate" title="Ian's Blog Feed">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<script>
+  document.documentElement.className = document.documentElement.className.replace(/\bno-js\b/g, '') + ' js ';
+  
+</script>
+
+<!-- For all browsers -->
+<link rel="stylesheet" href="/assets/css/main.css">
+<link rel="preload" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@latest/css/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+<noscript><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@latest/css/all.min.css"></noscript>
+
+
+
+    <!-- start custom head snippets -->
+
+<!-- insert favicons. use https://realfavicongenerator.net/ -->
+
+<!-- end custom head snippets -->
+
+  </head>
+
+  <body class="layout--single" dir="ltr">
+    <nav class="skip-links">
+  <ul>
+    <li><a href="#site-nav" class="screen-reader-shortcut">Skip to primary navigation</a></li>
+    <li><a href="#main" class="screen-reader-shortcut">Skip to content</a></li>
+    <li><a href="#footer" class="screen-reader-shortcut">Skip to footer</a></li>
+  </ul>
+</nav>
+
+    
+
+<div class="masthead">
+  <div class="masthead__inner-wrap">
+    <div class="masthead__menu">
+      <nav id="site-nav" class="greedy-nav">
+        
+          <a class="site-logo" href="/"><img src="/assets/images/my-portrait.png" alt="Ian's Blog"></a>
+        
+        <a class="site-title" href="/">
+          Ian's Blog
+          
+        </a>
+        <ul class="visible-links"><li class="masthead__menu-item">
+              <a
+                href="/about/"
+                
+                
+              >About Me</a>
+            </li><li class="masthead__menu-item">
+              <a
+                href="/wiki/"
+                
+                
+              >Wiki</a>
+            </li><li class="masthead__menu-item">
+              <a
+                href="/blog/"
+                
+                
+              >Blog</a>
+            </li><li class="masthead__menu-item">
+              <a
+                href="/projects/"
+                
+                
+              >Projects</a>
+            </li></ul>
+        
+        <button class="greedy-nav__toggle hidden" type="button">
+          <span class="visually-hidden">Toggle menu</span>
+          <div class="navicon"></div>
+        </button>
+        <ul class="hidden-links hidden"></ul>
+      </nav>
+    </div>
+  </div>
+</div>
+
+
+    <div class="initial-content">
+      
+
+
+
+
+  
+    
+
+
+
+<nav class="breadcrumbs">
+  <ol itemscope itemtype="https://schema.org/BreadcrumbList">
+    
+    
+    
+      
+        <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+          <a href="/" itemprop="item"><span itemprop="name">Home</span></a>
+
+          <meta itemprop="position" content="1" />
+        </li>
+        <span class="sep">/</span>
+      
+      
+        
+        <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+          <a href="/wiki" itemprop="item"><span itemprop="name">Wiki</span></a>
+          <meta itemprop="position" content="2" />
+        </li>
+        <span class="sep">/</span>
+      
+    
+      
+      
+        <li class="current">Longest Palindrome Substring(Med.)</li>
+      
+    
+  </ol>
+</nav>
+
+  
+
+
+<div id="main" role="main">
+  
+<div class="sidebar sticky" xmlns="http://www.w3.org/1999/html">
+  
+
+
+<div itemscope itemtype="https://schema.org/Person" class="h-card">
+
+  
+    <div class="author__avatar">
+      <a href="https://minseon9.github.io//">
+        <img src="/assets/images/my-portrait-transparent.png" alt="Ian" itemprop="image" class="u-photo">
+      </a>
+    </div>
+  
+
+  <div class="author__content">
+    <h3 class="author__name p-name" itemprop="name">
+      <a class="u-url" rel="me" href="https://minseon9.github.io//" itemprop="url">Ian</a>
+    </h3>
+    
+      <div class="author__bio p-note" itemprop="description">
+        <p>개발 좋아하는 사람</p>
+
+      </div>
+    
+  </div>
+
+  <div class="author__urls-wrapper">
+    <button class="btn btn--inverse">Follow</button>
+    <ul class="author__urls social-icons">
+      
+        <li itemprop="homeLocation" itemscope itemtype="https://schema.org/Place">
+          <i class="fas fa-fw fa-map-marker-alt" aria-hidden="true"></i> <span itemprop="name" class="p-locality">Seoul, Korea</span>
+        </li>
+      
+
+      
+        
+          
+            <li><a href="https://github.com/minseon9" rel="nofollow noopener noreferrer me" itemprop="sameAs"><i class="fab fa-fw fa-github-square" aria-hidden="true"></i><span class="label">GitHub</span></a></li>
+          
+        
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      <!--
+  <li>
+    <a href="http://link-to-whatever-social-network.com/user/" itemprop="sameAs" rel="nofollow noopener noreferrer me">
+      <i class="fas fa-fw" aria-hidden="true"></i> Custom Social Profile Link
+    </a>
+  </li>
+-->
+    </ul>
+  </div>
+</div>
+
+  
+
+  <!-- LNB Categories  -->
+  <div class="categories">
+    Contents
+    
+    <div class="category_title">
+      <a href="/wiki/#ToyProject">
+        <strong>ToyProject</strong>
+      </a>
+    </div>
+    <ul class="categories__index">
+      
+      <li class="tags__index">
+        <a href="/tags/#Kotlin">
+          Kotlin
+          <span class="tags__count">
+            1
+          </span>
+        </a>
+      </li>
+      
+      <li class="tags__index">
+        <a href="/tags/#Spring">
+          Spring
+          <span class="tags__count">
+            1
+          </span>
+        </a>
+      </li>
+      
+    </ul>
+    
+    <div class="category_title">
+      <a href="/wiki/#Book">
+        <strong>Book</strong>
+      </a>
+    </div>
+    <ul class="categories__index">
+      
+      <li class="tags__index">
+        <a href="/tags/#2025">
+          2025
+          <span class="tags__count">
+            0
+          </span>
+        </a>
+      </li>
+      
+    </ul>
+    
+    <div class="category_title">
+      <a href="/wiki/#Leetcode">
+        <strong>Leetcode</strong>
+      </a>
+    </div>
+    <ul class="categories__index">
+      
+      <li class="tags__index">
+        <a href="/tags/#Array">
+          Array
+          <span class="tags__count">
+            5
+          </span>
+        </a>
+      </li>
+      
+      <li class="tags__index">
+        <a href="/tags/#BinarySearch">
+          BinarySearch
+          <span class="tags__count">
+            1
+          </span>
+        </a>
+      </li>
+      
+      <li class="tags__index">
+        <a href="/tags/#BinaryTree">
+          BinaryTree
+          <span class="tags__count">
+            1
+          </span>
+        </a>
+      </li>
+      
+      <li class="tags__index">
+        <a href="/tags/#DFS">
+          DFS
+          <span class="tags__count">
+            1
+          </span>
+        </a>
+      </li>
+      
+      <li class="tags__index">
+        <a href="/tags/#Design">
+          Design
+          <span class="tags__count">
+            1
+          </span>
+        </a>
+      </li>
+      
+      <li class="tags__index">
+        <a href="/tags/#DivideAndConquer">
+          DivideAndConquer
+          <span class="tags__count">
+            1
+          </span>
+        </a>
+      </li>
+      
+      <li class="tags__index">
+        <a href="/tags/#DynamicProgramming">
+          DynamicProgramming
+          <span class="tags__count">
+            1
+          </span>
+        </a>
+      </li>
+      
+      <li class="tags__index">
+        <a href="/tags/#HashTable">
+          HashTable
+          <span class="tags__count">
+            2
+          </span>
+        </a>
+      </li>
+      
+      <li class="tags__index">
+        <a href="/tags/#LinkedList">
+          LinkedList
+          <span class="tags__count">
+            1
+          </span>
+        </a>
+      </li>
+      
+      <li class="tags__index">
+        <a href="/tags/#Manacher'sAlgorithm">
+          Manacher'sAlgorithm
+          <span class="tags__count">
+            1
+          </span>
+        </a>
+      </li>
+      
+      <li class="tags__index">
+        <a href="/tags/#Math">
+          Math
+          <span class="tags__count">
+            3
+          </span>
+        </a>
+      </li>
+      
+      <li class="tags__index">
+        <a href="/tags/#Randomized">
+          Randomized
+          <span class="tags__count">
+            1
+          </span>
+        </a>
+      </li>
+      
+      <li class="tags__index">
+        <a href="/tags/#SlidingWindow">
+          SlidingWindow
+          <span class="tags__count">
+            1
+          </span>
+        </a>
+      </li>
+      
+      <li class="tags__index">
+        <a href="/tags/#Sorting">
+          Sorting
+          <span class="tags__count">
+            1
+          </span>
+        </a>
+      </li>
+      
+      <li class="tags__index">
+        <a href="/tags/#Stack">
+          Stack
+          <span class="tags__count">
+            1
+          </span>
+        </a>
+      </li>
+      
+      <li class="tags__index">
+        <a href="/tags/#String">
+          String
+          <span class="tags__count">
+            2
+          </span>
+        </a>
+      </li>
+      
+      <li class="tags__index">
+        <a href="/tags/#TowPointers">
+          TowPointers
+          <span class="tags__count">
+            1
+          </span>
+        </a>
+      </li>
+      
+      <li class="tags__index">
+        <a href="/tags/#Tree">
+          Tree
+          <span class="tags__count">
+            1
+          </span>
+        </a>
+      </li>
+      
+      <li class="tags__index">
+        <a href="/tags/#TwoPointers">
+          TwoPointers
+          <span class="tags__count">
+            2
+          </span>
+        </a>
+      </li>
+      
+    </ul>
+    
+    <div class="category_title">
+      <a href="/wiki/#AI">
+        <strong>AI</strong>
+      </a>
+    </div>
+    <ul class="categories__index">
+      
+      <li class="tags__index">
+        <a href="/tags/#Cursor">
+          Cursor
+          <span class="tags__count">
+            1
+          </span>
+        </a>
+      </li>
+      
+      <li class="tags__index">
+        <a href="/tags/#Prompt">
+          Prompt
+          <span class="tags__count">
+            1
+          </span>
+        </a>
+      </li>
+      
+    </ul>
+    
+    <div class="category_title">
+      <a href="/wiki/#Language">
+        <strong>Language</strong>
+      </a>
+    </div>
+    <ul class="categories__index">
+      
+      <li class="tags__index">
+        <a href="/tags/#Kotlin">
+          Kotlin
+          <span class="tags__count">
+            2
+          </span>
+        </a>
+      </li>
+      
+    </ul>
+    
+    </div>
+  </div>
+
+
+
+  <article class="page" itemscope itemtype="https://schema.org/CreativeWork">
+    <meta itemprop="headline" content="Longest Palindrome Substring(Med.)">
+    <meta itemprop="description" content="">
+    <meta itemprop="datePublished" content="2025-06-19T16:44:02+00:00">
+    
+
+    <div class="page__inner-wrap">
+      
+        <header>
+          <h1 id="page-title" class="page__title" itemprop="headline">
+            <a href="https://minseon9.github.io//wiki/LongestPalindromeSubstring" itemprop="url">Longest Palindrome Substring(Med.)
+</a>
+          </h1>
+          
+
+  <p class="page__meta">
+    
+      
+      <span class="page__meta-date">
+        <i class="far fa-calendar-alt" aria-hidden="true"></i>
+        
+        <time datetime="2025-06-19T16:44:02+00:00">June 19, 2025</time>
+      </span>
+    
+
+    <span class="page__meta-sep"></span>
+
+    
+      
+      
+
+      <span class="page__meta-readtime">
+        <i class="far fa-clock" aria-hidden="true"></i>
+        
+          3 minute read
+        
+      </span>
+    
+
+    
+    
+      <span class="page__meta-sep"></span>
+      
+        <span class="page__meta-tag">
+          Manacher'sAlgorithm
+        </span>
+      
+        <span class="page__meta-tag">
+          TowPointers
+        </span>
+      
+        <span class="page__meta-tag">
+          String
+        </span>
+      
+        <span class="page__meta-tag">
+          DynamicProgramming
+        </span>
+      
+    
+  </p>
+
+
+        </header>
+      
+
+      <section class="page__content" itemprop="text">
+        
+          <aside class="sidebar__right ">
+            <nav class="toc">
+              <header><h4 class="nav__title"><i class="fas fa-file-alt"></i> On this page</h4></header>
+              <ul class="toc__menu"><li><a href="#longest-palindrome-substring">Longest Palindrome Substring</a></li><li><a href="#문제-풀이">문제 풀이</a><ul><li><a href="#manachers-algorithm">Manacher’s Algorithm</a></li><li><a href="#상세">상세</a><ul><li><a href="#trick">Trick</a></li></ul></li><li><a href="#code">Code</a><ul><li><a href="#kotlin">Kotlin</a></li><li><a href="#python">Python</a></li></ul></li><li><a href="#leetcode-solution-link">Leetcode Solution Link</a></li></ul></li></ul>
+            </nav>
+          </aside>
+        
+        <ul id="markdown-toc">
+  <li><a href="#longest-palindrome-substring" id="markdown-toc-longest-palindrome-substring">Longest Palindrome Substring</a></li>
+  <li><a href="#문제-풀이" id="markdown-toc-문제-풀이">문제 풀이</a>    <ul>
+      <li><a href="#manachers-algorithm" id="markdown-toc-manachers-algorithm">Manacher’s Algorithm</a></li>
+      <li><a href="#상세" id="markdown-toc-상세">상세</a>        <ul>
+          <li><a href="#trick" id="markdown-toc-trick">Trick</a></li>
+        </ul>
+      </li>
+      <li><a href="#code" id="markdown-toc-code">Code</a>        <ul>
+          <li><a href="#kotlin" id="markdown-toc-kotlin">Kotlin</a></li>
+          <li><a href="#python" id="markdown-toc-python">Python</a></li>
+        </ul>
+      </li>
+      <li><a href="#leetcode-solution-link" id="markdown-toc-leetcode-solution-link">Leetcode Solution Link</a></li>
+    </ul>
+  </li>
+</ul>
+
+<h1 id="longest-palindrome-substring">Longest Palindrome Substring</h1>
+<p>주어진 문자열에 대해 가장 긴 Palindrome을 찾는 문제다.
+가령</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Input: s = "babad"
+Output: "bab"
+</code></pre></div></div>
+
+<p>Palindrome은 거꾸로 읽어도, 똑바로 읽어도 똑같은 회문을 말한다.<br />
+토마토, 기러기, 스위스, 우영우, 역삼역</p>
+
+<h1 id="문제-풀이">문제 풀이</h1>
+<p>이미 탐색한 데이터는 잘 알고 있다.<br />
+여기에 Palindrome의 특성을 잘 사용하면 조금 더 똑똑해보이게 풀 수 있다. 바로 정반대쪽이 동일한 문자열을 가진다는 것.
+아쉽게도 내가 생각해난 건 아니고, 학교 다니면서 배운 기묘한 알고리즘이다.</p>
+
+<h2 id="manachers-algorithm">Manacher’s Algorithm</h2>
+<p>메인 아이디어는 2가지 인 것 같다.<br />
+하나는 각 요소들의 padlindrome 길이를 기억하고 있는 것.<br />
+다른 하나는 다른 padlindrome을 이용해, 지금 탐색하는 위치의 탐색 비용을 줄이는 것이다.</p>
+
+<p>그림으로 보면,<br />
+<code class="language-plaintext highlighter-rouge">p</code>: 현재까지 발견된 palindrome 중 가장 <strong>오른쪽 끝</strong>까지 뻗는 palindrome의 <strong>중심 위치</strong> <br />
+<code class="language-plaintext highlighter-rouge">A</code>: 현재까지 탐색한 각 요소 별 palindrome의 길이<br />
+<code class="language-plaintext highlighter-rouge">i</code>: 현재 탐색 중인 위치 <br />
+<code class="language-plaintext highlighter-rouge">i' = 2 * p - i</code>: <code class="language-plaintext highlighter-rouge">i</code>의 <code class="language-plaintext highlighter-rouge">p</code>에 대한 대칭점</p>
+
+<figure>
+ <img src="/assets/images/LongestPalindromeSubstring/manacher's_algorithm.png" />  
+</figure>
+
+<p>index <code class="language-plaintext highlighter-rouge">i</code>가 <code class="language-plaintext highlighter-rouge">p</code>의 palindrome 안에 위치한다. 수식으로 표현하면 <code class="language-plaintext highlighter-rouge">i &lt; p + A[p]</code>이다.<br />
+palindrome의 특성을 이용해, <code class="language-plaintext highlighter-rouge">p</code>를 기준으로 대칭점인 <code class="language-plaintext highlighter-rouge">i'</code> 의 데이터를 활용할 수 있다.<br />
+즉, 이미 탐색한 <code class="language-plaintext highlighter-rouge">i'</code>의 palindrome을 i도 거의 그대로 가질 것이다. (거의라고 한 것은 여타 조건을 조금 따져야하기 때문)<br />
+그럼 <code class="language-plaintext highlighter-rouge">i</code>를 탐색할 때는 이미 탐색한 <code class="language-plaintext highlighter-rouge">i'</code>의 palindrome의 길이를 활용해 탐색 비용을 최적화할 수 있다.</p>
+
+<p>결론적으로, <strong>탐색의 오른쪽 끝인 p+A[p]은 항상 증가한다.</strong><br />
+반복된 탐색이 없으므로 Time Complexity가 O(n)이다.</p>
+
+<h2 id="상세">상세</h2>
+<p>탐색하는 지점의 위치에 따라 로직이 달라진다.</p>
+<ul>
+  <li><code class="language-plaintext highlighter-rouge">i</code>가 <code class="language-plaintext highlighter-rouge">p + A[p]</code>에 포함되는 경우, 대칭점인 <code class="language-plaintext highlighter-rouge">i'</code>를 활용한다.</li>
+  <li>이를 벗어나는 경우에는 <code class="language-plaintext highlighter-rouge">i</code>를 새로운 기준으로 업데이트한다.</li>
+</ul>
+
+<h3 id="trick">Trick</h3>
+<p>panlindrome은 길이가 짝수일 수도, 홀수일 수도 있다.<br />
+이것을 처리하는 로직이 굉장히 눈에 아른 거린다.<br />
+이를 간소화하기 위해서 Tricky한 방법을 사용했는데, 주어진 문자열 사이에 특수한 문자를 넣어주는 것이다.<br />
+예를 들어, <code class="language-plaintext highlighter-rouge">banana</code>이면 <code class="language-plaintext highlighter-rouge">b$a$n$a$n$a$</code><br />
+그럼 <code class="language-plaintext highlighter-rouge">aa</code> 와 같은 케이스도 <code class="language-plaintext highlighter-rouge">a$a$</code>가 되어서 고민할거리가 줄어든다.</p>
+
+<h2 id="code">Code</h2>
+<h3 id="kotlin">Kotlin</h3>
+<div class="language-kotlin highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">class</span> <span class="nc">Solution</span> <span class="p">{</span>
+    <span class="k">private</span> <span class="kd">val</span> <span class="py">DIVIDER</span> <span class="p">=</span> <span class="sc">'$'</span>
+
+    <span class="k">fun</span> <span class="nf">longestPalindrome</span><span class="p">(</span><span class="n">s</span><span class="p">:</span> <span class="nc">String</span><span class="p">):</span> <span class="nc">String</span> <span class="p">{</span>
+        <span class="kd">val</span> <span class="py">refined</span><span class="p">=</span> <span class="nf">refineString</span><span class="p">(</span><span class="n">s</span><span class="p">)</span>
+        <span class="kd">val</span> <span class="py">n</span> <span class="p">=</span> <span class="n">refined</span><span class="p">.</span><span class="n">length</span>
+        <span class="kd">val</span> <span class="py">palindromeLengths</span> <span class="p">=</span> <span class="nc">IntArray</span><span class="p">(</span><span class="n">n</span><span class="p">)</span> <span class="p">{</span> <span class="mi">0</span> <span class="p">}</span>
+
+        <span class="kd">var</span> <span class="py">searchedEnd</span> <span class="p">=</span> <span class="mi">0</span>
+        <span class="kd">var</span> <span class="py">searchedCenter</span> <span class="p">=</span> <span class="mi">0</span>
+        <span class="kd">var</span> <span class="py">maxLen</span> <span class="p">=</span> <span class="mi">0</span>
+        <span class="kd">var</span> <span class="py">maxLenIndex</span> <span class="p">=</span> <span class="mi">0</span>
+
+        <span class="k">for</span> <span class="p">(</span><span class="n">i</span> <span class="k">in</span> <span class="mi">0</span> <span class="n">until</span> <span class="n">n</span><span class="p">)</span> <span class="p">{</span>
+            <span class="n">palindromeLengths</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="p">=</span> <span class="k">if</span> <span class="p">(</span><span class="n">i</span> <span class="p">&gt;=</span> <span class="n">searchedEnd</span><span class="p">)</span> <span class="mi">0</span>
+            <span class="k">else</span> <span class="nf">minOf</span><span class="p">(</span><span class="n">searchedEnd</span> <span class="p">-</span> <span class="n">i</span><span class="p">,</span> <span class="n">palindromeLengths</span><span class="p">[</span><span class="mi">2</span> <span class="p">*</span> <span class="n">searchedCenter</span> <span class="p">-</span> <span class="n">i</span><span class="p">])</span>
+
+            <span class="k">while</span> <span class="p">(</span><span class="k">true</span><span class="p">)</span> <span class="p">{</span>
+                <span class="kd">val</span> <span class="py">left</span> <span class="p">=</span> <span class="n">i</span> <span class="p">-</span> <span class="n">palindromeLengths</span><span class="p">[</span><span class="n">i</span><span class="p">]</span>
+                <span class="kd">val</span> <span class="py">right</span> <span class="p">=</span> <span class="n">i</span> <span class="p">+</span> <span class="n">palindromeLengths</span><span class="p">[</span><span class="n">i</span><span class="p">]</span>
+                <span class="k">if</span> <span class="p">(</span><span class="n">left</span> <span class="p">&lt;</span> <span class="mi">0</span> <span class="p">||</span> <span class="n">right</span> <span class="p">&gt;=</span> <span class="n">n</span><span class="p">)</span> <span class="k">break</span>
+                <span class="k">if</span> <span class="p">(</span><span class="n">refined</span><span class="p">[</span><span class="n">left</span><span class="p">]</span> <span class="p">==</span> <span class="n">refined</span><span class="p">[</span><span class="n">right</span><span class="p">])</span> <span class="p">{</span>
+                    <span class="n">palindromeLengths</span><span class="p">[</span><span class="n">i</span><span class="p">]++</span>
+                <span class="p">}</span> <span class="k">else</span> <span class="k">break</span>
+            <span class="p">}</span>
+
+            <span class="k">if</span> <span class="p">(</span><span class="n">i</span> <span class="p">+</span> <span class="n">palindromeLengths</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="p">&gt;</span> <span class="n">searchedEnd</span><span class="p">)</span> <span class="p">{</span>
+                <span class="n">searchedEnd</span> <span class="p">=</span> <span class="n">i</span> <span class="p">+</span> <span class="n">palindromeLengths</span><span class="p">[</span><span class="n">i</span><span class="p">]</span>
+                <span class="n">searchedCenter</span> <span class="p">=</span> <span class="n">i</span>
+            <span class="p">}</span>
+            <span class="k">if</span> <span class="p">(</span><span class="n">palindromeLengths</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="p">&gt;</span> <span class="n">maxLen</span><span class="p">)</span> <span class="p">{</span>
+                <span class="n">maxLen</span> <span class="p">=</span> <span class="n">palindromeLengths</span><span class="p">[</span><span class="n">i</span><span class="p">]</span>
+                <span class="n">maxLenIndex</span> <span class="p">=</span> <span class="n">i</span>
+            <span class="p">}</span>
+        <span class="p">}</span>
+        <span class="k">return</span> <span class="nf">getLongestPalindrome</span><span class="p">(</span><span class="n">refined</span><span class="p">,</span> <span class="n">palindromeLengths</span><span class="p">,</span> <span class="n">maxLenIndex</span><span class="p">)</span>
+    <span class="p">}</span>
+
+
+    <span class="k">fun</span> <span class="nf">refineString</span><span class="p">(</span><span class="n">s</span><span class="p">:</span> <span class="nc">String</span><span class="p">):</span> <span class="nc">String</span> <span class="p">{</span>
+        <span class="kd">val</span> <span class="py">builder</span> <span class="p">=</span> <span class="nc">StringBuilder</span><span class="p">()</span>
+        <span class="k">for</span> <span class="p">(</span><span class="n">char</span> <span class="k">in</span> <span class="n">s</span><span class="p">)</span> <span class="p">{</span>
+            <span class="n">builder</span><span class="p">.</span><span class="nf">append</span><span class="p">(</span><span class="n">char</span><span class="p">).</span><span class="nf">append</span><span class="p">(</span><span class="nc">DIVIDER</span><span class="p">)</span>
+        <span class="p">}</span>
+        <span class="k">return</span> <span class="n">builder</span><span class="p">.</span><span class="nf">toString</span><span class="p">()</span>
+    <span class="p">}</span>
+
+    <span class="k">fun</span> <span class="nf">getLongestPalindrome</span><span class="p">(</span><span class="n">refined</span><span class="p">:</span> <span class="nc">String</span><span class="p">,</span> <span class="n">palindromeLengths</span><span class="p">:</span> <span class="nc">IntArray</span><span class="p">,</span> <span class="n">centerIndex</span><span class="p">:</span> <span class="nc">Int</span><span class="p">):</span> <span class="nc">String</span> <span class="p">{</span>
+        <span class="kd">val</span> <span class="py">maxLen</span> <span class="p">=</span> <span class="n">palindromeLengths</span><span class="p">[</span><span class="n">centerIndex</span><span class="p">]</span>
+        <span class="kd">val</span> <span class="py">start</span> <span class="p">=</span> <span class="n">centerIndex</span> <span class="p">-</span> <span class="n">maxLen</span> <span class="p">+</span> <span class="mi">1</span>
+        <span class="kd">val</span> <span class="py">end</span> <span class="p">=</span> <span class="n">centerIndex</span> <span class="p">+</span> <span class="n">maxLen</span>
+
+        <span class="k">return</span> <span class="n">refined</span><span class="p">.</span><span class="nf">substring</span><span class="p">(</span><span class="n">start</span><span class="p">,</span> <span class="n">end</span><span class="p">).</span><span class="nf">filter</span> <span class="p">{</span><span class="n">it</span> <span class="p">!=</span> <span class="nc">DIVIDER</span> <span class="p">}</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div></div>
+<h3 id="python">Python</h3>
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">class</span> <span class="nc">Solution</span><span class="p">:</span>
+    <span class="n">DIVIDER</span> <span class="o">=</span> <span class="s">'$'</span>
+
+    <span class="k">def</span> <span class="nf">longestPalindrome</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">s</span><span class="p">:</span> <span class="nb">str</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">str</span><span class="p">:</span>
+        <span class="n">refined_string</span> <span class="o">=</span> <span class="bp">self</span><span class="p">.</span><span class="n">refine_string</span><span class="p">(</span><span class="n">s</span><span class="p">)</span>
+
+        <span class="n">palindrome_lengths</span><span class="p">:</span> <span class="nb">dict</span><span class="p">[</span><span class="nb">int</span><span class="p">,</span> <span class="nb">int</span><span class="p">]</span> <span class="o">=</span> <span class="p">{}</span>
+
+
+        <span class="n">searched_end_index</span> <span class="o">=</span> <span class="mi">0</span>
+        <span class="n">searched_center_index</span> <span class="o">=</span> <span class="mi">0</span>
+        <span class="n">max_length_index</span> <span class="o">=</span> <span class="mi">0</span>
+        <span class="n">max_length</span> <span class="o">=</span> <span class="mi">0</span>
+        <span class="k">for</span> <span class="n">index</span><span class="p">,</span> <span class="n">char</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">refined_string</span><span class="p">):</span>
+            <span class="k">if</span> <span class="n">index</span> <span class="o">&gt;=</span> <span class="n">searched_end_index</span><span class="p">:</span>
+                <span class="n">palindrome_lengths</span><span class="p">[</span><span class="n">index</span><span class="p">]</span> <span class="o">=</span> <span class="mi">0</span>
+            <span class="k">else</span><span class="p">:</span>
+                <span class="n">palindrome_lengths</span><span class="p">[</span><span class="n">index</span><span class="p">]</span> <span class="o">=</span> <span class="nb">min</span><span class="p">(</span><span class="n">searched_end_index</span> <span class="o">-</span> <span class="n">index</span><span class="p">,</span> <span class="n">palindrome_lengths</span><span class="p">.</span><span class="n">get</span><span class="p">(</span><span class="mi">2</span><span class="o">*</span><span class="n">searched_center_index</span><span class="o">-</span><span class="n">index</span><span class="p">,</span> <span class="mi">0</span><span class="p">))</span>
+
+            <span class="k">while</span> <span class="bp">True</span><span class="p">:</span>
+                <span class="n">left</span> <span class="o">=</span> <span class="n">index</span> <span class="o">-</span> <span class="n">palindrome_lengths</span><span class="p">[</span><span class="n">index</span><span class="p">]</span>
+                <span class="n">right</span> <span class="o">=</span> <span class="n">index</span> <span class="o">+</span> <span class="n">palindrome_lengths</span><span class="p">[</span><span class="n">index</span><span class="p">]</span>
+                <span class="k">if</span> <span class="n">left</span> <span class="o">&lt;</span> <span class="mi">0</span> <span class="ow">or</span> <span class="n">right</span> <span class="o">&gt;=</span> <span class="nb">len</span><span class="p">(</span><span class="n">refined_string</span><span class="p">):</span>
+                    <span class="k">break</span>
+
+                <span class="k">if</span> <span class="n">refined_string</span><span class="p">[</span><span class="n">left</span><span class="p">]</span> <span class="o">==</span> <span class="n">refined_string</span><span class="p">[</span><span class="n">right</span><span class="p">]:</span>
+                    <span class="n">palindrome_lengths</span><span class="p">[</span><span class="n">index</span><span class="p">]</span> <span class="o">+=</span> <span class="mi">1</span>
+                <span class="k">else</span><span class="p">:</span>
+                    <span class="k">break</span>
+
+                <span class="n">left</span> <span class="o">-=</span> <span class="mi">1</span>
+                <span class="n">right</span> <span class="o">+=</span> <span class="mi">1</span>
+
+            <span class="k">if</span> <span class="n">index</span> <span class="o">&gt;=</span> <span class="n">searched_end_index</span><span class="p">:</span>
+                <span class="n">searched_end_index</span> <span class="o">=</span> <span class="n">index</span> <span class="o">+</span> <span class="n">palindrome_lengths</span><span class="p">[</span><span class="n">index</span><span class="p">]</span>
+                <span class="n">searched_center_index</span> <span class="o">=</span> <span class="n">index</span>
+
+            <span class="k">if</span> <span class="n">max_length</span> <span class="o">&lt;</span> <span class="n">palindrome_lengths</span><span class="p">[</span><span class="n">index</span><span class="p">]:</span>
+                <span class="n">max_length_index</span> <span class="o">=</span> <span class="n">index</span>
+                <span class="n">max_length</span> <span class="o">=</span> <span class="n">palindrome_lengths</span><span class="p">[</span><span class="n">index</span><span class="p">]</span>
+
+        <span class="k">return</span> <span class="bp">self</span><span class="p">.</span><span class="n">get_longest_palindrom</span><span class="p">(</span><span class="n">refined_string</span><span class="p">,</span> <span class="n">palindrome_lengths</span><span class="p">,</span>  <span class="n">max_length_index</span><span class="p">)</span>
+
+
+    <span class="k">def</span> <span class="nf">refine_string</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">s</span><span class="p">:</span> <span class="nb">str</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">str</span><span class="p">:</span>
+        <span class="n">refined_string</span> <span class="o">=</span> <span class="s">''</span>
+        <span class="k">for</span> <span class="n">char</span> <span class="ow">in</span> <span class="n">s</span><span class="p">:</span>
+            <span class="n">refined_string</span> <span class="o">+=</span> <span class="n">char</span> <span class="o">+</span> <span class="bp">self</span><span class="p">.</span><span class="n">DIVIDER</span>
+
+        <span class="k">return</span> <span class="n">refined_string</span>
+
+    <span class="k">def</span> <span class="nf">get_longest_palindrom</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">refined_string</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">palindrome_lengths</span><span class="p">:</span><span class="nb">list</span><span class="p">[</span><span class="nb">int</span><span class="p">],</span> <span class="n">max_length_index</span><span class="p">:</span> <span class="nb">int</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">str</span><span class="p">:</span>
+        <span class="n">max_length</span> <span class="o">=</span> <span class="n">palindrome_lengths</span><span class="p">[</span><span class="n">max_length_index</span><span class="p">]</span>
+
+        <span class="k">print</span><span class="p">(</span><span class="n">refined_string</span><span class="p">[</span><span class="n">max_length_index</span> <span class="o">-</span> <span class="n">max_length</span> <span class="o">+</span> <span class="mi">1</span> <span class="p">:</span> <span class="n">max_length_index</span> <span class="o">+</span> <span class="n">max_length</span><span class="p">])</span>
+        <span class="n">longest_palindrom</span> <span class="o">=</span> <span class="s">''</span>
+        <span class="k">for</span> <span class="n">char</span> <span class="ow">in</span> <span class="n">refined_string</span><span class="p">[</span><span class="n">max_length_index</span> <span class="o">-</span> <span class="n">max_length</span> <span class="o">+</span> <span class="mi">1</span> <span class="p">:</span> <span class="n">max_length_index</span> <span class="o">+</span> <span class="n">max_length</span><span class="p">]:</span>
+            <span class="k">if</span> <span class="n">char</span> <span class="o">!=</span> <span class="bp">self</span><span class="p">.</span><span class="n">DIVIDER</span><span class="p">:</span>
+                <span class="n">longest_palindrom</span> <span class="o">+=</span> <span class="n">char</span>
+
+        <span class="k">return</span> <span class="n">longest_palindrom</span>
+</code></pre></div></div>
+
+<h2 id="leetcode-solution-link">Leetcode Solution Link</h2>
+<p><a href="https://leetcode.com/problems/longest-palindromic-substring/solutions/6863162/on-time-complexity-manachers-algorithm-s-8rgm">O(n) Time Complexity Manacher’s Algorithm Solution</a></p>
+
+
+        
+      </section>
+
+      <footer class="page__meta">
+        
+        
+  
+
+
+  
+
+  <p class="page__taxonomy">
+    <strong><i class="fas fa-fw fa-tags" aria-hidden="true"></i> Tags: </strong>
+    <span itemprop="keywords">
+    
+      <a href="/tags/#DynamicProgramming" class="page__taxonomy-item p-category" rel="tag">DynamicProgramming</a><span class="sep">, </span>
+    
+      <a href="/tags/#Manacher'sAlgorithm" class="page__taxonomy-item p-category" rel="tag">Manacher'sAlgorithm</a><span class="sep">, </span>
+    
+      <a href="/tags/#String" class="page__taxonomy-item p-category" rel="tag">String</a><span class="sep">, </span>
+    
+      <a href="/tags/#TowPointers" class="page__taxonomy-item p-category" rel="tag">TowPointers</a>
+    
+    </span>
+  </p>
+
+
+
+
+  
+
+
+  
+
+  <p class="page__taxonomy">
+    <strong><i class="fas fa-fw fa-folder-open" aria-hidden="true"></i> Categories: </strong>
+    <span itemprop="keywords">
+    
+      <a href="/wiki/#Leetcode" class="page__taxonomy-item p-category" rel="tag">Leetcode</a>
+    
+    </span>
+  </p>
+
+
+        
+
+  <p class="page__date"><strong><i class="fas fa-fw fa-calendar-alt" aria-hidden="true"></i> Updated:</strong> <time class="dt-published" datetime="2025-06-19T16:44:02+00:00">June 19, 2025</time></p>
+
+      </footer>
+
+      <section class="page__share">
+  <h4 class="page__share-title">Share on</h4>
+
+  <a href="https://twitter.com/intent/tweet?text=Longest+Palindrome+Substring%28Med.%29%20https%3A%2F%2Fminseon9.github.io%2F%2Fwiki%2FLongestPalindromeSubstring" class="btn btn--twitter" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on Twitter"><i class="fab fa-fw fa-twitter" aria-hidden="true"></i><span> Twitter</span></a>
+
+  <a href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fminseon9.github.io%2F%2Fwiki%2FLongestPalindromeSubstring" class="btn btn--facebook" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on Facebook"><i class="fab fa-fw fa-facebook" aria-hidden="true"></i><span> Facebook</span></a>
+
+  <a href="https://www.linkedin.com/shareArticle?mini=true&url=https://minseon9.github.io//wiki/LongestPalindromeSubstring" class="btn btn--linkedin" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on LinkedIn"><i class="fab fa-fw fa-linkedin" aria-hidden="true"></i><span> LinkedIn</span></a>
+</section>
+
+
+      
+  <nav class="pagination">
+    
+      <a href="/wiki/MedianOfTwoSortedArray" class="pagination--pager" title="Median of Two Sorted Arrays(Hard)">Previous</a>
+    
+    
+      <a href="/wiki/ReversedInteger" class="pagination--pager" title="Reversed Integer(Med.)">Next</a>
+    
+  </nav>
+
+
+    </div>
+
+    
+
+  </article>
+
+  
+  
+    
+    
+<div class="page__related">
+  
+  <h2 class="page__related-title">You may also enjoy</h2>
+  <div class="grid__wrapper">
+    
+      
+      
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/wiki/TwoSum" rel="permalink">Two Sum(Easy)
+</a>
+      
+    </h2>
+    
+
+  <p class="page__meta">
+    
+      
+      <span class="page__meta-date">
+        <i class="far fa-fw fa-calendar-alt" aria-hidden="true"></i>
+        
+        <time datetime="2025-06-15T08:32:25+00:00">June 15, 2025</time>
+      </span>
+    
+
+    <span class="page__meta-sep"></span>
+
+    
+      
+      
+
+      <span class="page__meta-readtime">
+        <i class="far fa-fw fa-clock" aria-hidden="true"></i>
+        
+          1 minute read
+        
+      </span>
+    
+
+    
+    
+      <span class="page__meta-sep"></span>
+      
+        <span class="page__meta-tag">
+          Array
+        </span>
+      
+        <span class="page__meta-tag">
+          HashTable
+        </span>
+      
+    
+  </p>
+
+
+    <p class="archive__item-excerpt" itemprop="description">
+</p>
+  </article>
+</div>
+
+    
+      
+      
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/wiki/AddTwoNumbers" rel="permalink">Add Two Numbers(Med.)
+</a>
+      
+    </h2>
+    
+
+  <p class="page__meta">
+    
+      
+      <span class="page__meta-date">
+        <i class="far fa-fw fa-calendar-alt" aria-hidden="true"></i>
+        
+        <time datetime="2025-06-16T04:05:32+00:00">June 16, 2025</time>
+      </span>
+    
+
+    <span class="page__meta-sep"></span>
+
+    
+      
+      
+
+      <span class="page__meta-readtime">
+        <i class="far fa-fw fa-clock" aria-hidden="true"></i>
+        
+          1 minute read
+        
+      </span>
+    
+
+    
+    
+      <span class="page__meta-sep"></span>
+      
+        <span class="page__meta-tag">
+          LinkedList
+        </span>
+      
+        <span class="page__meta-tag">
+          Math
+        </span>
+      
+    
+  </p>
+
+
+    <p class="archive__item-excerpt" itemprop="description">
+</p>
+  </article>
+</div>
+
+    
+      
+      
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/wiki/LongestSubstringWithoutRepeatingCharacters" rel="permalink">Longest Substring Without Repeating Characters(Med.)
+</a>
+      
+    </h2>
+    
+
+  <p class="page__meta">
+    
+      
+      <span class="page__meta-date">
+        <i class="far fa-fw fa-calendar-alt" aria-hidden="true"></i>
+        
+        <time datetime="2025-06-17T03:05:14+00:00">June 17, 2025</time>
+      </span>
+    
+
+    <span class="page__meta-sep"></span>
+
+    
+      
+      
+
+      <span class="page__meta-readtime">
+        <i class="far fa-fw fa-clock" aria-hidden="true"></i>
+        
+          1 minute read
+        
+      </span>
+    
+
+    
+    
+      <span class="page__meta-sep"></span>
+      
+        <span class="page__meta-tag">
+          String
+        </span>
+      
+        <span class="page__meta-tag">
+          HashTable
+        </span>
+      
+        <span class="page__meta-tag">
+          SlidingWindow
+        </span>
+      
+    
+  </p>
+
+
+    <p class="archive__item-excerpt" itemprop="description">
+</p>
+  </article>
+</div>
+
+    
+      
+      
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/wiki/MedianOfTwoSortedArray" rel="permalink">Median of Two Sorted Arrays(Hard)
+</a>
+      
+    </h2>
+    
+
+  <p class="page__meta">
+    
+      
+      <span class="page__meta-date">
+        <i class="far fa-fw fa-calendar-alt" aria-hidden="true"></i>
+        
+        <time datetime="2025-06-18T09:45:00+00:00">June 18, 2025</time>
+      </span>
+    
+
+    <span class="page__meta-sep"></span>
+
+    
+      
+      
+
+      <span class="page__meta-readtime">
+        <i class="far fa-fw fa-clock" aria-hidden="true"></i>
+        
+          3 minute read
+        
+      </span>
+    
+
+    
+    
+      <span class="page__meta-sep"></span>
+      
+        <span class="page__meta-tag">
+          Array
+        </span>
+      
+        <span class="page__meta-tag">
+          BinarySearch
+        </span>
+      
+        <span class="page__meta-tag">
+          DivideAndConquer
+        </span>
+      
+    
+  </p>
+
+
+    <p class="archive__item-excerpt" itemprop="description">
+</p>
+  </article>
+</div>
+
+    
+  </div>
+</div>
+
+  
+</div>
+
+      
+    </div>
+
+    
+
+    <div id="footer" class="page__footer">
+      <footer>
+        <!-- start custom footer snippets -->
+
+<!-- end custom footer snippets -->
+        <div class="page__footer-follow">
+  <ul class="social-icons">
+    
+      <li><strong>Follow:</strong></li>
+    
+
+    
+      
+        
+          <li><a href="https://github.com/minseon9" rel="nofollow noopener noreferrer"><i class="fab fa-fw fa-github-square" aria-hidden="true"></i> GitHub</a></li>
+        
+      
+        
+          <li><a href="mailto:dlaepuel@gmail.com" rel="nofollow noopener noreferrer"><i class="fas fa-fw fa-envelope-square" aria-hidden="true"></i> Email</a></li>
+        
+      
+        
+          <li><a href="https://linkedin.com/in/miseong-ian" rel="nofollow noopener noreferrer"><i class="fab fa-fw fa-linkedin" aria-hidden="true"></i> LinkedIn</a></li>
+        
+      
+    
+
+    
+      <li><a href="/feed.xml"><i class="fas fa-fw fa-rss-square" aria-hidden="true"></i> Feed</a></li>
+    
+  </ul>
+</div>
+
+<div class="page__footer-copyright">&copy; 2025 <a href="https://minseon9.github.io/">Ian's Blog</a>. Powered by <a href="https://jekyllrb.com" rel="nofollow">Jekyll</a> &amp; <a href="https://mademistakes.com/work/jekyll-themes/minimal-mistakes/" rel="nofollow">Minimal Mistakes</a>.</div>
+
+      </footer>
+    </div>
+
+    
+  <script src="/assets/js/main.min.js"></script>
+
+
+
+
+
+
+
+
+
+  </body>
+</html>

@@ -1,0 +1,941 @@
+<!doctype html>
+<!--
+  Minimal Mistakes Jekyll Theme 4.26.2 by Michael Rose
+  Copyright 2013-2024 Michael Rose - mademistakes.com | @mmistakes
+  Free for personal and commercial use under the MIT license
+  https://github.com/mmistakes/minimal-mistakes/blob/master/LICENSE
+-->
+
+<html lang="en-US" class="no-js">
+  <head>
+    <meta charset="utf-8">
+
+<!-- begin _includes/seo.html --><title>Array, PrimitiveArray, List, MutableList - Ian’s Blog</title>
+<meta name="description" content="">
+
+
+  <meta name="author" content="Ian">
+  
+  <meta property="article:author" content="Ian">
+  
+
+
+<meta property="og:type" content="article">
+<meta property="og:locale" content="en_US">
+<meta property="og:site_name" content="Ian's Blog">
+<meta property="og:title" content="Array, PrimitiveArray, List, MutableList">
+<meta property="og:url" content="https://minseon9.github.io//wiki/Comparison%20List%20and%20Array">
+
+
+  <meta property="og:description" content="">
+
+
+
+
+
+
+
+  <meta property="article:published_time" content="2025-07-09T02:21:56+00:00">
+
+
+
+
+
+  
+
+  
+
+
+<link rel="canonical" href="https://minseon9.github.io//wiki/Comparison%20List%20and%20Array">
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- end _includes/seo.html -->
+
+
+
+  <link href="/feed.xml" type="application/atom+xml" rel="alternate" title="Ian's Blog Feed">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<script>
+  document.documentElement.className = document.documentElement.className.replace(/\bno-js\b/g, '') + ' js ';
+  
+</script>
+
+<!-- For all browsers -->
+<link rel="stylesheet" href="/assets/css/main.css">
+<link rel="preload" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@latest/css/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+<noscript><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@latest/css/all.min.css"></noscript>
+
+
+
+    <!-- start custom head snippets -->
+
+<!-- insert favicons. use https://realfavicongenerator.net/ -->
+
+<!-- end custom head snippets -->
+
+  </head>
+
+  <body class="layout--single" dir="ltr">
+    <nav class="skip-links">
+  <ul>
+    <li><a href="#site-nav" class="screen-reader-shortcut">Skip to primary navigation</a></li>
+    <li><a href="#main" class="screen-reader-shortcut">Skip to content</a></li>
+    <li><a href="#footer" class="screen-reader-shortcut">Skip to footer</a></li>
+  </ul>
+</nav>
+
+    
+
+<div class="masthead">
+  <div class="masthead__inner-wrap">
+    <div class="masthead__menu">
+      <nav id="site-nav" class="greedy-nav">
+        
+          <a class="site-logo" href="/"><img src="/assets/images/my-portrait.png" alt="Ian's Blog"></a>
+        
+        <a class="site-title" href="/">
+          Ian's Blog
+          
+        </a>
+        <ul class="visible-links"><li class="masthead__menu-item">
+              <a
+                href="/about/"
+                
+                
+              >About Me</a>
+            </li><li class="masthead__menu-item">
+              <a
+                href="/wiki/"
+                
+                
+              >Wiki</a>
+            </li><li class="masthead__menu-item">
+              <a
+                href="/blog/"
+                
+                
+              >Blog</a>
+            </li><li class="masthead__menu-item">
+              <a
+                href="/projects/"
+                
+                
+              >Projects</a>
+            </li></ul>
+        
+        <button class="greedy-nav__toggle hidden" type="button">
+          <span class="visually-hidden">Toggle menu</span>
+          <div class="navicon"></div>
+        </button>
+        <ul class="hidden-links hidden"></ul>
+      </nav>
+    </div>
+  </div>
+</div>
+
+
+    <div class="initial-content">
+      
+
+
+
+
+  
+    
+
+
+
+<nav class="breadcrumbs">
+  <ol itemscope itemtype="https://schema.org/BreadcrumbList">
+    
+    
+    
+      
+        <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+          <a href="/" itemprop="item"><span itemprop="name">Home</span></a>
+
+          <meta itemprop="position" content="1" />
+        </li>
+        <span class="sep">/</span>
+      
+      
+        
+        <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+          <a href="/wiki" itemprop="item"><span itemprop="name">Wiki</span></a>
+          <meta itemprop="position" content="2" />
+        </li>
+        <span class="sep">/</span>
+      
+    
+      
+      
+        <li class="current">Array, PrimitiveArray, List, MutableList</li>
+      
+    
+  </ol>
+</nav>
+
+  
+
+
+<div id="main" role="main">
+  
+<div class="sidebar sticky" xmlns="http://www.w3.org/1999/html">
+  
+
+
+<div itemscope itemtype="https://schema.org/Person" class="h-card">
+
+  
+    <div class="author__avatar">
+      <a href="https://minseon9.github.io//">
+        <img src="/assets/images/my-portrait-transparent.png" alt="Ian" itemprop="image" class="u-photo">
+      </a>
+    </div>
+  
+
+  <div class="author__content">
+    <h3 class="author__name p-name" itemprop="name">
+      <a class="u-url" rel="me" href="https://minseon9.github.io//" itemprop="url">Ian</a>
+    </h3>
+    
+      <div class="author__bio p-note" itemprop="description">
+        <p>개발 좋아하는 사람</p>
+
+      </div>
+    
+  </div>
+
+  <div class="author__urls-wrapper">
+    <button class="btn btn--inverse">Follow</button>
+    <ul class="author__urls social-icons">
+      
+        <li itemprop="homeLocation" itemscope itemtype="https://schema.org/Place">
+          <i class="fas fa-fw fa-map-marker-alt" aria-hidden="true"></i> <span itemprop="name" class="p-locality">Seoul, Korea</span>
+        </li>
+      
+
+      
+        
+          
+            <li><a href="https://github.com/minseon9" rel="nofollow noopener noreferrer me" itemprop="sameAs"><i class="fab fa-fw fa-github-square" aria-hidden="true"></i><span class="label">GitHub</span></a></li>
+          
+        
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      <!--
+  <li>
+    <a href="http://link-to-whatever-social-network.com/user/" itemprop="sameAs" rel="nofollow noopener noreferrer me">
+      <i class="fas fa-fw" aria-hidden="true"></i> Custom Social Profile Link
+    </a>
+  </li>
+-->
+    </ul>
+  </div>
+</div>
+
+  
+
+  <!-- LNB Categories  -->
+  <div class="categories">
+    Contents
+    
+    <div class="category_title">
+      <a href="/wiki/#ToyProject">
+        <strong>ToyProject</strong>
+      </a>
+    </div>
+    <ul class="categories__index">
+      
+      <li class="tags__index">
+        <a href="/tags/#Kotlin">
+          Kotlin
+          <span class="tags__count">
+            1
+          </span>
+        </a>
+      </li>
+      
+      <li class="tags__index">
+        <a href="/tags/#Spring">
+          Spring
+          <span class="tags__count">
+            1
+          </span>
+        </a>
+      </li>
+      
+    </ul>
+    
+    <div class="category_title">
+      <a href="/wiki/#Book">
+        <strong>Book</strong>
+      </a>
+    </div>
+    <ul class="categories__index">
+      
+      <li class="tags__index">
+        <a href="/tags/#2025">
+          2025
+          <span class="tags__count">
+            0
+          </span>
+        </a>
+      </li>
+      
+    </ul>
+    
+    <div class="category_title">
+      <a href="/wiki/#Leetcode">
+        <strong>Leetcode</strong>
+      </a>
+    </div>
+    <ul class="categories__index">
+      
+      <li class="tags__index">
+        <a href="/tags/#Array">
+          Array
+          <span class="tags__count">
+            5
+          </span>
+        </a>
+      </li>
+      
+      <li class="tags__index">
+        <a href="/tags/#BinarySearch">
+          BinarySearch
+          <span class="tags__count">
+            1
+          </span>
+        </a>
+      </li>
+      
+      <li class="tags__index">
+        <a href="/tags/#BinaryTree">
+          BinaryTree
+          <span class="tags__count">
+            1
+          </span>
+        </a>
+      </li>
+      
+      <li class="tags__index">
+        <a href="/tags/#DFS">
+          DFS
+          <span class="tags__count">
+            1
+          </span>
+        </a>
+      </li>
+      
+      <li class="tags__index">
+        <a href="/tags/#Design">
+          Design
+          <span class="tags__count">
+            1
+          </span>
+        </a>
+      </li>
+      
+      <li class="tags__index">
+        <a href="/tags/#DivideAndConquer">
+          DivideAndConquer
+          <span class="tags__count">
+            1
+          </span>
+        </a>
+      </li>
+      
+      <li class="tags__index">
+        <a href="/tags/#DynamicProgramming">
+          DynamicProgramming
+          <span class="tags__count">
+            1
+          </span>
+        </a>
+      </li>
+      
+      <li class="tags__index">
+        <a href="/tags/#HashTable">
+          HashTable
+          <span class="tags__count">
+            2
+          </span>
+        </a>
+      </li>
+      
+      <li class="tags__index">
+        <a href="/tags/#LinkedList">
+          LinkedList
+          <span class="tags__count">
+            1
+          </span>
+        </a>
+      </li>
+      
+      <li class="tags__index">
+        <a href="/tags/#Manacher'sAlgorithm">
+          Manacher'sAlgorithm
+          <span class="tags__count">
+            1
+          </span>
+        </a>
+      </li>
+      
+      <li class="tags__index">
+        <a href="/tags/#Math">
+          Math
+          <span class="tags__count">
+            3
+          </span>
+        </a>
+      </li>
+      
+      <li class="tags__index">
+        <a href="/tags/#Randomized">
+          Randomized
+          <span class="tags__count">
+            1
+          </span>
+        </a>
+      </li>
+      
+      <li class="tags__index">
+        <a href="/tags/#SlidingWindow">
+          SlidingWindow
+          <span class="tags__count">
+            1
+          </span>
+        </a>
+      </li>
+      
+      <li class="tags__index">
+        <a href="/tags/#Sorting">
+          Sorting
+          <span class="tags__count">
+            1
+          </span>
+        </a>
+      </li>
+      
+      <li class="tags__index">
+        <a href="/tags/#Stack">
+          Stack
+          <span class="tags__count">
+            1
+          </span>
+        </a>
+      </li>
+      
+      <li class="tags__index">
+        <a href="/tags/#String">
+          String
+          <span class="tags__count">
+            2
+          </span>
+        </a>
+      </li>
+      
+      <li class="tags__index">
+        <a href="/tags/#TowPointers">
+          TowPointers
+          <span class="tags__count">
+            1
+          </span>
+        </a>
+      </li>
+      
+      <li class="tags__index">
+        <a href="/tags/#Tree">
+          Tree
+          <span class="tags__count">
+            1
+          </span>
+        </a>
+      </li>
+      
+      <li class="tags__index">
+        <a href="/tags/#TwoPointers">
+          TwoPointers
+          <span class="tags__count">
+            2
+          </span>
+        </a>
+      </li>
+      
+    </ul>
+    
+    <div class="category_title">
+      <a href="/wiki/#AI">
+        <strong>AI</strong>
+      </a>
+    </div>
+    <ul class="categories__index">
+      
+      <li class="tags__index">
+        <a href="/tags/#Cursor">
+          Cursor
+          <span class="tags__count">
+            1
+          </span>
+        </a>
+      </li>
+      
+      <li class="tags__index">
+        <a href="/tags/#Prompt">
+          Prompt
+          <span class="tags__count">
+            1
+          </span>
+        </a>
+      </li>
+      
+    </ul>
+    
+    <div class="category_title">
+      <a href="/wiki/#Language">
+        <strong>Language</strong>
+      </a>
+    </div>
+    <ul class="categories__index">
+      
+      <li class="tags__index">
+        <a href="/tags/#Kotlin">
+          Kotlin
+          <span class="tags__count">
+            2
+          </span>
+        </a>
+      </li>
+      
+    </ul>
+    
+    </div>
+  </div>
+
+
+
+  <article class="page" itemscope itemtype="https://schema.org/CreativeWork">
+    <meta itemprop="headline" content="Array, PrimitiveArray, List, MutableList">
+    <meta itemprop="description" content="">
+    <meta itemprop="datePublished" content="2025-07-09T02:21:56+00:00">
+    
+
+    <div class="page__inner-wrap">
+      
+        <header>
+          <h1 id="page-title" class="page__title" itemprop="headline">
+            <a href="https://minseon9.github.io//wiki/Comparison%20List%20and%20Array" itemprop="url">Array, PrimitiveArray, List, MutableList
+</a>
+          </h1>
+          
+
+  <p class="page__meta">
+    
+      
+      <span class="page__meta-date">
+        <i class="far fa-calendar-alt" aria-hidden="true"></i>
+        
+        <time datetime="2025-07-09T02:21:56+00:00">July 9, 2025</time>
+      </span>
+    
+
+    <span class="page__meta-sep"></span>
+
+    
+      
+      
+
+      <span class="page__meta-readtime">
+        <i class="far fa-clock" aria-hidden="true"></i>
+        
+          1 minute read
+        
+      </span>
+    
+
+    
+    
+      <span class="page__meta-sep"></span>
+      
+        <span class="page__meta-tag">
+          Kotlin
+        </span>
+      
+    
+  </p>
+
+
+        </header>
+      
+
+      <section class="page__content" itemprop="text">
+        
+          <aside class="sidebar__right ">
+            <nav class="toc">
+              <header><h4 class="nav__title"><i class="fas fa-file-alt"></i> On this page</h4></header>
+              <ul class="toc__menu"><li><a href="#background-knowledge">Background knowledge</a><ul><li><a href="#int-vs-integer">int vs. Integer</a></li><li><a href="#autounboxing">Auto/UnBoxing</a></li></ul></li><li><a href="#comparision">Comparision</a><ul><li><a href="#array">Array</a></li><li><a href="#primitivearray">PrimitiveArray</a></li><li><a href="#list">List</a></li><li><a href="#mutablelist">MutableList</a></li><li><a href="#performance-comparisionjust-a-casual-test">Performance Comparision(Just a casual test)</a></li></ul></li></ul>
+            </nav>
+          </aside>
+        
+        <ul id="markdown-toc">
+  <li><a href="#background-knowledge" id="markdown-toc-background-knowledge">Background knowledge</a>    <ul>
+      <li><a href="#int-vs-integer" id="markdown-toc-int-vs-integer">int vs. Integer</a></li>
+      <li><a href="#autounboxing" id="markdown-toc-autounboxing">Auto/UnBoxing</a></li>
+    </ul>
+  </li>
+  <li><a href="#comparision" id="markdown-toc-comparision">Comparision</a>    <ul>
+      <li><a href="#array" id="markdown-toc-array">Array<T></T></a></li>
+      <li><a href="#primitivearray" id="markdown-toc-primitivearray">PrimitiveArray</a></li>
+      <li><a href="#list" id="markdown-toc-list">List<T></T></a></li>
+      <li><a href="#mutablelist" id="markdown-toc-mutablelist">MutableList<T></T></a></li>
+      <li><a href="#performance-comparisionjust-a-casual-test" id="markdown-toc-performance-comparisionjust-a-casual-test">Performance Comparision(Just a casual test)</a></li>
+    </ul>
+  </li>
+</ul>
+
+<p>Kotlin에서 Array와 List의 동작 방식을 비교한다.</p>
+
+<h2 id="background-knowledge">Background knowledge</h2>
+<h3 id="int-vs-integer">int vs. Integer</h3>
+<p>Kotlin은 java에서의 정수형 원시 타입(primitive type)인 int와 정수 객체인 Integer를 구분하지 않는다.<br />
+대신 JVM에서 실행될 때는 상황에 따라 적절하게 컴파일된다.</p>
+
+<p>예를 들어,<br />
+<code class="language-plaintext highlighter-rouge">val a: Int = 1</code>에서 Int는 런타임에 int로 동작한다.<br />
+<code class="language-plaintext highlighter-rouge">val a: List&lt;Int&gt; = listOf(...)</code>에서 Int는 런타임에 Integer 객체로 동작한다.</p>
+
+<h3 id="autounboxing">Auto/UnBoxing</h3>
+<p><code class="language-plaintext highlighter-rouge">val a: List&lt;Int&gt; = listOf(...)</code> 예시에서 listOf에 들어있는 녀석들은 primitive type이다.<br />
+즉, primitive type 데이터가 List에 저장될 때 Integer라는 객체로 변환되어야한다. 컴파일러가 알아서 처리해준다.<br />
+이처럼 primitive type의 데이터를 대응하는 래퍼 클래스(wrapper class) 객체로 자동 변환되는 것을 오토박싱(Auto Boxing)이라 한다.<br />
+언박싱(UnBoxing)은 이 역과정이다.</p>
+
+<h2 id="comparision">Comparision</h2>
+<h3 id="array">Array<T></T></h3>
+<p>Kotlin의 <code class="language-plaintext highlighter-rouge">Array&lt;T&gt;</code>는 Java의 T[]에 해당한다.</p>
+
+<p>래퍼 클래스에 해당하는 객체의 참조를 들고 있다. 예를 들어, <code class="language-plaintext highlighter-rouge">Array&lt;Int&gt;</code>는 내부적으로 Int 객체 참조들을 저장한다. (즉, Int[]가 아님).
+그리고 객체를 저장하기 때문에 오토박싱/언박싱이 필요하다.</p>
+
+<h3 id="primitivearray">PrimitiveArray</h3>
+<p><code class="language-plaintext highlighter-rouge">IntArray</code>, <code class="language-plaintext highlighter-rouge">DoubleArray</code>, <code class="language-plaintext highlighter-rouge">BooleanArray</code> 와 같은 Kotlin이 제공하는 원시 타입 배열 래퍼 클래스이다.<br />
+Java의 <code class="language-plaintext highlighter-rouge">int[]</code>, <code class="language-plaintext highlighter-rouge">double[]</code> 등과 대응된다</p>
+
+<p>Primitive Type의 데이터를 들고 있기 때문에 오토박싱/언박싱이 필요없다.</p>
+
+<h3 id="list">List<T></T></h3>
+<p><code class="language-plaintext highlighter-rouge">List&lt;T&gt;</code>는 읽기 전용(immutable) 리스트다.
+기본적으로 <code class="language-plaintext highlighter-rouge">ArrayList&lt;T&gt;</code>를 감싸고 있으며, <code class="language-plaintext highlighter-rouge">Array&lt;T&gt;</code>와 동일하게 객체 참조를 저장한다.</p>
+
+<h3 id="mutablelist">MutableList<T></T></h3>
+<p><code class="language-plaintext highlighter-rouge">MutableList&lt;T&gt;</code>는 리스트 원소를 추가, 삭제, 수정할 수 있는 가변 컬렉션이다.<br />
+역시 객체 참조를 저장한다.</p>
+
+<h3 id="performance-comparisionjust-a-casual-test">Performance Comparision(Just a casual test)</h3>
+<p>재미삼아 해본 성능 테스트다. 
+총 연산 횟수 100,000,000회동안의 소요 시간이다.</p>
+
+<p>MutableList 테스트 예시</p>
+<div class="language-kotlin highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">import</span> <span class="nn">kotlin.system.measureNanoTime</span>
+
+<span class="k">fun</span> <span class="nf">main</span><span class="p">()</span> <span class="p">{</span>
+    <span class="kd">val</span> <span class="py">size</span> <span class="p">=</span> <span class="mi">10_000_000</span>
+    <span class="kd">val</span> <span class="py">repeat</span> <span class="p">=</span> <span class="mi">10</span>
+    <span class="kd">val</span> <span class="py">mutableListInt</span> <span class="p">=</span> <span class="nc">MutableList</span><span class="p">(</span><span class="n">size</span><span class="p">)</span> <span class="p">{</span> <span class="n">it</span> <span class="p">}</span>
+    <span class="kd">var</span> <span class="py">sum</span> <span class="p">=</span> <span class="mi">0L</span>
+    <span class="kd">val</span> <span class="py">time</span> <span class="p">=</span> <span class="nf">measureNanoTime</span> <span class="p">{</span>
+        <span class="nf">repeat</span><span class="p">(</span><span class="n">repeat</span><span class="p">)</span> <span class="p">{</span>
+            <span class="k">for</span> <span class="p">(</span><span class="n">i</span> <span class="k">in</span> <span class="mi">0</span> <span class="n">until</span> <span class="n">mutableListInt</span><span class="p">.</span><span class="n">size</span><span class="p">)</span> <span class="n">sum</span> <span class="p">+=</span> <span class="n">mutableListInt</span><span class="p">[</span><span class="n">i</span><span class="p">]</span>
+        <span class="p">}</span>
+    <span class="p">}</span>
+    <span class="nf">println</span><span class="p">(</span><span class="s">"\n================= MutableList&lt;Int&gt; 성능 테스트 ================="</span><span class="p">)</span>
+    <span class="nf">println</span><span class="p">(</span><span class="s">"합계: $sum, 소요 시간(ms): ${time / 1_000_000}"</span><span class="p">)</span>
+    <span class="nf">println</span><span class="p">(</span><span class="s">"============================================================\n"</span><span class="p">)</span>
+<span class="p">}</span> 
+</code></pre></div></div>
+
+<p>결과는 이렇다.</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>================= IntArray 성능 테스트 ================
+합계: 499999950000000, 소요 시간(ms): 69
+=======================================================
+
+================= Array&lt;Int&gt; 성능 테스트 ==============
+합계: 499999950000000, 소요 시간(ms): 71
+=======================================================
+
+================= List&lt;Int&gt; 성능 테스트 ===============
+합계: 499999950000000, 소요 시간(ms): 119
+=======================================================
+
+================= MutableList&lt;Int&gt; 성능 테스트 ========
+합계: 499999950000000, 소요 시간(ms): 116
+=======================================================
+</code></pre></div></div>
+
+<p>100,000,000회에서의 성능 차이기 때문에 각 케이스에서의 성능 차이가 유의미하다고 할 수는 없겠지만, <br />
+<code class="language-plaintext highlighter-rouge">IntArray</code>와 <code class="language-plaintext highlighter-rouge">Array&lt;Int&gt;</code>는 차이가 거의 없었다.
+대신 <code class="language-plaintext highlighter-rouge">List/MutableList</code>은 꽤나 차이가 나는데, 오토박싱/언박싱 때문이라기 보다 JVM에서의 동작 차이에서 기인하는 듯하다.</p>
+
+
+        
+      </section>
+
+      <footer class="page__meta">
+        
+        
+  
+
+
+  
+
+  <p class="page__taxonomy">
+    <strong><i class="fas fa-fw fa-tags" aria-hidden="true"></i> Tags: </strong>
+    <span itemprop="keywords">
+    
+      <a href="/tags/#Kotlin" class="page__taxonomy-item p-category" rel="tag">Kotlin</a>
+    
+    </span>
+  </p>
+
+
+
+
+  
+
+
+  
+
+  <p class="page__taxonomy">
+    <strong><i class="fas fa-fw fa-folder-open" aria-hidden="true"></i> Categories: </strong>
+    <span itemprop="keywords">
+    
+      <a href="/wiki/#Language" class="page__taxonomy-item p-category" rel="tag">Language</a>
+    
+    </span>
+  </p>
+
+
+        
+
+  <p class="page__date"><strong><i class="fas fa-fw fa-calendar-alt" aria-hidden="true"></i> Updated:</strong> <time class="dt-published" datetime="2025-07-09T02:21:56+00:00">July 9, 2025</time></p>
+
+      </footer>
+
+      <section class="page__share">
+  <h4 class="page__share-title">Share on</h4>
+
+  <a href="https://twitter.com/intent/tweet?text=Array%2C+PrimitiveArray%2C+List%2C+MutableList%20https%3A%2F%2Fminseon9.github.io%2F%2Fwiki%2FComparison%2520List%2520and%2520Array" class="btn btn--twitter" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on Twitter"><i class="fab fa-fw fa-twitter" aria-hidden="true"></i><span> Twitter</span></a>
+
+  <a href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fminseon9.github.io%2F%2Fwiki%2FComparison%2520List%2520and%2520Array" class="btn btn--facebook" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on Facebook"><i class="fab fa-fw fa-facebook" aria-hidden="true"></i><span> Facebook</span></a>
+
+  <a href="https://www.linkedin.com/shareArticle?mini=true&url=https://minseon9.github.io//wiki/Comparison%20List%20and%20Array" class="btn btn--linkedin" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on LinkedIn"><i class="fab fa-fw fa-linkedin" aria-hidden="true"></i><span> LinkedIn</span></a>
+</section>
+
+
+      
+  <nav class="pagination">
+    
+      <a href="/wiki/Shuffle%20an%20Array" class="pagination--pager" title="Shuffle an Array">Previous</a>
+    
+    
+      <a href="#" class="pagination--pager disabled">Next</a>
+    
+  </nav>
+
+
+    </div>
+
+    
+
+  </article>
+
+  
+  
+    
+    
+<div class="page__related">
+  
+  <h2 class="page__related-title">You may also enjoy</h2>
+  <div class="grid__wrapper">
+    
+      
+      
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/wiki/nullable%20%EC%B2%98%EB%A6%AC%20%EC%97%B0%EC%82%B0%EC%9E%90" rel="permalink">Kotlin null 처리 문법
+</a>
+      
+    </h2>
+    
+
+  <p class="page__meta">
+    
+      
+      <span class="page__meta-date">
+        <i class="far fa-fw fa-calendar-alt" aria-hidden="true"></i>
+        
+        <time datetime="2025-06-16T03:40:05+00:00">June 16, 2025</time>
+      </span>
+    
+
+    <span class="page__meta-sep"></span>
+
+    
+      
+      
+
+      <span class="page__meta-readtime">
+        <i class="far fa-fw fa-clock" aria-hidden="true"></i>
+        
+          1 minute read
+        
+      </span>
+    
+
+    
+    
+      <span class="page__meta-sep"></span>
+      
+        <span class="page__meta-tag">
+          Kotlin
+        </span>
+      
+    
+  </p>
+
+
+    <p class="archive__item-excerpt" itemprop="description">
+</p>
+  </article>
+</div>
+
+    
+      
+  </div>
+</div>
+
+  
+</div>
+
+      
+    </div>
+
+    
+
+    <div id="footer" class="page__footer">
+      <footer>
+        <!-- start custom footer snippets -->
+
+<!-- end custom footer snippets -->
+        <div class="page__footer-follow">
+  <ul class="social-icons">
+    
+      <li><strong>Follow:</strong></li>
+    
+
+    
+      
+        
+          <li><a href="https://github.com/minseon9" rel="nofollow noopener noreferrer"><i class="fab fa-fw fa-github-square" aria-hidden="true"></i> GitHub</a></li>
+        
+      
+        
+          <li><a href="mailto:dlaepuel@gmail.com" rel="nofollow noopener noreferrer"><i class="fas fa-fw fa-envelope-square" aria-hidden="true"></i> Email</a></li>
+        
+      
+        
+          <li><a href="https://linkedin.com/in/miseong-ian" rel="nofollow noopener noreferrer"><i class="fab fa-fw fa-linkedin" aria-hidden="true"></i> LinkedIn</a></li>
+        
+      
+    
+
+    
+      <li><a href="/feed.xml"><i class="fas fa-fw fa-rss-square" aria-hidden="true"></i> Feed</a></li>
+    
+  </ul>
+</div>
+
+<div class="page__footer-copyright">&copy; 2025 <a href="https://minseon9.github.io/">Ian's Blog</a>. Powered by <a href="https://jekyllrb.com" rel="nofollow">Jekyll</a> &amp; <a href="https://mademistakes.com/work/jekyll-themes/minimal-mistakes/" rel="nofollow">Minimal Mistakes</a>.</div>
+
+      </footer>
+    </div>
+
+    
+  <script src="/assets/js/main.min.js"></script>
+
+
+
+
+
+
+
+
+
+  </body>
+</html>

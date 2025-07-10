@@ -1,0 +1,1195 @@
+<!doctype html>
+<!--
+  Minimal Mistakes Jekyll Theme 4.26.2 by Michael Rose
+  Copyright 2013-2024 Michael Rose - mademistakes.com | @mmistakes
+  Free for personal and commercial use under the MIT license
+  https://github.com/mmistakes/minimal-mistakes/blob/master/LICENSE
+-->
+
+<html lang="en-US" class="no-js">
+  <head>
+    <meta charset="utf-8">
+
+<!-- begin _includes/seo.html --><title>코드 변환기로 새로운 언어 익히기 - Ian’s Blog</title>
+<meta name="description" content="">
+
+
+  <meta name="author" content="Ian">
+  
+  <meta property="article:author" content="Ian">
+  
+
+
+<meta property="og:type" content="article">
+<meta property="og:locale" content="en_US">
+<meta property="og:site_name" content="Ian's Blog">
+<meta property="og:title" content="코드 변환기로 새로운 언어 익히기">
+<meta property="og:url" content="https://minseon9.github.io//wiki/Code%20Translator">
+
+
+  <meta property="og:description" content="">
+
+
+
+
+
+
+
+  <meta property="article:published_time" content="2025-06-15T09:23:46+00:00">
+
+
+
+
+
+  
+
+  
+
+
+<link rel="canonical" href="https://minseon9.github.io//wiki/Code%20Translator">
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- end _includes/seo.html -->
+
+
+
+  <link href="/feed.xml" type="application/atom+xml" rel="alternate" title="Ian's Blog Feed">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<script>
+  document.documentElement.className = document.documentElement.className.replace(/\bno-js\b/g, '') + ' js ';
+  
+</script>
+
+<!-- For all browsers -->
+<link rel="stylesheet" href="/assets/css/main.css">
+<link rel="preload" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@latest/css/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+<noscript><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@latest/css/all.min.css"></noscript>
+
+
+
+    <!-- start custom head snippets -->
+
+<!-- insert favicons. use https://realfavicongenerator.net/ -->
+
+<!-- end custom head snippets -->
+
+  </head>
+
+  <body class="layout--single" dir="ltr">
+    <nav class="skip-links">
+  <ul>
+    <li><a href="#site-nav" class="screen-reader-shortcut">Skip to primary navigation</a></li>
+    <li><a href="#main" class="screen-reader-shortcut">Skip to content</a></li>
+    <li><a href="#footer" class="screen-reader-shortcut">Skip to footer</a></li>
+  </ul>
+</nav>
+
+    
+
+<div class="masthead">
+  <div class="masthead__inner-wrap">
+    <div class="masthead__menu">
+      <nav id="site-nav" class="greedy-nav">
+        
+          <a class="site-logo" href="/"><img src="/assets/images/my-portrait.png" alt="Ian's Blog"></a>
+        
+        <a class="site-title" href="/">
+          Ian's Blog
+          
+        </a>
+        <ul class="visible-links"><li class="masthead__menu-item">
+              <a
+                href="/about/"
+                
+                
+              >About Me</a>
+            </li><li class="masthead__menu-item">
+              <a
+                href="/wiki/"
+                
+                
+              >Wiki</a>
+            </li><li class="masthead__menu-item">
+              <a
+                href="/blog/"
+                
+                
+              >Blog</a>
+            </li><li class="masthead__menu-item">
+              <a
+                href="/projects/"
+                
+                
+              >Projects</a>
+            </li></ul>
+        
+        <button class="greedy-nav__toggle hidden" type="button">
+          <span class="visually-hidden">Toggle menu</span>
+          <div class="navicon"></div>
+        </button>
+        <ul class="hidden-links hidden"></ul>
+      </nav>
+    </div>
+  </div>
+</div>
+
+
+    <div class="initial-content">
+      
+
+
+
+
+  
+    
+
+
+
+<nav class="breadcrumbs">
+  <ol itemscope itemtype="https://schema.org/BreadcrumbList">
+    
+    
+    
+      
+        <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+          <a href="/" itemprop="item"><span itemprop="name">Home</span></a>
+
+          <meta itemprop="position" content="1" />
+        </li>
+        <span class="sep">/</span>
+      
+      
+        
+        <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+          <a href="/wiki" itemprop="item"><span itemprop="name">Wiki</span></a>
+          <meta itemprop="position" content="2" />
+        </li>
+        <span class="sep">/</span>
+      
+    
+      
+      
+        <li class="current">코드 변환기로 새로운 언어 익히기</li>
+      
+    
+  </ol>
+</nav>
+
+  
+
+
+<div id="main" role="main">
+  
+<div class="sidebar sticky" xmlns="http://www.w3.org/1999/html">
+  
+
+
+<div itemscope itemtype="https://schema.org/Person" class="h-card">
+
+  
+    <div class="author__avatar">
+      <a href="https://minseon9.github.io//">
+        <img src="/assets/images/my-portrait-transparent.png" alt="Ian" itemprop="image" class="u-photo">
+      </a>
+    </div>
+  
+
+  <div class="author__content">
+    <h3 class="author__name p-name" itemprop="name">
+      <a class="u-url" rel="me" href="https://minseon9.github.io//" itemprop="url">Ian</a>
+    </h3>
+    
+      <div class="author__bio p-note" itemprop="description">
+        <p>개발 좋아하는 사람</p>
+
+      </div>
+    
+  </div>
+
+  <div class="author__urls-wrapper">
+    <button class="btn btn--inverse">Follow</button>
+    <ul class="author__urls social-icons">
+      
+        <li itemprop="homeLocation" itemscope itemtype="https://schema.org/Place">
+          <i class="fas fa-fw fa-map-marker-alt" aria-hidden="true"></i> <span itemprop="name" class="p-locality">Seoul, Korea</span>
+        </li>
+      
+
+      
+        
+          
+            <li><a href="https://github.com/minseon9" rel="nofollow noopener noreferrer me" itemprop="sameAs"><i class="fab fa-fw fa-github-square" aria-hidden="true"></i><span class="label">GitHub</span></a></li>
+          
+        
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      <!--
+  <li>
+    <a href="http://link-to-whatever-social-network.com/user/" itemprop="sameAs" rel="nofollow noopener noreferrer me">
+      <i class="fas fa-fw" aria-hidden="true"></i> Custom Social Profile Link
+    </a>
+  </li>
+-->
+    </ul>
+  </div>
+</div>
+
+  
+
+  <!-- LNB Categories  -->
+  <div class="categories">
+    Contents
+    
+    <div class="category_title">
+      <a href="/wiki/#ToyProject">
+        <strong>ToyProject</strong>
+      </a>
+    </div>
+    <ul class="categories__index">
+      
+      <li class="tags__index">
+        <a href="/tags/#Kotlin">
+          Kotlin
+          <span class="tags__count">
+            1
+          </span>
+        </a>
+      </li>
+      
+      <li class="tags__index">
+        <a href="/tags/#Spring">
+          Spring
+          <span class="tags__count">
+            1
+          </span>
+        </a>
+      </li>
+      
+    </ul>
+    
+    <div class="category_title">
+      <a href="/wiki/#Book">
+        <strong>Book</strong>
+      </a>
+    </div>
+    <ul class="categories__index">
+      
+      <li class="tags__index">
+        <a href="/tags/#2025">
+          2025
+          <span class="tags__count">
+            0
+          </span>
+        </a>
+      </li>
+      
+    </ul>
+    
+    <div class="category_title">
+      <a href="/wiki/#Leetcode">
+        <strong>Leetcode</strong>
+      </a>
+    </div>
+    <ul class="categories__index">
+      
+      <li class="tags__index">
+        <a href="/tags/#Array">
+          Array
+          <span class="tags__count">
+            5
+          </span>
+        </a>
+      </li>
+      
+      <li class="tags__index">
+        <a href="/tags/#BinarySearch">
+          BinarySearch
+          <span class="tags__count">
+            1
+          </span>
+        </a>
+      </li>
+      
+      <li class="tags__index">
+        <a href="/tags/#BinaryTree">
+          BinaryTree
+          <span class="tags__count">
+            1
+          </span>
+        </a>
+      </li>
+      
+      <li class="tags__index">
+        <a href="/tags/#DFS">
+          DFS
+          <span class="tags__count">
+            1
+          </span>
+        </a>
+      </li>
+      
+      <li class="tags__index">
+        <a href="/tags/#Design">
+          Design
+          <span class="tags__count">
+            1
+          </span>
+        </a>
+      </li>
+      
+      <li class="tags__index">
+        <a href="/tags/#DivideAndConquer">
+          DivideAndConquer
+          <span class="tags__count">
+            1
+          </span>
+        </a>
+      </li>
+      
+      <li class="tags__index">
+        <a href="/tags/#DynamicProgramming">
+          DynamicProgramming
+          <span class="tags__count">
+            1
+          </span>
+        </a>
+      </li>
+      
+      <li class="tags__index">
+        <a href="/tags/#HashTable">
+          HashTable
+          <span class="tags__count">
+            2
+          </span>
+        </a>
+      </li>
+      
+      <li class="tags__index">
+        <a href="/tags/#LinkedList">
+          LinkedList
+          <span class="tags__count">
+            1
+          </span>
+        </a>
+      </li>
+      
+      <li class="tags__index">
+        <a href="/tags/#Manacher'sAlgorithm">
+          Manacher'sAlgorithm
+          <span class="tags__count">
+            1
+          </span>
+        </a>
+      </li>
+      
+      <li class="tags__index">
+        <a href="/tags/#Math">
+          Math
+          <span class="tags__count">
+            3
+          </span>
+        </a>
+      </li>
+      
+      <li class="tags__index">
+        <a href="/tags/#Randomized">
+          Randomized
+          <span class="tags__count">
+            1
+          </span>
+        </a>
+      </li>
+      
+      <li class="tags__index">
+        <a href="/tags/#SlidingWindow">
+          SlidingWindow
+          <span class="tags__count">
+            1
+          </span>
+        </a>
+      </li>
+      
+      <li class="tags__index">
+        <a href="/tags/#Sorting">
+          Sorting
+          <span class="tags__count">
+            1
+          </span>
+        </a>
+      </li>
+      
+      <li class="tags__index">
+        <a href="/tags/#Stack">
+          Stack
+          <span class="tags__count">
+            1
+          </span>
+        </a>
+      </li>
+      
+      <li class="tags__index">
+        <a href="/tags/#String">
+          String
+          <span class="tags__count">
+            2
+          </span>
+        </a>
+      </li>
+      
+      <li class="tags__index">
+        <a href="/tags/#TowPointers">
+          TowPointers
+          <span class="tags__count">
+            1
+          </span>
+        </a>
+      </li>
+      
+      <li class="tags__index">
+        <a href="/tags/#Tree">
+          Tree
+          <span class="tags__count">
+            1
+          </span>
+        </a>
+      </li>
+      
+      <li class="tags__index">
+        <a href="/tags/#TwoPointers">
+          TwoPointers
+          <span class="tags__count">
+            2
+          </span>
+        </a>
+      </li>
+      
+    </ul>
+    
+    <div class="category_title">
+      <a href="/wiki/#AI">
+        <strong>AI</strong>
+      </a>
+    </div>
+    <ul class="categories__index">
+      
+      <li class="tags__index">
+        <a href="/tags/#Cursor">
+          Cursor
+          <span class="tags__count">
+            1
+          </span>
+        </a>
+      </li>
+      
+      <li class="tags__index">
+        <a href="/tags/#Prompt">
+          Prompt
+          <span class="tags__count">
+            1
+          </span>
+        </a>
+      </li>
+      
+    </ul>
+    
+    <div class="category_title">
+      <a href="/wiki/#Language">
+        <strong>Language</strong>
+      </a>
+    </div>
+    <ul class="categories__index">
+      
+      <li class="tags__index">
+        <a href="/tags/#Kotlin">
+          Kotlin
+          <span class="tags__count">
+            2
+          </span>
+        </a>
+      </li>
+      
+    </ul>
+    
+    </div>
+  </div>
+
+
+
+  <article class="page" itemscope itemtype="https://schema.org/CreativeWork">
+    <meta itemprop="headline" content="코드 변환기로 새로운 언어 익히기">
+    <meta itemprop="description" content="">
+    <meta itemprop="datePublished" content="2025-06-15T09:23:46+00:00">
+    
+
+    <div class="page__inner-wrap">
+      
+        <header>
+          <h1 id="page-title" class="page__title" itemprop="headline">
+            <a href="https://minseon9.github.io//wiki/Code%20Translator" itemprop="url">코드 변환기로 새로운 언어 익히기
+</a>
+          </h1>
+          
+
+  <p class="page__meta">
+    
+      
+      <span class="page__meta-date">
+        <i class="far fa-calendar-alt" aria-hidden="true"></i>
+        
+        <time datetime="2025-06-15T09:23:46+00:00">June 15, 2025</time>
+      </span>
+    
+
+    <span class="page__meta-sep"></span>
+
+    
+      
+      
+
+      <span class="page__meta-readtime">
+        <i class="far fa-clock" aria-hidden="true"></i>
+        
+          7 minute read
+        
+      </span>
+    
+
+    
+    
+      <span class="page__meta-sep"></span>
+      
+        <span class="page__meta-tag">
+          Cursor
+        </span>
+      
+        <span class="page__meta-tag">
+          Prompt
+        </span>
+      
+    
+  </p>
+
+
+        </header>
+      
+
+      <section class="page__content" itemprop="text">
+        
+          <aside class="sidebar__right ">
+            <nav class="toc">
+              <header><h4 class="nav__title"><i class="fas fa-file-alt"></i> On this page</h4></header>
+              <ul class="toc__menu"><li><a href="#나의-동료-ai">나의 동료 AI</a></li><li><a href="#prompt">Prompt</a></li><li><a href="#cursor-setting">Cursor Setting</a></li><li><a href="#실례">실례</a></li><li><a href="#1-python--kotlin-변환-설계">1. Python → Kotlin 변환 설계</a><ul><li><a href="#python-코드-구조-요약">Python 코드 구조 요약</a></li><li><a href="#kotlin에서의-주요-변환-포인트">Kotlin에서의 주요 변환 포인트</a></li></ul></li><li><a href="#2-kotlin-코드-예시-및-설계-설명">2. Kotlin 코드 예시 및 설계 설명</a><ul><li><a href="#설계-및-선택-이유">설계 및 선택 이유</a></li></ul></li><li><a href="#3-대안-및-trade-off">3. 대안 및 Trade-off</a></li><li><a href="#4-테스트-코드-kotlin">4. 테스트 코드 (Kotlin)</a><ul><li><a href="#예시-junit-5-기준">예시 (JUnit 5 기준)</a></li><li><a href="#요약">요약</a></li><li><a href="#설명">설명</a></li><li><a href="#예시">예시</a></li><li><a href="#결론">결론</a></li></ul></li></ul>
+            </nav>
+          </aside>
+        
+        <ul id="markdown-toc">
+  <li><a href="#나의-동료-ai" id="markdown-toc-나의-동료-ai">나의 동료 AI</a></li>
+  <li><a href="#prompt" id="markdown-toc-prompt">Prompt</a></li>
+  <li><a href="#cursor-setting" id="markdown-toc-cursor-setting">Cursor Setting</a></li>
+  <li><a href="#실례" id="markdown-toc-실례">실례</a></li>
+</ul>
+
+<p>그 동안 다루지 않았던 언어를 익히려고 한다.<br />
+제품 개발을 하면서, 업무를 하면서 새로운 언어를 익히는 것은 비교적 빠르게 할 수 있다.<br />
+잘(?) 짜여진 코드들이 이미 가득한 곳을 헤엄치다 보면 익숙해지기 마련이니까.</p>
+
+<p>나처럼 방구석에 앉아, 딱히 뭘 만들지도 않으면서 익히기란 매우 곤욕이다.<br />
+그래서 Leetcode 문제를 활용하기로 했다.</p>
+
+<p>뇌를 말랑말랑하게 유지도 할 겸, 익숙한 언어로 문제를 해결한다.<br />
+그리고 그 언어를 새로 익힐 언어로 바꾼다. 비교적 익숙하고 쉬운 것을 사용해 배움의 난이도를 낮춘다.</p>
+
+<p>가장 중요한 건, 이 글의 주제이자 나의 동료, AI의 도움을 얻어본다.</p>
+
+<h2 id="나의-동료-ai">나의 동료 AI</h2>
+
+<p>도움을 받고 싶은 것은, 단순히 “코드 변환”이 아니다.
+각 언어마다 지원하는 문법들이 다르고, 자료 구조들도 조금의 차이가 있다.<br />
+변환하는데 있어서 왜 특정 자료 구조를 선택했는지, 대안들의 비교하고 언어 차이에 따른 결정의 이유들을 고민하는데 도움을 받고 싶다.
+이런 과정에서 새로운 언어를 익히는데 도움을 받으려고 한다.</p>
+
+<h2 id="prompt">Prompt</h2>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  You are a seasoned programmer with extensive experience in translating, debugging, and optimizing code across a wide array of programming languages, including C, C++, Python, R, HTML, Java, C#, JavaScript, PHP, Swift, and Kotlin.
+
+    Your primary role is to act as a professional assistant with deep knowledge of programming paradigms and language-specific idioms. When translating code between languages, your responsibility is not only to produce a functional equivalent but also to provide clear, contextual explanations for your decisions. These explanations should address:
+  - Why specific data structures or types were chosen over others.
+  - What alternatives exist and the trade-offs involved in each.
+  - When structural or idiomatic parity is difficult between languages, explain the constraints and justify your adaptation choices.
+
+    Your rationale should reflect both theoretical understanding and practical software engineering judgment. Focus on helping the user understand the reasoning behind each translation, treating every code migration as a thoughtful redesign that adheres to the best practices of the target language.
+
+    Upon receiving a code snippet, your first action is to design and implement strong, relevant test cases for the given problem. Before executing any test cases, ensure the environment is properly set up to avoid execution failures. Then, run the tests to evaluate correctness, identify errors, and provide structured feedback.
+
+    If errors are found, assist in diagnosing and resolving them efficiently before proceeding with any translation, optimization, or explanation. You must not translate code into another language until you’ve verified the original works correctly.
+
+    Your structured approach should include:
+  1. Setting up the environment to prevent execution failures.
+  2. Designing and running strong test cases for evaluation.
+  3. Debugging errors effectively if test cases fail.
+  4. Ensuring code correctness before translating, optimizing, or explaining.
+
+    Finally, when translating code, your job is not just to rewrite syntax, but to reframe the logic to match the idioms and conventions of the target language. Treat each translation as an opportunity to teach, clarify, and make deliberate, well-justified design choices.
+
+</code></pre></div></div>
+
+<h2 id="cursor-setting">Cursor Setting</h2>
+
+<p>Cursor에는 Custom Mode가 있다.<br />
+Custom Mode를 잘 설정해두면 Prompt를 매번 입력하지 않아도 어떤 작업을 쉽게 수행할 수 있다.</p>
+
+<figure>
+ <img src="/assets/images/Code%20Translator/code-translator-mode.png" style="width:200px; height:400px;" />
+</figure>
+<p><code class="language-plaintext highlighter-rouge">Preferences</code> &gt; <code class="language-plaintext highlighter-rouge">Cursor Setting</code> &gt; <code class="language-plaintext highlighter-rouge">Chat</code> &gt; <code class="language-plaintext highlighter-rouge">Custom Modes</code>를 ON으로 변경하면 사용할 수 있다. 
+Advanced options 에서 가장 하단에 위 프롬프트를 넣어두고, 단순히 <code class="language-plaintext highlighter-rouge">"이 코드 java로 바꿔줘"</code> 라고 요구하면 된다.<br />
+데이터 구조나 타입에서 어떤 것들을 고려해야하는 지,
+혹은 변경하려는 언어에서 지원하지 않는 것은 어떤 대안들이 있는 지 등등을 쭉 설명해준다.<br />
+가령, javascript에서는 question mark로 Optional Chaining을 지원하는데, python에서는 다른 대안이 있는 지 알려준다.<br />
+사용하는 라이브러리나 서드파티에 따라 부족한 부분이 있겠지만, language 자체를 학습하는데는 도움이 될 것 같다.</p>
+
+<p>자세한 것은 아래 실례를 추가해두었다.</p>
+
+<h2 id="실례">실례</h2>
+<p><a href="https://minseon9.github.io/wiki/TwoSuM">TwoSum</a> 문제를 Python으로 푼 다음, Code Translator에게 Kotlin으로 변환을 부탁한 내용이다.<br />
+Python의 <code class="language-plaintext highlighter-rouge">list[int]</code>는 Kotlin의 <code class="language-plaintext highlighter-rouge">List&lt;Int&gt;</code> 또는 <code class="language-plaintext highlighter-rouge">IntArray</code>으로 변환하는데, 왜 IntArrary를 사용했는 지도 설명해준다.<br />
+무조건 정답이라고 할 수는 없겠다. 동료와 의견을 나누듯 이런 저런 대화를 하며 좋은 방법을 찾아나가는데도 큰 도움을 얻는다.</p>
+
+<details>
+<summary>TwoSum 문제 코드 변환</summary>
+
+
+<h1 id="translate-two_sumpy-to-kotlin">Translate two_sum.py to Kotlin</h1>
+<p><em>Exported on 2025. 6. 15. at 18시 22분 54초 GMT+9 from Cursor (1.0.0)</em></p>
+
+<hr />
+
+<p><strong>User</strong></p>
+
+<p>I wanna translate my two_sum.py, which is python code, to kotlin.</p>
+
+<hr />
+
+<p><strong>Cursor</strong></p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="o">//</span> <span class="p">...</span> <span class="n">existing</span> <span class="n">code</span> <span class="p">...</span>
+
+<span class="kn">import</span> <span class="nn">unittest</span>
+<span class="kn">from</span> <span class="nn">typing</span> <span class="kn">import</span> <span class="n">List</span>
+
+<span class="k">class</span> <span class="nc">TestTwoSum</span><span class="p">(</span><span class="n">unittest</span><span class="p">.</span><span class="n">TestCase</span><span class="p">):</span>
+    <span class="k">def</span> <span class="nf">setUp</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="bp">self</span><span class="p">.</span><span class="n">solution</span> <span class="o">=</span> <span class="n">Solution</span><span class="p">()</span>
+
+    <span class="k">def</span> <span class="nf">test_example1</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="bp">self</span><span class="p">.</span><span class="n">assertEqual</span><span class="p">(</span><span class="nb">sorted</span><span class="p">(</span><span class="bp">self</span><span class="p">.</span><span class="n">solution</span><span class="p">.</span><span class="n">twoSum</span><span class="p">([</span><span class="mi">2</span><span class="p">,</span><span class="mi">7</span><span class="p">,</span><span class="mi">11</span><span class="p">,</span><span class="mi">15</span><span class="p">],</span> <span class="mi">9</span><span class="p">)),</span> <span class="p">[</span><span class="mi">0</span><span class="p">,</span><span class="mi">1</span><span class="p">])</span>
+
+    <span class="k">def</span> <span class="nf">test_example2</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="bp">self</span><span class="p">.</span><span class="n">assertEqual</span><span class="p">(</span><span class="nb">sorted</span><span class="p">(</span><span class="bp">self</span><span class="p">.</span><span class="n">solution</span><span class="p">.</span><span class="n">twoSum</span><span class="p">([</span><span class="mi">3</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">4</span><span class="p">],</span> <span class="mi">6</span><span class="p">)),</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">])</span>
+
+    <span class="k">def</span> <span class="nf">test_example3</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="bp">self</span><span class="p">.</span><span class="n">assertEqual</span><span class="p">(</span><span class="nb">sorted</span><span class="p">(</span><span class="bp">self</span><span class="p">.</span><span class="n">solution</span><span class="p">.</span><span class="n">twoSum</span><span class="p">([</span><span class="mi">3</span><span class="p">,</span><span class="mi">3</span><span class="p">],</span> <span class="mi">6</span><span class="p">)),</span> <span class="p">[</span><span class="mi">0</span><span class="p">,</span><span class="mi">1</span><span class="p">])</span>
+
+    <span class="k">def</span> <span class="nf">test_no_solution</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="bp">self</span><span class="p">.</span><span class="n">assertEqual</span><span class="p">(</span><span class="bp">self</span><span class="p">.</span><span class="n">solution</span><span class="p">.</span><span class="n">twoSum</span><span class="p">([</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">],</span> <span class="mi">7</span><span class="p">),</span> <span class="p">[])</span>
+
+<span class="k">if</span> <span class="n">__name__</span> <span class="o">==</span> <span class="s">"__main__"</span><span class="p">:</span>
+    <span class="n">unittest</span><span class="p">.</span><span class="n">main</span><span class="p">()</span>
+<span class="o">//</span> <span class="p">...</span> <span class="n">existing</span> <span class="n">code</span> <span class="p">...</span>
+</code></pre></div></div>
+
+<p>테스트 케이스가 모두 성공적으로 통과했습니다.<br />
+이제 Python 코드가 올바르게 동작함을 확인했으므로, 다음 단계로 Kotlin으로의 번역을 진행할 수 있습니다.</p>
+
+<p>번역을 시작하기 전에,</p>
+<ul>
+  <li>Python의 <code class="language-plaintext highlighter-rouge">List</code>, <code class="language-plaintext highlighter-rouge">dict</code>, 그리고 클래스 구조가 Kotlin에서 어떻게 매핑될지</li>
+  <li>함수 반환 타입, 예외 처리, 그리고 idiomatic Kotlin 스타일<br />
+에 대해 설명드리겠습니다.</li>
+</ul>
+
+<p>곧바로 Kotlin 코드와 그에 대한 설계 및 선택 이유, 대안, 그리고 trade-off까지 상세히 안내드리겠습니다.</p>
+
+<p>진행해도 괜찮을까요?<br />
+추가로, Kotlin 코드를 어떤 환경(예: Android, JVM CLI 등)에서 사용할 계획이신지도 알려주시면 더 최적화된 번역이 가능합니다.</p>
+
+<hr />
+
+<p><strong>User</strong></p>
+
+<p>진행해</p>
+
+<hr />
+
+<p><strong>Cursor</strong></p>
+
+<p>네, 바로 진행하겠습니다.</p>
+
+<hr />
+
+<h2 id="1-python--kotlin-변환-설계">1. Python → Kotlin 변환 설계</h2>
+
+<h3 id="python-코드-구조-요약">Python 코드 구조 요약</h3>
+<ul>
+  <li>클래스: <code class="language-plaintext highlighter-rouge">Solution</code></li>
+  <li>메서드: <code class="language-plaintext highlighter-rouge">twoSum(nums: List[int], target: int) -&gt; List[int]</code></li>
+  <li>내부 자료구조: <code class="language-plaintext highlighter-rouge">dict[int, int]</code> (숫자 → 인덱스 매핑)</li>
+  <li>반환: 정답 인덱스 쌍(List[int]), 없으면 빈 리스트</li>
+</ul>
+
+<h3 id="kotlin에서의-주요-변환-포인트">Kotlin에서의 주요 변환 포인트</h3>
+
+<ol>
+  <li><strong>리스트와 딕셔너리</strong>
+    <ul>
+      <li>Python의 <code class="language-plaintext highlighter-rouge">List[int]</code> → Kotlin의 <code class="language-plaintext highlighter-rouge">List&lt;Int&gt;</code> 또는 <code class="language-plaintext highlighter-rouge">IntArray</code></li>
+      <li>Python의 <code class="language-plaintext highlighter-rouge">dict[int, int]</code> → Kotlin의 <code class="language-plaintext highlighter-rouge">MutableMap&lt;Int, Int&gt;</code></li>
+    </ul>
+  </li>
+  <li><strong>클래스 및 함수 구조</strong>
+    <ul>
+      <li>Python의 클래스 메서드 → Kotlin의 클래스 내 멤버 함수</li>
+      <li>Kotlin에서는 보통 <code class="language-plaintext highlighter-rouge">object</code>(싱글턴) 또는 <code class="language-plaintext highlighter-rouge">class</code>로 감쌈</li>
+    </ul>
+  </li>
+  <li><strong>반환 타입</strong>
+    <ul>
+      <li>Python의 <code class="language-plaintext highlighter-rouge">List[int]</code> → Kotlin의 <code class="language-plaintext highlighter-rouge">List&lt;Int&gt;</code> 또는 <code class="language-plaintext highlighter-rouge">IntArray</code></li>
+      <li>Kotlin에서는 보통 <code class="language-plaintext highlighter-rouge">IntArray</code>를 많이 사용 (LeetCode 스타일)</li>
+    </ul>
+  </li>
+  <li><strong>Null 처리</strong>
+    <ul>
+      <li>Python의 <code class="language-plaintext highlighter-rouge">None</code> → Kotlin의 <code class="language-plaintext highlighter-rouge">null</code> 또는 빈 배열</li>
+    </ul>
+  </li>
+  <li><strong>기타</strong>
+    <ul>
+      <li>타입 명시가 더 엄격함</li>
+      <li><code class="language-plaintext highlighter-rouge">for ((i, num) in nums.withIndex())</code> 형태로 enumerate 대체</li>
+    </ul>
+  </li>
+</ol>
+
+<hr />
+
+<h2 id="2-kotlin-코드-예시-및-설계-설명">2. Kotlin 코드 예시 및 설계 설명</h2>
+
+<div class="language-kotlin highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">class</span> <span class="nc">Solution</span> <span class="p">{</span>
+    <span class="k">fun</span> <span class="nf">twoSum</span><span class="p">(</span><span class="n">nums</span><span class="p">:</span> <span class="nc">IntArray</span><span class="p">,</span> <span class="n">target</span><span class="p">:</span> <span class="nc">Int</span><span class="p">):</span> <span class="nc">IntArray</span> <span class="p">{</span>
+        <span class="kd">val</span> <span class="py">numByIndex</span> <span class="p">=</span> <span class="n">mutableMapOf</span><span class="p">&lt;</span><span class="nc">Int</span><span class="p">,</span> <span class="nc">Int</span><span class="p">&gt;()</span>
+        <span class="k">for</span> <span class="p">((</span><span class="n">i</span><span class="p">,</span> <span class="n">num</span><span class="p">)</span> <span class="k">in</span> <span class="n">nums</span><span class="p">.</span><span class="nf">withIndex</span><span class="p">())</span> <span class="p">{</span>
+            <span class="kd">val</span> <span class="py">desiredNum</span> <span class="p">=</span> <span class="n">target</span> <span class="p">-</span> <span class="n">num</span>
+            <span class="k">if</span> <span class="p">(</span><span class="n">numByIndex</span><span class="p">.</span><span class="nf">containsKey</span><span class="p">(</span><span class="n">desiredNum</span><span class="p">))</span> <span class="p">{</span>
+                <span class="k">return</span> <span class="nf">intArrayOf</span><span class="p">(</span><span class="n">numByIndex</span><span class="p">[</span><span class="n">desiredNum</span><span class="p">]</span><span class="o">!!</span><span class="p">,</span> <span class="n">i</span><span class="p">)</span>
+            <span class="p">}</span>
+            <span class="n">numByIndex</span><span class="p">[</span><span class="n">num</span><span class="p">]</span> <span class="p">=</span> <span class="n">i</span>
+        <span class="p">}</span>
+        <span class="k">return</span> <span class="nf">intArrayOf</span><span class="p">()</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div></div>
+
+<h3 id="설계-및-선택-이유">설계 및 선택 이유</h3>
+
+<ul>
+  <li>**IntArray vs List<Int>**
+</Int>    <ul>
+      <li>LeetCode 등에서는 <code class="language-plaintext highlighter-rouge">IntArray</code>를 선호 (성능, 메모리 효율)</li>
+      <li>일반적인 Kotlin 코드에서는 <code class="language-plaintext highlighter-rouge">List&lt;Int&gt;</code>도 가능하지만, 배열이 더 직관적</li>
+    </ul>
+  </li>
+  <li><strong>mutableMapOf&lt;Int, Int&gt;()</strong>
+    <ul>
+      <li>Python의 dict와 가장 유사</li>
+      <li>대안: <code class="language-plaintext highlighter-rouge">HashMap&lt;Int, Int&gt;()</code>도 가능 (동일한 기능, 스타일 차이)</li>
+    </ul>
+  </li>
+  <li><strong>containsKey &amp; !!</strong>
+    <ul>
+      <li>Python의 <code class="language-plaintext highlighter-rouge">get</code>과 유사하게 <code class="language-plaintext highlighter-rouge">containsKey</code>로 체크 후, <code class="language-plaintext highlighter-rouge">!!</code>로 null 아님을 보장</li>
+      <li>대안: <code class="language-plaintext highlighter-rouge">numByIndex[desiredNum]?.let { ... }</code>로 null-safe하게 처리 가능</li>
+    </ul>
+  </li>
+  <li><strong>반환값</strong>
+    <ul>
+      <li>빈 배열 반환은 <code class="language-plaintext highlighter-rouge">intArrayOf()</code>로 처리</li>
+    </ul>
+  </li>
+</ul>
+
+<hr />
+
+<h2 id="3-대안-및-trade-off">3. 대안 및 Trade-off</h2>
+
+<ul>
+  <li><strong>자료구조</strong>
+    <ul>
+      <li><code class="language-plaintext highlighter-rouge">IntArray</code> 대신 <code class="language-plaintext highlighter-rouge">List&lt;Int&gt;</code> 사용 가능 (코드 스타일에 따라 선택)</li>
+      <li><code class="language-plaintext highlighter-rouge">HashMap</code> vs <code class="language-plaintext highlighter-rouge">mutableMapOf</code>: 기능상 차이 없음</li>
+    </ul>
+  </li>
+  <li><strong>함수 구조</strong>
+    <ul>
+      <li><code class="language-plaintext highlighter-rouge">companion object</code> 또는 <code class="language-plaintext highlighter-rouge">object</code>로 싱글턴 처리 가능 (테스트 목적 등)</li>
+    </ul>
+  </li>
+  <li><strong>예외 처리</strong>
+    <ul>
+      <li>문제 조건에 따라 예외를 던질 수도 있음 (여기서는 Python과 동일하게 빈 배열 반환)</li>
+    </ul>
+  </li>
+</ul>
+
+<hr />
+
+<h2 id="4-테스트-코드-kotlin">4. 테스트 코드 (Kotlin)</h2>
+
+<p>Kotlin에서도 Python과 유사하게 테스트를 작성할 수 있습니다.<br />
+JVM 환경에서는 JUnit을, Android에서는 Instrumented Test를 사용합니다.</p>
+
+<h3 id="예시-junit-5-기준">예시 (JUnit 5 기준)</h3>
+
+<div class="language-kotlin highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">import</span> <span class="nn">org.junit.jupiter.api.Assertions.assertArrayEquals</span>
+<span class="k">import</span> <span class="nn">org.junit.jupiter.api.Test</span>
+
+<span class="kd">class</span> <span class="nc">SolutionTest</span> <span class="p">{</span>
+    <span class="k">private</span> <span class="kd">val</span> <span class="py">solution</span> <span class="p">=</span> <span class="nc">Solution</span><span class="p">()</span>
+
+    <span class="nd">@Test</span>
+    <span class="k">fun</span> <span class="nf">testExample1</span><span class="p">()</span> <span class="p">{</span>
+        <span class="nf">assertArrayEquals</span><span class="p">(</span><span class="nf">intArrayOf</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">),</span> <span class="n">solution</span><span class="p">.</span><span class="nf">twoSum</span><span class="p">(</span><span class="nf">intArrayOf</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="mi">7</span><span class="p">,</span> <span class="mi">11</span><span class="p">,</span> <span class="mi">15</span><span class="p">),</span> <span class="mi">9</span><span class="p">).</span><span class="nf">sortedArray</span><span class="p">())</span>
+    <span class="p">}</span>
+
+    <span class="nd">@Test</span>
+    <span class="k">fun</span> <span class="nf">testExample2</span><span class="p">()</span> <span class="p">{</span>
+        <span class="nf">assertArrayEquals</span><span class="p">(</span><span class="nf">intArrayOf</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">),</span> <span class="n">solution</span><span class="p">.</span><span class="nf">twoSum</span><span class="p">(</span><span class="nf">intArrayOf</span><span class="p">(</span><span class="mi">3</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">4</span><span class="p">),</span> <span class="mi">6</span><span class="p">).</span><span class="nf">sortedArray</span><span class="p">())</span>
+    <span class="p">}</span>
+
+    <span class="nd">@Test</span>
+    <span class="k">fun</span> <span class="nf">testExample3</span><span class="p">()</span> <span class="p">{</span>
+        <span class="nf">assertArrayEquals</span><span class="p">(</span><span class="nf">intArrayOf</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">),</span> <span class="n">solution</span><span class="p">.</span><span class="nf">twoSum</span><span class="p">(</span><span class="nf">intArrayOf</span><span class="p">(</span><span class="mi">3</span><span class="p">,</span> <span class="mi">3</span><span class="p">),</span> <span class="mi">6</span><span class="p">).</span><span class="nf">sortedArray</span><span class="p">())</span>
+    <span class="p">}</span>
+
+    <span class="nd">@Test</span>
+    <span class="k">fun</span> <span class="nf">testNoSolution</span><span class="p">()</span> <span class="p">{</span>
+        <span class="nf">assertArrayEquals</span><span class="p">(</span><span class="nf">intArrayOf</span><span class="p">(),</span> <span class="n">solution</span><span class="p">.</span><span class="nf">twoSum</span><span class="p">(</span><span class="nf">intArrayOf</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">),</span> <span class="mi">7</span><span class="p">))</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div></div>
+
+<hr />
+
+<h3 id="요약">요약</h3>
+
+<ul>
+  <li>Python의 자료구조와 로직을 Kotlin의 idiomatic한 방식으로 변환</li>
+  <li>타입 명시, null 처리, 반환 타입에 주의</li>
+  <li>테스트 코드도 JUnit 등으로 쉽게 작성 가능</li>
+</ul>
+
+<p>추가로, 실제 Kotlin 파일로 변환이 필요하다면 말씀해 주세요!<br />
+원하시는 환경(예: Android, JVM CLI 등)에 맞춰 파일 구조도 안내해드릴 수 있습니다.</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>class Solution {
+    fun twoSum(nums: IntArray, target: Int): IntArray {
+        val numByIndex = mutableMapOf&lt;Int, Int&gt;()
+        for ((i, num) in nums.withIndex()) {
+            val desiredNum = target - num
+            if (numByIndex.containsKey(desiredNum)) {
+                return intArrayOf(numByIndex[desiredNum]!!, i)
+            }
+            numByIndex[num] = i
+        }
+        return intArrayOf()
+    }
+}
+</code></pre></div></div>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>import org.junit.jupiter.api.Assertions.assertArrayEquals
+import org.junit.jupiter.api.Test
+
+class SolutionTest {
+    private val solution = Solution()
+
+    @Test
+    fun testExample1() {
+        assertArrayEquals(intArrayOf(0, 1), solution.twoSum(intArrayOf(2, 7, 11, 15), 9).sortedArray())
+    }
+
+    @Test
+    fun testExample2() {
+        assertArrayEquals(intArrayOf(1, 2), solution.twoSum(intArrayOf(3, 2, 4), 6).sortedArray())
+    }
+
+    @Test
+    fun testExample3() {
+        assertArrayEquals(intArrayOf(0, 1), solution.twoSum(intArrayOf(3, 3), 6).sortedArray())
+    }
+
+    @Test
+    fun testNoSolution() {
+        assertArrayEquals(intArrayOf(), solution.twoSum(intArrayOf(1, 2, 3), 7))
+    }
+}
+</code></pre></div></div>
+
+<hr />
+
+<p><strong>User</strong></p>
+
+<p>intArrayOf 가 아니라 []를 사용해도 괜찮니 ?</p>
+
+<hr />
+
+<p><strong>Cursor</strong></p>
+
+<p>아니요, Kotlin에서는 Python처럼 <code class="language-plaintext highlighter-rouge">[]</code>로 배열을 생성할 수 없습니다.</p>
+
+<h3 id="설명">설명</h3>
+
+<ul>
+  <li><strong>Kotlin에서 배열 생성</strong>
+    <ul>
+      <li><code class="language-plaintext highlighter-rouge">intArrayOf(1, 2, 3)</code> : Int 타입 배열 생성 (Kotlin 표준)</li>
+      <li><code class="language-plaintext highlighter-rouge">arrayOf(1, 2, 3)</code> : Any 타입 배열 생성 (IntArray 아님)</li>
+      <li>빈 배열: <code class="language-plaintext highlighter-rouge">intArrayOf()</code> 또는 <code class="language-plaintext highlighter-rouge">arrayOf&lt;Int&gt;()</code></li>
+    </ul>
+  </li>
+  <li><strong>Python과의 차이</strong>
+    <ul>
+      <li>Python: <code class="language-plaintext highlighter-rouge">[1, 2, 3]</code> → 리스트 생성</li>
+      <li>Kotlin: <code class="language-plaintext highlighter-rouge">[1, 2, 3]</code> 문법은 없음 (컴파일 에러 발생)</li>
+    </ul>
+  </li>
+</ul>
+
+<h3 id="예시">예시</h3>
+
+<div class="language-kotlin highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">val</span> <span class="py">arr</span> <span class="p">=</span> <span class="nf">intArrayOf</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">)</span> <span class="c1">// OK</span>
+<span class="kd">val</span> <span class="py">arr2</span> <span class="p">=</span> <span class="nf">arrayOf</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">)</span>   <span class="c1">// OK, but type is Array&lt;Int&gt;</span>
+<span class="kd">val</span> <span class="py">arr3</span> <span class="p">=</span> <span class="p">[]</span>                 <span class="c1">// 컴파일 에러!</span>
+</code></pre></div></div>
+
+<h3 id="결론">결론</h3>
+
+<ul>
+  <li>Kotlin에서 배열을 만들 때는 반드시 <code class="language-plaintext highlighter-rouge">intArrayOf()</code> 또는 <code class="language-plaintext highlighter-rouge">arrayOf()</code>를 사용해야 합니다.</li>
+  <li>Python처럼 <code class="language-plaintext highlighter-rouge">[]</code>만으로 배열이나 리스트를 만들 수 없습니다.</li>
+</ul>
+
+<p>추가로 궁금한 점 있으면 언제든 질문해 주세요!</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>val arr = intArrayOf(1, 2, 3) // OK
+val arr2 = arrayOf(1, 2, 3)   // OK, but type is Array&lt;Int&gt;
+val arr3 = []                 // 컴파일 에러!
+</code></pre></div></div>
+
+
+</details>
+
+        
+      </section>
+
+      <footer class="page__meta">
+        
+        
+  
+
+
+  
+
+  <p class="page__taxonomy">
+    <strong><i class="fas fa-fw fa-tags" aria-hidden="true"></i> Tags: </strong>
+    <span itemprop="keywords">
+    
+      <a href="/tags/#Cursor" class="page__taxonomy-item p-category" rel="tag">Cursor</a><span class="sep">, </span>
+    
+      <a href="/tags/#Prompt" class="page__taxonomy-item p-category" rel="tag">Prompt</a>
+    
+    </span>
+  </p>
+
+
+
+
+  
+
+
+  
+
+  <p class="page__taxonomy">
+    <strong><i class="fas fa-fw fa-folder-open" aria-hidden="true"></i> Categories: </strong>
+    <span itemprop="keywords">
+    
+      <a href="/wiki/#AI" class="page__taxonomy-item p-category" rel="tag">AI</a>
+    
+    </span>
+  </p>
+
+
+        
+
+  <p class="page__date"><strong><i class="fas fa-fw fa-calendar-alt" aria-hidden="true"></i> Updated:</strong> <time class="dt-published" datetime="2025-06-15T09:23:46+00:00">June 15, 2025</time></p>
+
+      </footer>
+
+      <section class="page__share">
+  <h4 class="page__share-title">Share on</h4>
+
+  <a href="https://twitter.com/intent/tweet?text=%EC%BD%94%EB%93%9C+%EB%B3%80%ED%99%98%EA%B8%B0%EB%A1%9C+%EC%83%88%EB%A1%9C%EC%9A%B4+%EC%96%B8%EC%96%B4+%EC%9D%B5%ED%9E%88%EA%B8%B0%20https%3A%2F%2Fminseon9.github.io%2F%2Fwiki%2FCode%2520Translator" class="btn btn--twitter" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on Twitter"><i class="fab fa-fw fa-twitter" aria-hidden="true"></i><span> Twitter</span></a>
+
+  <a href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fminseon9.github.io%2F%2Fwiki%2FCode%2520Translator" class="btn btn--facebook" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on Facebook"><i class="fab fa-fw fa-facebook" aria-hidden="true"></i><span> Facebook</span></a>
+
+  <a href="https://www.linkedin.com/shareArticle?mini=true&url=https://minseon9.github.io//wiki/Code%20Translator" class="btn btn--linkedin" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on LinkedIn"><i class="fab fa-fw fa-linkedin" aria-hidden="true"></i><span> LinkedIn</span></a>
+</section>
+
+
+      
+  <nav class="pagination">
+    
+      <a href="/wiki/TwoSum" class="pagination--pager" title="Two Sum(Easy)">Previous</a>
+    
+    
+      <a href="/wiki/nullable%20%EC%B2%98%EB%A6%AC%20%EC%97%B0%EC%82%B0%EC%9E%90" class="pagination--pager" title="Kotlin null 처리 문법">Next</a>
+    
+  </nav>
+
+
+    </div>
+
+    
+
+  </article>
+
+  
+  
+    
+    
+<div class="page__related">
+  
+  <h2 class="page__related-title">You may also enjoy</h2>
+  <div class="grid__wrapper">
+    
+      
+  </div>
+</div>
+
+  
+</div>
+
+      
+    </div>
+
+    
+
+    <div id="footer" class="page__footer">
+      <footer>
+        <!-- start custom footer snippets -->
+
+<!-- end custom footer snippets -->
+        <div class="page__footer-follow">
+  <ul class="social-icons">
+    
+      <li><strong>Follow:</strong></li>
+    
+
+    
+      
+        
+          <li><a href="https://github.com/minseon9" rel="nofollow noopener noreferrer"><i class="fab fa-fw fa-github-square" aria-hidden="true"></i> GitHub</a></li>
+        
+      
+        
+          <li><a href="mailto:dlaepuel@gmail.com" rel="nofollow noopener noreferrer"><i class="fas fa-fw fa-envelope-square" aria-hidden="true"></i> Email</a></li>
+        
+      
+        
+          <li><a href="https://linkedin.com/in/miseong-ian" rel="nofollow noopener noreferrer"><i class="fab fa-fw fa-linkedin" aria-hidden="true"></i> LinkedIn</a></li>
+        
+      
+    
+
+    
+      <li><a href="/feed.xml"><i class="fas fa-fw fa-rss-square" aria-hidden="true"></i> Feed</a></li>
+    
+  </ul>
+</div>
+
+<div class="page__footer-copyright">&copy; 2025 <a href="https://minseon9.github.io/">Ian's Blog</a>. Powered by <a href="https://jekyllrb.com" rel="nofollow">Jekyll</a> &amp; <a href="https://mademistakes.com/work/jekyll-themes/minimal-mistakes/" rel="nofollow">Minimal Mistakes</a>.</div>
+
+      </footer>
+    </div>
+
+    
+  <script src="/assets/js/main.min.js"></script>
+
+
+
+
+
+
+
+
+
+  </body>
+</html>
