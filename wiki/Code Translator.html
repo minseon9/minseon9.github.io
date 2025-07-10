@@ -637,7 +637,7 @@
           <aside class="sidebar__right ">
             <nav class="toc">
               <header><h4 class="nav__title"><i class="fas fa-file-alt"></i> On this page</h4></header>
-              <ul class="toc__menu"><li><a href="#나의-동료-ai">나의 동료 AI</a></li><li><a href="#prompt">Prompt</a></li><li><a href="#cursor-setting">Cursor Setting</a></li><li><a href="#실례">실례</a></li><li><a href="#1-python--kotlin-변환-설계">1. Python → Kotlin 변환 설계</a><ul><li><a href="#python-코드-구조-요약">Python 코드 구조 요약</a></li><li><a href="#kotlin에서의-주요-변환-포인트">Kotlin에서의 주요 변환 포인트</a></li></ul></li><li><a href="#2-kotlin-코드-예시-및-설계-설명">2. Kotlin 코드 예시 및 설계 설명</a><ul><li><a href="#설계-및-선택-이유">설계 및 선택 이유</a></li></ul></li><li><a href="#3-대안-및-trade-off">3. 대안 및 Trade-off</a></li><li><a href="#4-테스트-코드-kotlin">4. 테스트 코드 (Kotlin)</a><ul><li><a href="#예시-junit-5-기준">예시 (JUnit 5 기준)</a></li><li><a href="#요약">요약</a></li><li><a href="#설명">설명</a></li><li><a href="#예시">예시</a></li><li><a href="#결론">결론</a></li></ul></li></ul>
+              <ul class="toc__menu"><li><a href="#나의-동료-ai">나의 동료 AI</a></li><li><a href="#prompt">Prompt</a></li><li><a href="#cursor-setting">Cursor Setting</a></li><li><a href="#실례">실례</a></li><li><a href="#1-python--kotlin-변환-설계">1. Python → Kotlin 변환 설계</a><ul><li><a href="#python-코드-구조-요약">Python 코드 구조 요약</a></li><li><a href="#kotlin에서의-주요-변환-포인트">Kotlin에서의 주요 변환 포인트</a></li></ul></li><li><a href="#2-kotlin-코드-예시-및-설계-설명">2. Kotlin 코드 예시 및 설계 설명</a><ul><li><a href="#설계-및-선택-이유">설계 및 선택 이유</a></li></ul></li><li><a href="#3-대안-및-trade-off">3. 대안 및 Trade-off</a></li><li><a href="#4-테스트-코드-kotlin">4. 테스트 코드 (Kotlin)</a><ul><li><a href="#예시-junit-5-기준">예시 (JUnit 5 기준)</a></li><li><a href="#요약">요약</a></li><li><a href="#설명">설명</a></li><li><a href="#예시">예시</a></li><li><a href="#결론">결론</a></li></ul></li><li><a href="#reference">Reference</a></li></ul>
             </nav>
           </aside>
         
@@ -646,6 +646,7 @@
   <li><a href="#prompt" id="markdown-toc-prompt">Prompt</a></li>
   <li><a href="#cursor-setting" id="markdown-toc-cursor-setting">Cursor Setting</a></li>
   <li><a href="#실례" id="markdown-toc-실례">실례</a></li>
+  <li><a href="#reference" id="markdown-toc-reference">Reference</a></li>
 </ul>
 
 <p>그 동안 다루지 않았던 언어를 익히려고 한다.<br />
@@ -710,7 +711,7 @@ Advanced options 에서 가장 하단에 위 프롬프트를 넣어두고, 단�
 <p>자세한 것은 아래 실례를 추가해두었다.</p>
 
 <h2 id="실례">실례</h2>
-<p><a href="https://minseon9.github.io/wiki/TwoSuM">TwoSum</a> 문제를 Python으로 푼 다음, Code Translator에게 Kotlin으로 변환을 부탁한 내용이다.<br />
+<p>TwoSum<sup><a href="#ref-1" id="ref-link-1">[1]</a></sup> 문제를 Python으로 푼 다음, Code Translator에게 Kotlin으로 변환을 부탁한 내용이다.<br />
 Python의 <code class="language-plaintext highlighter-rouge">list[int]</code>는 Kotlin의 <code class="language-plaintext highlighter-rouge">List&lt;Int&gt;</code> 또는 <code class="language-plaintext highlighter-rouge">IntArray</code>으로 변환하는데, 왜 IntArrary를 사용했는 지도 설명해준다.<br />
 무조건 정답이라고 할 수는 없겠다. 동료와 의견을 나누듯 이런 저런 대화를 하며 좋은 방법을 찾아나가는데도 큰 도움을 얻는다.</p>
 
@@ -1046,6 +1047,12 @@ val arr3 = []                 // 컴파일 에러!
 
 
 </details>
+
+<hr />
+<h2 id="reference">Reference</h2>
+<ol>
+  <li><a id="ref-1"></a><a href="https://minseon9.github.io/wiki/TwoSuM">TwoSum</a><br /></li>
+</ol>
 
         
       </section>
