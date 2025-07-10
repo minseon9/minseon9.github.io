@@ -1,5 +1,4 @@
 Categories:
-    - {category: ToyProject, tags: [Kotlin, Spring]}
     - {category: Book, tags: ['2025']}
     - {category: Leetcode, tags: [Array, BinarySearch, BinaryTree, DFS, Design, DivideAndConquer, DynamicProgramming, HashTable, LinkedList, 'Manacher''sAlgorithm', Math, Randomized, SlidingWindow, Sorting, Stack, String, TowPointers, Tree, TwoPointers]}
     - {category: AI, tags: [Cursor, Prompt]}
