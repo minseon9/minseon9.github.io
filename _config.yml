@@ -242,7 +242,7 @@ plugins:
   - jekyll-gist
   - jekyll-feed
   - jekyll-include-cache
-
+  - jekyll-refergen
 
 # mimic GitHub Pages with --safe
 whitelist:
@@ -343,3 +343,6 @@ defaults:
       comments: # true
       share: true
       related: true
+      
+refergen-plugin:
+  collections: ["posts", "wiki"] # Specify which collections to process
