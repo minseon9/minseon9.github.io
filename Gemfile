@@ -17,7 +17,6 @@ ruby '3.3.5'
 #
 gem "jekyll", "~> 3.7"
 gem "minimal-mistakes-jekyll", "=4.26.2"
-gem "github-pages", group: :jekyll_plugins
 gem "jekyll-refergen"
 
 # The following plugins are automatically loaded by the theme-gem:
@@ -29,5 +28,3 @@ gem "jekyll-refergen"
 #
 # If you have any other plugins, put them here!
 # Cf. https://jekyllrb.com/docs/plugins/installation/
-group :jekyll_plugins do
-end
