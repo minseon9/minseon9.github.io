@@ -18,6 +18,7 @@ ruby '3.3.5'
 gem "jekyll", "~> 3.7"
 gem "minimal-mistakes-jekyll", "=4.26.2"
 gem "jekyll-refergen"
+gem "kramdown-parser-gfm"
 
 # The following plugins are automatically loaded by the theme-gem:
 #   gem "jekyll-paginate"
