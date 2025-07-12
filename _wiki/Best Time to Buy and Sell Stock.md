@@ -5,7 +5,7 @@ summary     :
 date        : 2025-07-10 23:09:23 +0900
 updated     : 2025-07-10 23:49:23 +0900
 category    : Leetcode
-tags        : Array 'Dynamic Programming'
+tags        : Array DynamicProgramming
 toc         : true
 public      : true
 parent      : 

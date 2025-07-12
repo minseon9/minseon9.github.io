@@ -5,7 +5,7 @@ summary     :
 date        : 2025-06-20 01:44:02 +0900
 updated     : 2025-06-23 12:12:37 +0900
 category    : Leetcode
-tags        : Manacher'sAlgorithm TowPointers String DynamicProgramming
+tags        : Manacher'sAlgorithm TwoPointers String DynamicProgramming
 toc         : true
 public      : true
 parent      : 
