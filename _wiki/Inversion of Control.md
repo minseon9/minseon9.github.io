@@ -3,7 +3,7 @@ layout      : single
 title       : Inversion of Control(IoC)
 summary     : 
 date        : 2025-07-08 13:03:16 +0900
-updated     : 2025-07-09 03:41:32 +0900
+updated     : 2025-07-09 15:38:49 +0900
 category    : 'Application Architecture'
 tags        : 
 toc         : true
@@ -34,6 +34,8 @@ Inversion of Control은 이런 흐름을 **"누가"** 제어하느냐에 대한 
 사용자로 부터 숫자를 입력받고, 피라미드 형태의 별을 출력하는 프로그램이다.  
 
 ```python3
+# FIXME 미들웨어 예시. 요청에 대해서 각 미들웨어를 내가 호출. 가공.
+# 단순히 class 의 재사용 뿐
 # 피라미드 출력 예시
 n = int(input("피라미드 높이를 입력하세요: "))
 for i in range(n):
@@ -81,7 +83,8 @@ tracts and design patterns.
 사용자가 정의하는 부분은 미들웨어, API의 endpoint, application domain(비즈니스 로직) 정도.
 framework는 request에 대해 미리 정의된 design대로 처리하고, 사용자가 정의한 부분은 호출할 뿐이다.  
 
-
+# FIXME 미들웨어 예시. 나는 미들웨어만 custom하게 정의. 프레임워크가 내가 정의한 미들웨어를 호출
+# 미들웨어 class 코드 뿐 아니라 미들웨어라는 application domain의 디자인까지 재활용
 
 
 ### Framework, Re-use of Design
@@ -142,12 +145,13 @@ framework is in charge of the flow of control.
 그래서 등장한 것이 object-oriented frameworks.
 추상화 클래스들과 추상화 클래스들의 collaborate가 정의된 재사용 가능한 "design" 혹은 "subsystem"  
 다시 말해, framework는 "standard" 어플리케이션의 기본적인 구현을 제공함으로 code와 design을 모두 재사용  
-application domain에서 변하지 않은 핵심 구조와 그 요소들의 관계를 중점으로 다룸. 즉, flow of control을 framework가 책
+application domain에서 변하지 않은 핵심 구조와 그 요소들의 관계를 중점으로 다룸. 즉, flow of control을 framework가 책임
+
+다시 말하면 IoC는 framework가 동작하는 디자인 패턴, 원리, 공통 구조인 것
 
 
 
 % 해당 문서는 framework의 디자인 패턴이나 컨셉부터, framework를 어떻게 개발할 것인 지, 문서화는 어떻게 할 것 인지, 어떻게 사용하면 되는 지 등을 다룸. 그 중에서 내가 관심있는 것은 Chapter 3
-
 
 
 ### Dynamic binding
