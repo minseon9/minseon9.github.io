@@ -266,6 +266,9 @@ whitelist:
 wiki_archive:
   type: liquid
   path: /wiki/
+posts_archive:
+  type: liquid
+  path: /blog/
 category_archive:
   type: liquid
   path: /categories/

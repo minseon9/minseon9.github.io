@@ -21,19 +21,34 @@
     Contents
     {% for item in site.data.categories-tags['Categories'] %}
     <div class="category_title">
-      <a href="{{ site.wiki_archive.path | relative_url }}#{{ item.category }}">
-        <strong>{{item.category}}</strong>
-      </a>
+      {% if item.collection == 'posts' %}
+        <a href="{{ site.posts_archive.path | relative_url }}">
+          <strong>{{item.category}}</strong>
+        </a>
+      {% else %}
+        <a href="{{ site.wiki_archive.path | relative_url }}#{{ item.category }}">
+          <strong>{{item.category}}</strong>
+        </a>
+      {% endif %}
     </div>
     <ul class="categories__index">
       {% for tag in item.tags %}
       <li class="tags__index">
-        <a href="{{ site.tag_archive.path | relative_url }}#{{ tag }}">
-          {{ tag }}
-          <span class="tags__count">
-            {{site.wiki | where: "category", item.category | where_exp: "wiki", "wiki.tags contains tag" | size }}
-          </span>
-        </a>
+        {% if item.collection == 'posts' %}
+          <a href="{{ site.posts_archive.path | relative_url }}">
+            {{ tag }}
+            <span class="tags__count">
+              {{site.posts | where: "category", item.category | where_exp: "item_doc", "item_doc.tags contains tag" | size }}
+            </span>
+          </a>
+        {% else %}
+          <a href="{{ site.tag_archive.path | relative_url }}#{{ tag }}">
+            {{ tag }}
+            <span class="tags__count">
+              {{site.wiki | where: "category", item.category | where_exp: "item_doc", "item_doc.tags contains tag" | size }}
+            </span>
+          </a>
+        {% endif %}
       </li>
       {% endfor %}
     </ul>

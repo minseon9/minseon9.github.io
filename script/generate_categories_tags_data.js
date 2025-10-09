@@ -41,7 +41,8 @@ dataList.forEach(function collectTagMap(data) {
     if (!categoryMap.get(data.category)) {
         categoriesTags.Categories.push({
             category: data.category,
-            tags: []
+            tags: [],
+            collection: data.type === 'blog' ? 'posts' : 'wiki',
         });
         categoryMap.set(data.category, true)
     }
