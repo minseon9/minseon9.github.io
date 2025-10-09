@@ -1,5 +1,5 @@
 Categories:
-    - {category: 독서, tags: ['2025']}
+    - {category: Blog, tags: [독서]}
     - {category: Leetcode, tags: [Array, BinarySearch, BinaryTree, DFS, Design, DivideAndConquer, DynamicProgramming, HashTable, LinkedList, 'Manacher''sAlgorithm', Math, Randomized, SlidingWindow, Sorting, Stack, String, Tree, TwoPointers]}
     - {category: AI, tags: [Cursor, Prompt]}
     - {category: Language, tags: [Kotlin]}
