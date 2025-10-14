@@ -3,3 +3,4 @@ Categories:
     - {category: Leetcode, tags: [Array, BinarySearch, BinaryTree, DFS, Design, DivideAndConquer, DynamicProgramming, HashTable, LinkedList, 'Manacher''sAlgorithm', Math, Randomized, SlidingWindow, Sorting, Stack, String, Tree, TwoPointers], collection: wiki}
     - {category: AI, tags: [Cursor, Prompt], collection: wiki}
     - {category: Language, tags: [Kotlin], collection: wiki}
+    - {category: SICP, tags: [], collection: wiki}
