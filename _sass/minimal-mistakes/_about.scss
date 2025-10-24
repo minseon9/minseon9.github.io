@@ -1,0 +1,350 @@
+/* ==========================================================================
+   About Page Styles
+   ========================================================================== */
+
+/* Container - 80% width with 10% padding on each side */
+.about {
+  max-width: 800px;
+  width: 80%;
+  margin: 0 auto;
+  padding: 3rem 0;
+  font-family: $global-font-family;
+  line-height: 1.65;
+  color: $text-color;
+}
+
+/* Header - H1 (Name) */
+.about > h1 {
+  font-size: $type-size-2;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+  margin-top: 0;
+  color: $text-color;
+  letter-spacing: -0.02em;
+  line-height: 1.2;
+  border-bottom: none;
+}
+
+/* Position text */
+.about > .about-position {
+  font-size: $type-size-6;
+  color: $muted-text-color;
+  margin-bottom: 0.5rem;
+  margin-top: 0;
+  font-weight: 400;
+}
+
+/* Email text */
+.about > .about-email {
+  font-size: $type-size-6;
+  color: $muted-text-color;
+  margin-bottom: 1rem;
+  margin-top: 0;
+  font-weight: 400;
+}
+
+.about > .about-email a {
+  color: $muted-text-color;
+  text-decoration: none;
+  transition: $global-transition;
+}
+
+.about > .about-email a:hover {
+  color: $text-color;
+  text-decoration: none;
+}
+
+/* Contact Icons */
+.about > .contact-icons {
+  display: flex;
+  gap: 1rem;
+  margin: 1rem 0 2.5rem 0;
+}
+
+.about .contact-icons a {
+  width: 24px;
+  height: 24px;
+  color: $muted-text-color;
+  transition: $global-transition;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.about .contact-icons a.icon-github:hover {
+  color: $github-color;
+}
+
+.about .contact-icons a.icon-linkedin:hover {
+  color: $linkedin-color;
+}
+
+.about .contact-icons svg {
+  width: 100%;
+  height: 100%;
+}
+
+/* Dividers (hr) */
+.about hr {
+  border: none;
+  border-top: 1px solid $border-color;
+  margin: 2.5rem 0;
+}
+
+/* Section Titles (h5) */
+.about h5 {
+  font-size: $type-size-5;
+  font-weight: 700;
+  margin-top: 2.5rem;
+  margin-bottom: 1.5rem;
+  color: $text-color;
+  letter-spacing: -0.01em;
+  border-bottom: none;
+  text-align: center;
+}
+
+/* First h5 (no extra margin-top) */
+.about h5:first-of-type {
+  margin-top: 0;
+}
+
+/* h5 after hr (no extra margin-top) */
+.about hr + h5 {
+  margin-top: 0;
+}
+
+/* Paragraphs */
+.about p {
+  margin-bottom: 1rem;
+  line-height: 1.7;
+  font-size: $type-size-6;
+}
+
+/* Lists */
+.about ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.about ul li {
+  margin-bottom: 1.5rem;
+  line-height: 1.7;
+  font-size: $type-size-6;
+}
+
+/* Nested lists (highlights) */
+.about ul li ul {
+  margin-top: 0.5rem;
+  margin-left: 0;
+  padding-left: 0;
+}
+
+.about ul li ul li {
+  margin-bottom: 0.4rem;
+  padding-left: 1.5rem;
+  position: relative;
+  font-size: $type-size-7;
+  color: $dark-gray;
+}
+
+.about ul li ul li:before {
+  content: "−";
+  position: absolute;
+  left: 0;
+  color: $muted-text-color;
+}
+
+/* Strong text in lists (company names, dates) */
+.about ul li > strong {
+  font-weight: 700;
+  color: $text-color;
+}
+
+/* Emphasis */
+.about em {
+  font-style: italic;
+  color: $muted-text-color;
+}
+
+/* Links */
+.about a {
+  color: $link-color;
+  text-decoration: none;
+}
+
+.about a:hover {
+  text-decoration: underline;
+}
+
+/* Plant Gallery */
+.about .plant-gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1rem;
+  margin: 2rem 0;
+}
+
+.about .plant-gallery img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-radius: $border-radius;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.about .plant-gallery img:hover {
+  transform: scale(1.05);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+/* Education Section */
+.about .education-item {
+  margin-bottom: 1.5rem;
+}
+
+.about .education-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  margin-bottom: 0.25rem;
+  gap: 1rem;
+}
+
+.about .education-header strong {
+  font-weight: 700;
+  color: $text-color;
+  font-size: $type-size-6;
+}
+
+.about .education-header .date {
+  font-size: $type-size-6;
+  color: $muted-text-color;
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+
+.about .education-detail {
+  font-size: $type-size-7;
+  color: $light-gray;
+  font-style: italic;
+  margin-left: 0;
+}
+
+/* Awards Section */
+.about .award-item {
+  margin-bottom: 1.5rem;
+}
+
+.about .award-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  margin-bottom: 0.25rem;
+  gap: 1rem;
+}
+
+.about .award-header strong {
+  font-weight: 700;
+  color: $text-color;
+  font-size: $type-size-6;
+}
+
+.about .award-header .date {
+  font-size: $type-size-6;
+  color: $muted-text-color;
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+
+.about .award-detail {
+  font-size: $type-size-7;
+  color: $light-gray;
+  font-style: italic;
+  margin-left: 0;
+}
+
+/* Responsive Design */
+@media (max-width: $medium) {
+  .about {
+    width: 90%;
+    padding: 2rem 0;
+  }
+
+  .about > h1 {
+    font-size: $type-size-2 * 0.8;
+  }
+
+  .about > .about-position,
+  .about > .about-email {
+    font-size: $type-size-7;
+  }
+
+  .about > .contact-icons {
+    gap: 0.75rem;
+  }
+
+  .about .contact-icons a {
+    width: 22px;
+    height: 22px;
+  }
+
+  .about h5 {
+    font-size: $type-size-5 * 0.92;
+  }
+
+  .about ul li ul li {
+    font-size: $type-size-8;
+  }
+
+  .about .education-header,
+  .about .award-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.25rem;
+  }
+
+  .about .education-header .date,
+  .about .award-header .date {
+    font-size: $type-size-7;
+  }
+
+  .about .plant-gallery {
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 0.75rem;
+  }
+
+  .about .plant-gallery img {
+    height: 150px;
+  }
+}
+
+@media (max-width: $small) {
+  .about {
+    width: 92%;
+    padding: 1.5rem 0;
+  }
+
+  .about > h1 {
+    font-size: $type-size-3;
+  }
+
+  .about > .about-position,
+  .about > .about-email {
+    font-size: $type-size-7 * 0.95;
+  }
+
+  .about h5 {
+    font-size: $type-size-5 * 0.88;
+  }
+
+  .about .plant-gallery {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 0.5rem;
+  }
+
+  .about .plant-gallery img {
+    height: 120px;
+  }
+}
+
