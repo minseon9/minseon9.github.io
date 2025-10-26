@@ -10,7 +10,7 @@ classes: wide
   {% for category in postsInCategory %}
     <li>
       <a href="/wiki/#{{ category.name }}">
-        <strong>{{ category.name | capitalize }}</strong> <span class="taxonomy__count">{{ category.items | size }}</span>
+        <strong>{{ category.name }}</strong> <span class="taxonomy__count">{{ category.items | size }}</span>
       </a>
     </li>
   {% endfor %}
@@ -22,7 +22,7 @@ classes: wide
 {% for category in postsInCategory %}
   <section id="{{ category.name }}" class="taxonomy__section">
            <h2 class="archive__subtitle">
-             <a href="/wiki/{{ category.name }}">{{ category.name | capitalize }}</a>
+             <a href="/wiki/{{ category.name | downcase }}">{{ category.name }}</a>
            </h2>
     <div class="entries-{{ entries_layout }}">
       {% for post in category.items %}
