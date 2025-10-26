@@ -116,6 +116,9 @@ google_ads:
   ad_client            : "ca-pub-5035913114216363"
   ad_slot              : "YOUR_AD_SLOT_ID"         # 광고 슬롯 ID (선택사항)
   auto_ads             : true
+  ad_categories        : ["children"]              # 광고 카테고리: general, adult, children
+  ad_formats           : ["display", "responsive"] # 광고 형식
+  ad_placement         : "content"               # 광고 배치: content, sidebar, header, footer
 
 
 # Site Author

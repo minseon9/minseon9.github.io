@@ -11,9 +11,9 @@ public      : true
 parent      : 
 latex       : false
 resource    : 6B8B4337-4E34-4D0A-B8AE-6ED0980673CA
+author_profile: false
+classes: wide
 ---
-* TOC
-{:toc}
 
 # Best Time to Buy and Sell Stock
 Stock의 가격이 정수 배열로 주어진다.  

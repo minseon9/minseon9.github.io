@@ -39,41 +39,41 @@ layout: default
         </header>
       {% endunless %}
 
+      {% if page.toc %}
+        <div class="toc-divider">
+          <div class="toc__title">Table of Contents</div>
+          {% include toc.html sanitize=true html=content h_min=1 h_max=6 class="toc__menu" skip_no_ids=true %}
+        </div>
+      {% endif %}
+
       <section class="page__content" itemprop="text">
-        {% if page.toc %}
-          <aside class="sidebar__right {% if page.toc_sticky %}sticky{% endif %}">
-            <nav class="toc">
-              <header><h4 class="nav__title"><i class="fas fa-{{ page.toc_icon | default: 'file-alt' }}"></i> {{ page.toc_label | default: site.data.ui-text[site.locale].toc_label | default: "On this page" }}</h4></header>
-              {% include toc.html sanitize=true html=content h_min=1 h_max=6 class="toc__menu" skip_no_ids=true %}
-            </nav>
-          </aside>
-        {% endif %}
         {{ content }}
         {% if page.link %}<div><a href="{{ page.link }}" class="btn btn--primary">{{ site.data.ui-text[site.locale].ext_link_label | default: "Direct Link" }}</a></div>{% endif %}
       </section>
 
-      <footer class="page__meta">
-        {% if site.data.ui-text[site.locale].meta_label %}
-          <h4 class="page__meta-title">{{ site.data.ui-text[site.locale].meta_label }}</h4>
-        {% endif %}
-        {% include page__taxonomy.html %}
-        {% include page__date.html %}
-      </footer>
 
-      {% if page.share %}{% include social-share.html %}{% endif %}
+<!--      <footer class="page__meta">-->
+<!--        {% if site.data.ui-text[site.locale].meta_label %}-->
+<!--          <h4 class="page__meta-title">{{ site.data.ui-text[site.locale].meta_label }}</h4>-->
+<!--        {% endif %}-->
+<!--        {% include page__taxonomy.html %}-->
+<!--        {% include page__date.html %}-->
+<!--      </footer>-->
+<!--      {% if page.share %}{% include social-share.html %}{% endif %}-->
+<!--      {% include post_pagination.html %}-->
 
-      {% include post_pagination.html %}
     </div>
 
-    {% if jekyll.environment == 'production' and site.comments.provider and page.comments %}
+    {% if  site.comments.provider and page.comments %}
       {% include comments.html %}
     {% endif %}
 
+    {% include ads.html %}
   </article>
 
   {% comment %}<!-- only show related on a post page when `related: true` -->{% endcomment %}
   {% if page.categories[0] %}
-    {% assign related_wiki = site.wiki | where: "category", page.categories[0] %}
+    {% assign related_wiki = site.posts | where: "category", page.categories[0] %}
     {% include page__related.html posts=related_wiki %}
   {% else %}
     {% if page.id and page.related and site.related_posts.size > 0 %}

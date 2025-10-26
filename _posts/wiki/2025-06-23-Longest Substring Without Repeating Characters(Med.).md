@@ -11,9 +11,9 @@ public      : true
 parent      : 
 latex       : false
 resource    : DD81F695-3E0C-4AC2-8968-6BF71FA80346
+author_profile: false
+classes: wide
 ---
-* TOC
-{:toc}
 
 # Longest Substring Without Repeating Characters
 하나의 문자열이 주어진다.

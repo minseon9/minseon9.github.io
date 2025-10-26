@@ -11,9 +11,9 @@ public      : true
 parent      : 
 latex       : false
 resource    : D602B8CC-B768-4BD4-9A39-DD3AA49AA5F9
+author_profile: false
+classes: wide
 ---
-* TOC
-{:toc}
 
 # Median of Two Sorted Arrays
 두개의 정렬이 되어 있는 배열이 주어진다.

@@ -11,9 +11,9 @@ public      : true
 parent      : 
 latex       : false
 resource    : 124B2721-2748-4130-AC49-C306F1884EE1
+author_profile: false
+classes: wide
 ---
-* TOC
-{:toc}
 
 
 # Reversed Integer

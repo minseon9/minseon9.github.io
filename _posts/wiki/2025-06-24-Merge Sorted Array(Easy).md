@@ -11,9 +11,9 @@ public      : true
 parent      : 
 latex       : false
 resource    : 1CD5D268-E156-4BBD-9B75-4A624C7D6967
+author_profile: false
+classes: wide
 ---
-* TOC
-{:toc}
 
 # Merge Sorted Array
 주어진 두 정수 배열(`nums1`, `nums2`)을 정렬된 하나의 배열로 합치는 문제다.  

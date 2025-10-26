@@ -11,9 +11,9 @@ public      : true
 parent      : 
 latex       : false
 resource    : D48A71EA-57B7-41A4-8B8B-1F0B12B2BCE6
+author_profile: false
+classes: wide
 ---
-* TOC
-{:toc}
 
 
 # Remove Duplicates From Sorted Array

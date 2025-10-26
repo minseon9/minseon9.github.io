@@ -11,9 +11,9 @@ public      : true
 parent      : 
 latex       : false
 resource    : 565AF6A0-3B1C-4F5E-AF33-151686729FBC
+author_profile: false
+classes: wide
 ---
-* TOC
-{:toc}
 
 
 # Longest Palindrome Substring

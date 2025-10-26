@@ -346,3 +346,103 @@ select:focus {
   inset-inline-start: 50%;
   z-index: 11;
 }
+
+/*
+   Social Icons Component
+   ========================================================================== */
+
+.social-icons {
+  display: flex;
+  gap: 1rem;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+
+  a {
+    width: 24px;
+    height: 24px;
+    transition: $global-transition;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+
+    &:hover {
+      text-decoration: none;
+    }
+
+    svg {
+      width: 100%;
+      height: 100%;
+    }
+  }
+}
+
+// Footer: 원래 색상으로 표시 (hover 없음)
+.social-icons--footer a {
+  color: inherit; // SVG의 fill 색상 그대로 사용
+}
+
+// About: 회색으로 표시하고 hover 시 원래 색상
+.social-icons--about a {
+  color: $muted-text-color;
+  
+  &:hover {
+    color: inherit; // data-color 속성의 색상으로 변경
+  }
+}
+
+// Size variants
+.social-icons--small a {
+  width: 20px;
+  height: 20px;
+}
+
+.social-icons--large a {
+  width: 32px;
+  height: 32px;
+}
+
+// Layout variants
+.social-icons--center {
+  justify-content: center;
+}
+
+.social-icons--start {
+  justify-content: flex-start;
+}
+
+.social-icons--end {
+  justify-content: flex-end;
+}
+
+/*
+   Footer Styles
+   ========================================================================== */
+
+.page__footer-follow {
+  text-align: center;
+  margin-bottom: 1rem;
+
+  .social-icons {
+    justify-content: center;
+  }
+}
+
+.page__footer-copyright {
+  text-align: center;
+  font-size: $type-size-7;
+  color: $muted-text-color;
+  margin: 0;
+
+  a {
+    color: $muted-text-color;
+    text-decoration: none;
+    transition: $global-transition;
+
+    &:hover {
+      color: $text-color;
+      text-decoration: none;
+    }
+  }
+}

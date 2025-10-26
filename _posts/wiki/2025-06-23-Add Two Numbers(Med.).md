@@ -11,9 +11,9 @@ public      : true
 parent      : 
 latex       : false
 resource    : 4F0E4DB8-9F57-4624-B55A-F3328F17474E
+author_profile: false
+classes: wide
 ---
-* TOC
-{:toc}
 
 # Add Two Numbers
 두개의 non-negative interger가 들어있는 Linked Lists가 주어진다.

@@ -1,19 +1,19 @@
 ---
 layout      : single
 title       : Two Sum(Easy)
-summary     : 
+summary     : Leetcode - Two Sum (Array, HashTable)
 date        : 2025-06-15 17:32:25 +0900
 updated     : 2025-06-18 21:56:10 +0900
-category    : Leetcode
-tags        : Array HashTable
+category    : Algorithm 
+tags        : ["Problem Solving"]
 toc         : true
 public      : true
 parent      : 
 latex       : false
 resource    : 16DD8F24-B9C9-4502-86DF-26055480B4AF
+author_profile: false
+classes: wide
 ---
-* TOC
-{:toc}
 
 # Two Sum
 문제는 단순하다. 
@@ -27,7 +27,7 @@ Output: [1,2]
 ```
 
 
-# 문제 풀이
+## 문제 풀이
 
 문제는 a+b=x인 a,b를 찾는 것이다.
 
@@ -35,7 +35,7 @@ Output: [1,2]
 하나는 문제를 바꾸는 것. a와 b를 찾는 것이 아니라, x-b를 찾는 것으로 문제를 바꿀 수 있다.
 다른 하나는 이미 search한 값은 알고 있다는 점이다.
 
-## 상세  
+### 상세  
 이미 search한 값을 잘 들고 있어야한다. 검색 비용이 O(1)인 HashMap을 사용한다.
 key값이 중복되는 상황을 고려하지 않아도 되니, 해당 숫자를 key로 한다.
 원하는 결과인 해당 숫자의 위치 index를 value로 둔다.  
