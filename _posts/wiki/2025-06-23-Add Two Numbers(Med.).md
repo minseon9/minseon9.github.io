@@ -4,8 +4,8 @@ title       : Add Two Numbers(Med.)
 summary     : 
 date        : 2025-06-16 13:05:32 +0900
 updated     : 2025-06-23 12:09:51 +0900
-category    : Leetcode
-tags        : LinkedList Math
+category    : Algorithm
+tags        : ["Problem Solving"]
 toc         : true
 public      : true
 parent      : 

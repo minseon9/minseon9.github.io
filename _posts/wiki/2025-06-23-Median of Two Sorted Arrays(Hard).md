@@ -4,8 +4,8 @@ title       : Median of Two Sorted Arrays(Hard)
 summary     : 
 date        : 2025-06-18 18:45:00 +0900
 updated     : 2025-06-23 12:12:09 +0900
-category    : Leetcode
-tags        : Array BinarySearch DivideAndConquer
+category    : Algorithm
+tags        : ["Problem Solving"]
 toc         : true
 public      : true
 parent      : 

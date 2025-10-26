@@ -4,8 +4,8 @@ title       : Merge Sorted Array(Easy)
 summary     : 
 date        : 2025-06-23 10:34:34 +0900
 updated     : 2025-06-24 18:51:23 +0900
-category    : Leetcode
-tags        : Array Sorting TwoPointers
+category    : Algorithm
+tags        : ["Problem Solving"]
 toc         : true
 public      : true
 parent      : 

@@ -1,11 +1,11 @@
 ---
 layout      : single
-title       : Shuffle an Array
+title       : Shuffle an Array(Med.)
 summary     : 
 date        : 2025-07-09 11:07:22 +0900
 updated     : 2025-07-09 12:18:03 +0900
-category    : Leetcode
-tags        : Array Math Design Randomized
+category    : Algorithm
+tags        : ["Problem Solving"]
 toc         : true
 public      : true
 parent      : 
