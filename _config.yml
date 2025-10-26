@@ -289,20 +289,17 @@ category_archive:
   path: /wiki/:name/
 tag_archive:
   type: jekyll-archives
-  path: /wiki/tags/:name/
+  path: /wiki/tags/
 
 
 # Jekyll Archives Configuration
 jekyll-archives:
   enabled:
     - categories
-    - tags
   layouts:
     category: categories
-    tag: categories
   permalinks:
     category: /wiki/:name/
-    tag: /wiki/tags/:name/
 
 
 # HTML Compression
