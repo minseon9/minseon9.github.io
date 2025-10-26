@@ -5,7 +5,16 @@ layout: archive
 {{ content }}
 
 {% if page.title and page.title != 'Posts by Category' %}
-  {% assign filtered_posts = site.posts | where_exp: "item", "item.category == page.title" | where_exp: "item", "item.hidden != true" %}
+  {% assign filtered_posts = "" | split: "" %}
+  {% for post in site.posts %}
+    {% if post.hidden != true %}
+      {% assign post_category = post.category | strip | downcase %}
+      {% assign page_title = page.title | strip | downcase %}
+      {% if post_category == page_title %}
+        {% assign filtered_posts = filtered_posts | push: post %}
+      {% endif %}
+    {% endif %}
+  {% endfor %}
 {% else %}
   {% assign filtered_posts = site.posts | where_exp: "item", "item.hidden != true" %}
 {% endif %}
