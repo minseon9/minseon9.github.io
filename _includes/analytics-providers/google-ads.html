@@ -1,0 +1,14 @@
+{% if site.google_ads.enabled %}
+<!-- Google AdSense -->
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client={{ site.google_ads.ad_client }}" crossorigin="anonymous"></script>
+
+{% if site.google_ads.auto_ads %}
+<!-- Google Auto Ads -->
+<script>
+  (adsbygoogle = window.adsbygoogle || []).push({
+    google_ad_client: "{{ site.google_ads.ad_client }}",
+    enable_page_level_ads: true
+  });
+</script>
+{% endif %}
+{% endif %}

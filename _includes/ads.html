@@ -1,0 +1,21 @@
+{% if site.google_ads.enabled and jekyll.environment == 'production' %}
+<!-- Google AdSense 배너 광고 -->
+<div class="ad-banner" style="
+  text-align: center; 
+  margin: 30px 0; 
+  padding: 20px; 
+  background: #f8f9fa; 
+  border-radius: 8px; 
+  border: 1px solid #e9ecef;
+">
+  <ins class="adsbygoogle"
+       style="display:block"
+       data-ad-client="{{ site.google_ads.ad_client }}"
+       {% if site.google_ads.ad_slot %}data-ad-slot="{{ site.google_ads.ad_slot }}"{% endif %}
+       data-ad-format="auto"
+       data-full-width-responsive="true"></ins>
+  <script>
+       (adsbygoogle = window.adsbygoogle || []).push({});
+  </script>
+</div>
+{% endif %}

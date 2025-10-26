@@ -17,7 +17,7 @@ minimal_mistakes_skin    : "default" # "air", "aqua", "contrast", "dark", "dirt"
 # Site Settings
 locale                   : "en-US"
 rtl                      : # true, false (default) # turns direction of the page into right to left for RTL languages
-title                    : "Ian's Blog"
+title                    : "MINSEONG (IAN)"
 title_separator          : "-"
 subtitle                 : # site tagline that appears below site title in masthead
 name                     : "Ian"
@@ -26,7 +26,7 @@ url                      : "https://minseon9.github.io/"
 baseurl                  : "/" # the subpath of your site, e.g. "/blog"
 repository               : "minseon9/minseon9.github.io"
 teaser                   : # path of fallback teaser image, e.g. "/assets/images/500x300.png"
-logo                     : "/assets/images/my-portrait.png"
+logo                     :
 masthead_title           : # overrides the website title displayed in the masthead, use " " for no title
 breadcrumbs              : true
 words_per_minute         : 200
@@ -34,7 +34,7 @@ enable_copy_code_button  : # true, false (default)
 copyright                : # "copyright" name, defaults to site.title
 copyright_url            : # "copyright" URL, defaults to site.url
 comments:
-  provider               : # false (default), "disqus", "discourse", "facebook", "staticman", "staticman_v2", "utterances", "giscus", "custom"
+  provider               : giscus
   disqus:
     shortname            : # https://help.disqus.com/customer/portal/articles/466208-what-s-a-shortname-
   discourse:
@@ -48,17 +48,17 @@ comments:
     theme                : # "github-light" (default), "github-dark"
     issue_term           : # "pathname" (default)
   giscus:
-    repo_id              : # Shown during giscus setup at https://giscus.app
-    category_name        : # Full text name of the category
-    category_id          : # Shown during giscus setup at https://giscus.app
-    discussion_term      : # "pathname" (default), "url", "title", "og:title"
-    reactions_enabled    : # '1' for enabled (default), '0' for disabled
-    theme                : # "light" (default), "dark", "dark_dimmed", "transparent_dark", "preferred_color_scheme"
-    strict               : # 1 for enabled, 0 for disabled (default)
-    input_position       : # "top", "bottom" # The comment input box will be placed above or below the comments
-    emit_metadata        : # 1 for enabled, 0 for disabled (default) # https://github.com/giscus/giscus/blob/main/ADVANCED-USAGE.md#imetadatamessage
-    lang                 : # "en" (default)
-    lazy                 : # true, false # Loading of the comments will be deferred until the user scrolls near the comments container.
+    repo_id              : R_kgDONkKnbw
+    category_name        : General
+    category_id          : DIC_kwDONkKnb84CxEZW
+    discussion_term      : pathname
+    reactions_enabled    : '1'
+    theme                : light_tritanopia
+    strict               : 0
+    input_position       : bottom
+    emit_metadata        : 1
+    lang                 : en
+    lazy                 : true
   staticman:
     branch               : # "master"
     endpoint             : # "https://{your Staticman v3 API}/v3/entry/github/"
@@ -68,11 +68,11 @@ reCaptcha:
 atom_feed:
   path                   : # blank (default) uses feed.xml
   hide                   : # true, false (default)
-search                   : # true, false (default)
-search_full_content      : # true, false (default)
-search_provider          : # lunr (default), algolia, google
+search                   : true
+search_full_content      : true
+search_provider          : lunr
 lunr:
-  search_within_pages    : # true, false (default)
+  search_within_pages    : true
 algolia:
   application_id         : # YOUR_APPLICATION_ID
   index_name             : # YOUR_INDEX_NAME
@@ -105,10 +105,17 @@ social:
 
 # Analytics
 analytics:
-  provider               : # false (default), "google", "google-universal", "google-gtag", "custom"
+  provider               : google-gtag
   google:
-    tracking_id          :
-    anonymize_ip         : # true, false (default)
+    tracking_id          : G-NPYVLVL8MV  # G-XXXXXXXXXX 형태로 교체
+    anonymize_ip         : true
+
+# Google Ads
+google_ads:
+  enabled               : true
+  ad_client            : "ca-pub-5035913114216363"
+  ad_slot              : "YOUR_AD_SLOT_ID"         # 광고 슬롯 ID (선택사항)
+  auto_ads             : true
 
 
 # Site Author
@@ -129,20 +136,24 @@ author:
 footer:
   links:
     - label: "GitHub"
-      icon: "fab fa-fw fa-github-square"
+      icon: "github"
       url: "https://github.com/minseon9"
     - label: "Email"
-      icon: "fas fa-fw fa-envelope-square"
+      icon: "email"
       url: "mailto:dlaepuel@gmail.com"
     - label: "LinkedIn"
-      icon: "fab fa-fw fa-linkedin"
+      icon: "linkedin"
       url: "https://linkedin.com/in/miseong-ian"
+    - label: "RSS"
+      icon: "rss"
+      url: "/feed.xml"
 
 # Reading Files
 include:
   - .htaccess
   - _pages
   - _career
+  - _posts
 exclude:
   - "*.sublime-project"
   - "*.sublime-workspace"
@@ -243,6 +254,7 @@ plugins:
   - jekyll-feed
   - jekyll-include-cache
   - jekyll-refergen
+  - jekyll-archives
 
 # mimic GitHub Pages with --safe
 whitelist:
@@ -270,22 +282,24 @@ posts_archive:
   type: liquid
   path: /blog/
 category_archive:
-  type: liquid
-  path: /categories/
+  type: jekyll-archives
+  path: /wiki/:name/
 tag_archive:
-  type: liquid
-  path: /tags/
-# https://github.com/jekyll/jekyll-archives
-# jekyll-archives:
-#   enabled:
-#     - categories
-#     - tags
-#   layouts:
-#     category: archive-taxonomy
-#     tag: archive-taxonomy
-#   permalinks:
-#     category: /categories/:name/
-#     tag: /tags/:name/
+  type: jekyll-archives
+  path: /wiki/tags/:name/
+
+
+# Jekyll Archives Configuration
+jekyll-archives:
+  enabled:
+    - categories
+    - tags
+  layouts:
+    category: categories
+    tag: categories
+  permalinks:
+    category: /wiki/:name/
+    tag: /wiki/tags/:name/
 
 
 # HTML Compression
@@ -295,18 +309,11 @@ compress_html:
   ignore:
     envs: development
 
-
 # Collections
 collections:
-  wiki:
-    output: true
-    permalink: /:collection/:path
-  projects:
-    output: true
-    permalink: /:collection/:path
-  career:
-    output: true
-    permalink: /career/:name/
+  # projects:
+  #   output: true
+  #   permalink: /:collection/:path
 
 # Defaults
 defaults:
@@ -319,7 +326,7 @@ defaults:
       author_profile: true
       read_time: true
       show_date: true
-      comments: # true
+      comments: true
       share: true
       related: true
   # _wiki
@@ -331,7 +338,7 @@ defaults:
       author_profile: true
       read_time: true
       show_date: true
-      comments: # true
+      comments: true
       share: true
       related: true
   # _projects
@@ -343,7 +350,7 @@ defaults:
       author_profile: true
       read_time: true
       show_date: true
-      comments: # true
+      comments: true
       share: true
       related: true
       
