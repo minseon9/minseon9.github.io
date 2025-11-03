@@ -11,9 +11,9 @@ public      : true
 parent      : 
 latex       : false
 resource    : 90171542-768C-4A6E-A1B1-93065BFC881A
+author_profile: false
+classes: wide
 ---
-* TOC
-{:toc}
 
 Kotlin에서 Array와 List의 동작 방식을 비교한다.  
 

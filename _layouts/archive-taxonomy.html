@@ -1,29 +1,41 @@
 ---
-layout: default
-author_profile: false
+layout: archive
 ---
 
-{% if page.header.overlay_color or page.header.overlay_image or page.header.image %}
-  {% include page__hero.html %}
-{% elsif page.header.video.id and page.header.video.provider %}
-  {% include page__hero_video.html %}
+{% assign taxonomy_name = page.taxonomy | default: 'category' %}
+{% assign taxonomy_value = page.title %}
+
+{% if taxonomy_name == 'category' %}
+  {% assign taxonomy_posts = site.posts | where_exp: "item", "item.category == taxonomy_value" | where_exp: "item", "item.hidden != true" %}
+{% else %}
+  {% assign taxonomy_posts = site.posts | where_exp: "item", "item.tags contains taxonomy_value" | where_exp: "item", "item.hidden != true" %}
 {% endif %}
 
-{% if page.url != "/" and site.breadcrumbs %}
-  {% unless paginator %}
-    {% include breadcrumbs.html %}
-  {% endunless %}
-{% endif %}
+<ul class="taxonomy__index">
+  {% assign postsByTag = taxonomy_posts | group_by: 'tags' %}
+  {% for tag_group in postsByTag %}
+    {% if tag_group.name != blank %}
+      <li>
+        <a href="#{{ tag_group.name | first | slugify }}">
+          <strong>{{ tag_group.name | first }}</strong> <span class="taxonomy__count">{{ tag_group.items | size }}</span>
+        </a>
+      </li>
+    {% endif %}
+  {% endfor %}
+</ul>
 
-<div id="main" role="main">
-  {% include sidebar.html %}
-
-  <div class="archive">
-    {% unless page.header.overlay_color or page.header.overlay_image %}
-      <h1 id="page-title" class="page__title"{% if page.locale %} lang="{{ page.locale }}"{% endif %}>{{ page.title }}</h1>
-    {% endunless %}
-    {% for post in page.posts %}
-      {% include archive-single.html %}
-    {% endfor %}
-  </div>
-</div>
+{% assign entries_layout = page.entries_layout | default: 'grid' %}
+{% assign postsByTag = taxonomy_posts | group_by: 'tags' %}
+{% for tag_group in postsByTag %}
+  {% if tag_group.name != blank %}
+    <section id="{{ tag_group.name | first | slugify }}" class="taxonomy__section">
+      <h2 class="archive__subtitle">{{ tag_group.name | first }}</h2>
+      <div class="entries-{{ entries_layout }}">
+        {% for post in tag_group.items %}
+          {% include archive-single.html type=entries_layout %}
+        {% endfor %}
+      </div>
+      <a href="#page-title" class="back-to-top">{{ site.data.ui-text[site.locale].back_to_top | default: 'Back to Top' }} &uarr;</a>
+    </section>
+  {% endif %}
+{% endfor %}

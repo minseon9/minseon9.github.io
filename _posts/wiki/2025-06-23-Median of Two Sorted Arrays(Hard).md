@@ -4,16 +4,16 @@ title       : Median of Two Sorted Arrays(Hard)
 summary     : 
 date        : 2025-06-18 18:45:00 +0900
 updated     : 2025-06-23 12:12:09 +0900
-category    : Leetcode
-tags        : Array BinarySearch DivideAndConquer
+category    : Algorithm
+tags        : ["Problem Solving"]
 toc         : true
 public      : true
 parent      : 
 latex       : false
 resource    : D602B8CC-B768-4BD4-9A39-DD3AA49AA5F9
+author_profile: false
+classes: wide
 ---
-* TOC
-{:toc}
 
 # Median of Two Sorted Arrays
 두개의 정렬이 되어 있는 배열이 주어진다.

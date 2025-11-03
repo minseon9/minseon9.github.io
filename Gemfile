@@ -19,6 +19,7 @@ gem "jekyll", "~> 3.7"
 gem "minimal-mistakes-jekyll", "=4.26.2"
 gem "jekyll-refergen"
 gem "kramdown-parser-gfm"
+gem "jekyll-archives"
 
 # The following plugins are automatically loaded by the theme-gem:
 #   gem "jekyll-paginate"

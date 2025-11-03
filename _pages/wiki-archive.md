@@ -1,16 +1,16 @@
 ---
 layout: archive
 title: Wiki
-collection: wiki
 permalink: /wiki/
-author_profile: true
+author_profile: false
+classes: wide
 ---
 <ul class="taxonomy__index">
-  {% assign wikisInCategory = site.wiki | where_exp: "item", "item.public != false" | group_by_exp: 'wiki', 'wiki.category | category: "%Y"' %}
-  {% for wiki in wikisInCategory %}
+  {% assign postsInCategory = site.posts | where_exp: "item", "item.hidden != true" | group_by: 'category' %}
+  {% for category in postsInCategory %}
     <li>
-      <a href="#{{ wiki.name }}">
-        <strong>{{ wiki.name }}</strong> <span class="taxonomy__count">{{ wiki.items | size }}</span>
+      <a href="/wiki/#{{ category.name }}">
+        <strong>{{ category.name }}</strong> <span class="taxonomy__count">{{ category.items | size }}</span>
       </a>
     </li>
   {% endfor %}
@@ -18,12 +18,14 @@ author_profile: true
 
 
 {% assign entries_layout = page.entries_layout | default: 'list' %}
-{% assign wikisInCategory = site.wiki | where_exp: "item", "item.public != false" | group_by_exp: 'wiki', 'wiki.category | category: "%Y"' %}
-{% for wiki in wikisInCategory %}
-  <section id="{{ wiki.name }}" class="taxonomy__section">
-    <h2 class="archive__subtitle">{{ wiki.name }}</h2>
+{% assign postsInCategory = site.posts | where_exp: "item", "item.hidden != true" | group_by: 'category' %}
+{% for category in postsInCategory %}
+  <section id="{{ category.name }}" class="taxonomy__section">
+           <h2 class="archive__subtitle">
+             <a href="/wiki/{{ category.name | downcase }}">{{ category.name }}</a>
+           </h2>
     <div class="entries-{{ entries_layout }}">
-      {% for post in wiki.items %}
+      {% for post in category.items %}
         {% include archive-single.html type=entries_layout %}
       {% endfor %}
     </div>

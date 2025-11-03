@@ -1,5 +1,6 @@
 Categories:
     - {category: Blog, tags: [독서], collection: posts}
-    - {category: Leetcode, tags: [Array, BinarySearch, BinaryTree, DFS, Design, DivideAndConquer, DynamicProgramming, HashTable, LinkedList, 'Manacher''sAlgorithm', Math, Randomized, SlidingWindow, Sorting, Stack, String, Tree, TwoPointers], collection: wiki}
-    - {category: AI, tags: [Cursor, Prompt], collection: wiki}
-    - {category: Language, tags: [Kotlin], collection: wiki}
+    - {category: AI, tags: [Cursor, Prompt], collection: posts}
+    - {category: Language, tags: [Kotlin], collection: posts}
+    - {category: Algorithm, tags: ['Solving"]', '["Problem'], collection: posts}
+    - {category: Leetcode, tags: [Array, BinarySearch, BinaryTree, DFS, Design, DivideAndConquer, DynamicProgramming, HashTable, LinkedList, 'Manacher''sAlgorithm', Math, Randomized, SlidingWindow, Sorting, Stack, String, Tree, TwoPointers], collection: posts}

@@ -1,19 +1,19 @@
 ---
 layout      : single
-title       : Best Time to Buy and Sell Stock
+title       : Best Time to Buy and Sell Stock(Easy)
 summary     : 
 date        : 2025-07-10 23:09:23 +0900
 updated     : 2025-07-10 23:49:23 +0900
-category    : Leetcode
-tags        : Array DynamicProgramming
+category    : Algorithm
+tags        : ["Problem Solving"]
 toc         : true
 public      : true
 parent      : 
 latex       : false
 resource    : 6B8B4337-4E34-4D0A-B8AE-6ED0980673CA
+author_profile: false
+classes: wide
 ---
-* TOC
-{:toc}
 
 # Best Time to Buy and Sell Stock
 Stock의 가격이 정수 배열로 주어진다.  

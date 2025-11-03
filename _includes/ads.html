@@ -1,0 +1,29 @@
+{% if site.google_ads.enabled %}
+<!-- Google AdSense 배너 광고 -->
+<div class="ad-banner" style="
+  text-align: center !important;
+  margin: 30px 0 !important;
+  padding: 20px !important;
+  background: #f8f9fa !important;
+  border-radius: 8px !important;
+  border: 1px solid #e9ecef !important;
+  width: 100% !important;
+  max-width: 100% !important;
+  box-sizing: border-box !important;
+  position: relative !important;
+  z-index: 1 !important;
+">
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client={{ site.google_ads.ad_client }}"
+          crossorigin="anonymous"></script>
+  <!-- footer banner ad -->
+  <ins class="adsbygoogle"
+       style="display:block"
+       data-ad-client="ca-pub-5035913114216363"
+       data-ad-slot="6474166787"
+       data-ad-format="auto"
+       data-full-width-responsive="true"></ins>
+  <script>
+    (adsbygoogle = window.adsbygoogle || []).push({});
+  </script>
+</div>
+{% endif %}

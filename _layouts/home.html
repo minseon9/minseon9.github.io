@@ -4,19 +4,20 @@ layout: archive
 
 {{ content }}
 
-<h3 class="archive__subtitle">{{ site.data.ui-text[site.locale].recent_posts | default: "Recently updated wikis" }}</h3>
+<div class="home-layout">
+  <div class="home-header">
+    <h1 class="home-title">{{ site.data.ui-text[site.locale].recent_posts | default: "Recently Updated" }}</h1>
+  </div>
 
-{% assign wiki = site.wiki  %}
+  {% assign wiki = site.posts %}
+  {% assign entries_layout = page.entries_layout | default: 'list' %}
+  <div class="entries-{{ entries_layout }} home-entries">
+    {% include documents-collection.html entries=wiki type=entries_layout limit=5 sort_by='updated' sort_order='reverse' %}
+  </div>
 
-{% assign entries_layout = page.entries_layout | default: 'list' %}
-<div class="entries-{{ entries_layout }}">
-  {% include documents-collection.html entries=wiki type=entries_layout limit=5 sort_by='updated' sort_order='reverse' %}
-
-
-  {% if wiki.size > 5 %}
-    <a href="/wiki/"> See all posts </a>
-  {% endif %}
+  <div class="home-footer">
+    <a href="/wiki/" class="see-all-link">SEE ALL POST ></a>
+  </div>
 </div>
 
-
-{% include paginator.html %}
+<!--{% include paginator.html %}-->

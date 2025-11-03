@@ -4,16 +4,16 @@ title       : Add Two Numbers(Med.)
 summary     : 
 date        : 2025-06-16 13:05:32 +0900
 updated     : 2025-06-23 12:09:51 +0900
-category    : Leetcode
-tags        : LinkedList Math
+category    : Algorithm
+tags        : ["Problem Solving"]
 toc         : true
 public      : true
 parent      : 
 latex       : false
 resource    : 4F0E4DB8-9F57-4624-B55A-F3328F17474E
+author_profile: false
+classes: wide
 ---
-* TOC
-{:toc}
 
 # Add Two Numbers
 두개의 non-negative interger가 들어있는 Linked Lists가 주어진다.

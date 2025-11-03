@@ -1,6 +1,8 @@
 ---
-title: "Wikis by Tag"
-permalink: /tags/
+title: "Tags"
+permalink: /wiki/tags/
 layout: tags
-author_profile: true
+entries_layout: grid
+author_profile: false
+classes: wide
 ---

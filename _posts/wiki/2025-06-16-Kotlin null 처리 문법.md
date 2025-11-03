@@ -11,9 +11,9 @@ public      : true
 parent      : 
 latex       : false
 resource    : F1C84F34-9879-4360-B75B-D9D6FECAC17A
+author_profile: false
+classes: wide
 ---
-* TOC
-{:toc}
 
 Leetcode 풀면서 배운 TIL, Kotlin에서 null 처리 문법이다.
 

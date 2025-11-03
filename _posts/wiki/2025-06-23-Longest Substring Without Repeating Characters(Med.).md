@@ -4,16 +4,16 @@ title       : Longest Substring Without Repeating Characters(Med.)
 summary     : 
 date        : 2025-06-17 12:05:14 +0900
 updated     : 2025-06-23 12:11:44 +0900
-category    : Leetcode
-tags        : String HashTable SlidingWindow
+category    : Algorithm
+tags        : ["Problem Solving"]
 toc         : true
 public      : true
 parent      : 
 latex       : false
 resource    : DD81F695-3E0C-4AC2-8968-6BF71FA80346
+author_profile: false
+classes: wide
 ---
-* TOC
-{:toc}
 
 # Longest Substring Without Repeating Characters
 하나의 문자열이 주어진다.

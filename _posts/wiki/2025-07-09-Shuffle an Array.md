@@ -1,19 +1,19 @@
 ---
 layout      : single
-title       : Shuffle an Array
+title       : Shuffle an Array(Med.)
 summary     : 
 date        : 2025-07-09 11:07:22 +0900
 updated     : 2025-07-09 12:18:03 +0900
-category    : Leetcode
-tags        : Array Math Design Randomized
+category    : Algorithm
+tags        : ["Problem Solving"]
 toc         : true
 public      : true
 parent      : 
 latex       : false
 resource    : 1B49406D-571D-4763-8C17-E7672D188E89
+author_profile: false
+classes: wide
 ---
-* TOC
-{:toc}
 
 # Shuffle an Array
 주어진 정수 배열을 무작위로 섞는 알고리즘을 디자인하면 되는 문제다.  

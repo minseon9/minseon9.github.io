@@ -4,16 +4,16 @@ title       : Remove Duplicates From Sorted Array(Easy)
 summary     : 
 date        : 2025-06-24 18:23:39 +0900
 updated     : 2025-06-24 18:50:43 +0900
-category    : Leetcode
-tags        : Array TwoPointers
+category    : Algorithm
+tags        : ["Problem Solving"]
 toc         : true
 public      : true
 parent      : 
 latex       : false
 resource    : D48A71EA-57B7-41A4-8B8B-1F0B12B2BCE6
+author_profile: false
+classes: wide
 ---
-* TOC
-{:toc}
 
 
 # Remove Duplicates From Sorted Array

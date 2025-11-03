@@ -4,16 +4,16 @@ title       : Binary Tree Inorder Traversal(Med.)
 summary     : 
 date        : 2025-06-25 13:22:27 +0900
 updated     : 2025-06-25 14:07:26 +0900
-category    : Leetcode
-tags        : Stack DFS BinaryTree Tree
+category    : Algorithm
+tags        : ["Problem Solving"]
 toc         : true
 public      : true
 parent      : 
 latex       : false
 resource    : B72E397C-98CD-48C5-A2FA-60841F18AE0F
+author_profile: false
+classes: wide
 ---
-* TOC
-{:toc}
 
 # Binary Tree Inorder Traversal
 주어진 이진 트리를 inorder로 탐색하는 문제다.

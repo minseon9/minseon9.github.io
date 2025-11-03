@@ -4,4 +4,26 @@ layout: archive
 
 {{ content }}
 
-{% include posts-taxonomy.html taxonomies=site.categories %}
+{% if page.title and page.title != 'Posts by Category' %}
+  {% assign filtered_posts = "" | split: "" %}
+  {% for post in site.posts %}
+    {% if post.hidden != true %}
+      {% assign post_category = post.category | downcase %}
+      {% assign page_title = page.title | downcase %}
+      {% if post_category == page_title %}
+        {% assign filtered_posts = filtered_posts | push: post %}
+      {% endif %}
+    {% endif %}
+  {% endfor %}
+{% else %}
+  {% assign filtered_posts = site.posts | where_exp: "item", "item.hidden != true" %}
+{% endif %}
+
+{% if filtered_posts.size > 0 %}
+  {% assign entries_layout = page.entries_layout | default: 'list' %}
+  <div class="entries-{{ entries_layout }}">
+    {% include documents-collection.html entries=filtered_posts type=entries_layout sort_by='updated' sort_order='reverse' %}
+  </div>
+{% else %}
+  <p>No posts found for this category.</p>
+{% endif %}

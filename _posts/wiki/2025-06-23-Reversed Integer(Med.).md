@@ -4,16 +4,16 @@ title       : Reversed Integer(Med.)
 summary     : 
 date        : 2025-06-20 17:31:31 +0900
 updated     : 2025-06-23 12:14:45 +0900
-category    : Leetcode
-tags        : Math
+category    : Algorithm
+tags        : ["Problem Solving"]
 toc         : true
 public      : true
 parent      : 
 latex       : false
 resource    : 124B2721-2748-4130-AC49-C306F1884EE1
+author_profile: false
+classes: wide
 ---
-* TOC
-{:toc}
 
 
 # Reversed Integer

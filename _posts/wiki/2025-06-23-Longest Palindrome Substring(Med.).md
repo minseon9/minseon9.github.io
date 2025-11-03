@@ -4,16 +4,16 @@ title       : Longest Palindrome Substring(Med.)
 summary     : 
 date        : 2025-06-20 01:44:02 +0900
 updated     : 2025-06-23 12:12:37 +0900
-category    : Leetcode
-tags        : Manacher'sAlgorithm TwoPointers String DynamicProgramming
+category    : Algorithm
+tags        : ["Problem Solving"]
 toc         : true
 public      : true
 parent      : 
 latex       : false
 resource    : 565AF6A0-3B1C-4F5E-AF33-151686729FBC
+author_profile: false
+classes: wide
 ---
-* TOC
-{:toc}
 
 
 # Longest Palindrome Substring
