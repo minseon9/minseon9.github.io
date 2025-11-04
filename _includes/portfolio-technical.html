@@ -1,8 +1,5 @@
-<div class="portfolio">
-  <h1 class="portfolio__title">Portfolio</h1>
-  <h2 class="portfolio__subtitle">TECHNICAL CHALLENGES & LEARNINGS</h2>
-
-  {% assign sorted_careers = site.career | sort: 'order' | reverse %}
+<!-- Portfolio의 TECHNICAL CHALLENGES & LEARNINGS Tab -->
+{% assign sorted_careers = site.career | sort: 'order' | reverse %}
   {% for career in sorted_careers %}
   
   <div class="portfolio__company-group">
@@ -68,5 +65,4 @@
     <hr class="portfolio__company-divider"/>
   </div>
   
-  {% endfor %}
-</div>
+{% endfor %}

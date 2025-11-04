@@ -1,0 +1,40 @@
+<!-- WORKING STYLE & FEEDBACK Tab -->
+<div id="portfolio-feedback" class="portfolio__tab-content" style="display:block;">
+  <!-- 일하는 방향 & 가치관 -->
+  <h3 class="portfolio__section-main-title">일하는 방향 & 가치관</h3>
+  <div class="portfolio__feedback-section">
+    <div class="portfolio__feedback-gallery portfolio__feedback-gallery--positive">
+      {% assign positive_images = "3bc077bb-d60b-4692-8221-eb340cf50e65.png,52c9a626-22a4-440c-9335-672259ce96d0.png,590cef20-052d-4c3c-86ea-96d781119913.png,5c304f28-3776-4787-be5c-517b853bc901.png,e8bbfed5-05de-4590-ac0c-58fb8874ea8c.png" | split: "," %}
+      {% for image in positive_images %}
+      <a href="/assets/career/portfolio/positive/{{ image }}" class="image-popup">
+        <img src="/assets/career/portfolio/positive/{{ image }}" alt="Positive Feedback {{ forloop.index }}">
+      </a>
+      {% endfor %}
+    </div>
+    <div class="portfolio__feedback-text">
+      <p>개발자는 단순히 코드를 작성하는 사람이 아니라, 솔루션을 함께 만들어가는 파트너라고 믿습니다. 우리가 정의한 도메인과 고객의 문제 해결을 가장 높은 우선순위에 두며, 이 기반 위에서 모든 기술적 논의와 소통을 시작합니다. '왜(Why)' 해야 하는지 비즈니스와 도메인을 깊이 이해하고, '어떻게(How)' 해결할 것인지 기획 초기 단계부터 구현까지 전 과정에 참여해 더 나은 솔루션을 치열하게 고민합니다.</p>
+      <p>팀이 모두 같은 지향점을 바라보는 상태가 되는 것을 이상적으로 생각합니다. 이 과정에서 다양한 직군이 서로 이해할 수 있는 언어로 소통하고, 프로젝트 진행 상황을 투명하게 공유하며 팀 전체가 같은 방향으로 나아가는 것을 중요하게 생각합니다.</p>
+      <p>개발 시에는 코드 퀄리티와 보이스카우트 원칙을 중시합니다. <strong>"가장 빠르게 가는 길은 바르게 가는 길"</strong>이라는 믿음으로, 더 나은 코드를 위해 동료들과 치열하게 토론하고, 제안하며, 수용하는 과정을 즐깁니다. 높은 수준의 코드 리뷰를 통해 팀의 코드 베이스를 개선하고 동료의 성장에 적극적으로 기여하는 동료가 되는 것을 목표로 합니다.</p>
+    </div>
+  </div>
+  
+  <!-- 피드백을 통한 개선과 성장 -->
+  <h3 class="portfolio__section-main-title">피드백을 통한 개선과 성장</h3>
+  <div class="portfolio__feedback-section">
+    <div class="portfolio__feedback-gallery portfolio__feedback-gallery--constructive">
+      {% assign constructive_images = "74a86e02-14a5-40aa-a96d-1efa15c85a60.png,cb3b5d82-d28f-411b-8cf3-8cddf498cd2c.png,f8ec86fd-a105-446b-9a1b-b1f90d641833.png" | split: "," %}
+      {% for image in constructive_images %}
+      <a href="/assets/career/portfolio/constructive/{{ image }}" class="image-popup">
+        <img src="/assets/career/portfolio/constructive/{{ image }}" alt="Constructive Feedback {{ forloop.index }}">
+      </a>
+      {% endfor %}
+    </div>
+    <div class="portfolio__feedback-text">
+      <p>프로젝트를 진행하다 보면 누구나 시행착오를 겪습니다. 저는 이를 성장의 발판으로 삼아, 문제를 빠르게 드러내고 개선 사이클을 짧게 가져가는 방식을 일의 기본 원칙으로 둡니다.</p>
+      <p>초기에는 과도한 추상화나 '한 번에 완벽하게 하려는' 접근으로 인해, 우선순위 설정과 리스크 관리에 어려움을 겪었다는 피드백을 받았습니다. 이후에는 리스크를 조기에 가시화하고 작은 단위로 개선을 검증하는 워크플로우를 팀 내에 정착시키는 데 집중했습니다.</p>
+      <p>예를 들어, 특약 구독 지원 프로젝트에서는 착수 전 구독 도메인의 전체 동작과 레거시 리스크를 목록화해 공유하고, 최소 개선 범위를 우선 선정했습니다. 가격 정책 등 공통 로직만 전략 패턴으로 분리하는 식으로 필요한 수준의 추상화만 적용하며, 가장 중요한 문제부터 단계적으로 해결했습니다.</p>
+      <p>프로젝트 과정에서 드러난 이슈나 개선 포인트를 단순한 오류로 보지 않고, 회고와 피드백을 통해 팀의 학습 자산으로 전환하려 노력합니다. 이러한 반복적인 개선을 통해, "완벽한 설계"보다 빠른 피드백 순환과 지속 가능한 개선이 더 큰 가치를 만든다는 것을 체득했습니다.</p>
+    </div>
+  </div>
+</div>
+

@@ -71,12 +71,20 @@
   justify-content: center;
 }
 
-.about .contact-icons a.icon-github:hover {
-  color: $github-color;
+// About page social icons hover colors
+.about .social-icons a.icon-github:hover {
+  color: #333;
+  text-decoration: none;
 }
 
-.about .contact-icons a.icon-linkedin:hover {
-  color: $linkedin-color;
+.about .social-icons a.icon-linkedin:hover {
+  color: #0077b5;
+  text-decoration: none;
+}
+
+.about .social-icons a.icon-resume:hover {
+  color: $text-color;
+  text-decoration: none;
 }
 
 .about .contact-icons svg {

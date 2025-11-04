@@ -1,5 +1,4 @@
 ---
-layout: career
 company: "(주)헥슬란트"
 position: "산학 협력 인턴"
 start_date: "2020.03"

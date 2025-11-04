@@ -1,5 +1,4 @@
 ---
-layout: career
 company: "(주)헥슬란트"
 position: "Backend Engineer"
 start_date: "2021.03"

@@ -1,5 +1,4 @@
 ---
-layout: career
 company: "(주)레몬베이스"
 position: "Backend Engineer"
 start_date: "2023.08"
@@ -52,7 +51,7 @@ project_groups:
             이러한 구조적 개선과 도메인 정의는 실질적인 비즈니스 성과로 연결되었습니다。
             <br>초기 솔루션만으로 4개 이상의 고객사 계약을 달성하며, 합리적 도메인 정의와 구조 개선이 제품 경쟁력으로 이어질 수 있음을 입증했습니다.
 
-      - title: "제품 별 , 알림 개편 등 홈 화면 개편"
+      - title: "제품 별 알림 개편 등 홈 화면 개편"
         role: "제품 별 해야 할 일(Task) 설계 및 구현"
         skills: "Django, MySQL"
         definition_and_hypothesis:

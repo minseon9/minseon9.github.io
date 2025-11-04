@@ -11,7 +11,7 @@ linkedin: "https://www.linkedin.com/in/your-linkedin-id/"
 
 I'm Minseong Lee, also known as Ian. I've been working as a backend engineer since 2021, primarily in B2B SaaS—blockchain infrastructure and HR products.
 
-If you want to know more about my professional life as a backend engineer, you can check my [LinkedIn]({{ page.linkedin }}) profile.
+If you want to know more about my professional life as a backend engineer, you can check my [LinkedIn]({{ page.linkedin }}) profile or [Resume](/assets/career/résumé.pdf).
 
 This site is where I document my personal records, projects, and what I've learned. I write here because I want to share, discuss, and sometimes revise my thoughts with others.
 

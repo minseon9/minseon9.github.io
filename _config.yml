@@ -311,9 +311,9 @@ compress_html:
 
 # Collections
 collections:
-  # projects:
-  #   output: true
-  #   permalink: /:collection/:path
+  career:
+    output: true
+    permalink: /career/:name/
 
 # Defaults
 defaults:

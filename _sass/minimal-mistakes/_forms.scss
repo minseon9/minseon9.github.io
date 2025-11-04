@@ -383,12 +383,25 @@ select:focus {
   color: inherit; // SVG의 fill 색상 그대로 사용
 }
 
-// About: 회색으로 표시하고 hover 시 원래 색상
+// About: 회색으로 표시 (hover는 개별적으로 정의)
 .social-icons--about a {
-  color: $muted-text-color;
+  color: #808080;
+  text-decoration: none;
   
+  // Font Awesome 아이콘 크기 맞추기 (SVG와 동일하게 24px)
+  i {
+    font-size: 24px;
+    line-height: 1;
+  }
+  
+  // SVG는 fill="currentColor"로 color를 따름
+  svg {
+    fill: currentColor;
+  }
+  
+  // 호버 시에도 밑줄 제거
   &:hover {
-    color: inherit; // data-color 속성의 색상으로 변경
+    text-decoration: none;
   }
 }
 

@@ -4,7 +4,7 @@
   padding-left: 15vw;
   padding-right: 15vw;
   box-sizing: border-box;
-  font-size: 0.7em;
+  font-size: 0.75em;  /* 0.7em → 0.85em으로 일반 글자 크기 증가 */
 
   .portfolio__title {
     margin-bottom: 0em;
@@ -12,47 +12,164 @@
     font-weight: 700;
     text-align: center;
   }
-  .portfolio__subtitle {
-    font-size: 1rem;
-    font-weight: 500;
-    margin-top: 0.5em;
-    margin-bottom: 2.5em;
-    text-align: center;
+  
+  .portfolio__tabs {
+    display: flex;
+    gap: 0.5rem;
+    justify-content: center;
+    margin: 2rem 0 3rem 0;
+    border-bottom: 2px solid #e0e0e0;
   }
+  
+  .portfolio__tab {
+    padding: 0.75rem 1.5rem;
+    background: none;
+    border: none;
+    border-bottom: 3px solid transparent;
+    cursor: pointer;
+    font-size: 0.8rem;
+    font-weight: 600;
+    color: #666;
+    transition: all 0.3s ease;
+    margin-bottom: -2px;
+    
+    &:hover {
+      color: #333;
+    }
+    
+    &.active {
+      color: #333;
+      border-bottom-color: #333;
+    }
+  }
+  
+  .portfolio__tab-content {
+    width: 100%;
+    
+    &--wide {
+      .portfolio {
+        max-width: 100% !important;
+        padding-left: 15vw !important;
+        padding-right: 15vw !important;
+        margin-left: 0 !important;
+        margin-right: 0 !important;
+        
+        @media (max-width: 700px) {
+          padding-left: 2vw !important;
+          padding-right: 2vw !important;
+        }
+      }
+    }
+  }
+  
+  .portfolio__section-main-title {
+    font-size: 1rem;
+    font-weight: 700;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+    text-align: center;
+    color: #333;
+    
+    &:first-child {
+      margin-top: 1rem;
+    }
+  }
+  
+  
+  .portfolio__feedback-section {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 2rem;
+    margin: 2rem auto 3rem auto;
+    max-width: 900px;
+    padding: 0 2rem;
+    align-items: start;
+  }
+  
+  .portfolio__feedback-text {
+    line-height: 1.8;
+    font-size: 0.7rem;
+    color: #555;
+    
+    p {
+      margin-bottom: 0.8rem;  /* 1.2rem → 0.8rem으로 간격 축소 */
+      
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+    
+    strong {
+      font-weight: 700;
+      color: #333;
+    }
+  }
+  
+  .portfolio__feedback-gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 1.5rem;
+    margin: 0 0 2rem 0;
+    
+    a {
+      display: block;
+      text-decoration: none;
+      cursor: pointer;
+      
+      img {
+        width: 100%;
+        height: auto;
+        border-radius: 0.5em;
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+      }
+      
+      &:hover img {
+        transform: scale(1.02);
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+      }
+    }
+  }
+  
+  // feedback-section 내부의 갤러리는 그리드로
+  .portfolio__feedback-section .portfolio__feedback-gallery {
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 0.5rem;
+    margin: 0 0 2rem 0;
+  }
+  
+  // Constructive Feedback 갤러리도 비슷한 크기로
+  .portfolio__feedback-gallery--constructive {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    justify-content: center;
+    
+    a {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    
+    img {
+      max-width: 400px;
+      max-height: 200px;
+      width: auto;
+      height: auto;
+      object-fit: contain;
+    }
+  }
+  
+  
 
   .portfolio__project {
     margin-bottom: 1.1em;
   }
 
-  .portfolio__column-list, .portfolio__column, .portfolio__image, .portfolio__role, .portfolio__period, .portfolio__skills {
+  .portfolio__column-list, .portfolio__column {
     /* column 레이아웃 관련 스타일 제거 */
     all: unset;
     display: revert;
-  }
-
-  .portfolio__image {
-    border: none;
-    margin: 1em 0 1.2em 0;
-    padding: 0;
-    border-radius: 0;
-    text-align: center;
-    img {
-      max-width: 100%;
-      height: auto;
-      border-radius: 0.5em;
-    }
-  }
-  .portfolio__role {
-    font-size: 1em;
-    font-weight: 600;
-    margin-bottom: 0.2em;
-    margin-top: 0.5em;
-  }
-  .portfolio__period {
-    color: #888;
-    font-size: 1em;
-    margin-bottom: 0.5em;
-    margin-top: 0.1em;
   }
   .portfolio__skills {
     font-size: 1em;
@@ -62,8 +179,8 @@
     word-break: keep-all;
   }
   .portfolio__project-group-title {
-    font-size: 1.8rem;
-    font-weight: 800;
+    font-size: 1rem;
+    font-weight: 600;
     margin-top: 2.5em;
     margin-bottom: 1.5em;
     color: #1a1a1a;
@@ -78,77 +195,12 @@
     margin-top: 0.6em;
     margin-bottom: 0.4em;
   }
-  .portfolio__desc {
-    font-size: 1em;
-    margin-bottom: 0.75em;
-    margin-top: 0.1em;
-    line-height: 1.4;
-  }
   .portfolio__project-content-title {
     font-weight: bold;
     margin-top: 1em;
     margin-bottom: 0.2em;
     font-size: 1.2em;
     letter-spacing: -0.01em;
-  }
-  .portfolio__bulleted-list {
-    list-style-type: disc;
-    padding-left: 0;
-    margin: 0.3em 0 0.3em 0;
-    font-size: 1em;
-    line-height: 1.4;
-  }
-  .portfolio__bulleted-list > li {
-    margin-bottom: 0.1em;
-    font-size: 1em;
-    line-height: 1.4;
-    list-style-type: disc;
-    padding-left: 0;
-  }
-  .portfolio__bulleted-list .portfolio__bulleted-list {
-    list-style-type: circle;
-    padding-left: 0;
-    margin-top: 0.1em;
-    margin-bottom: 0.1em;
-  }
-  .portfolio__bulleted-list .portfolio__bulleted-list > li {
-    list-style-type: circle;
-    position: relative;
-    padding-left: 0;
-  }
-  .portfolio__bulleted-list .portfolio__bulleted-list > li::marker {
-    color: #fff;
-    font-size: 0.9em;
-  }
-  .portfolio__bulleted-list .portfolio__bulleted-list > li::before {
-    content: '';
-    display: inline-block;
-    width: 0.3em;
-    height: 0.3em;
-    margin-right: 0.5em;
-    border-radius: 50%;
-    border: 1.5px solid #888;
-    background: #fff;
-    vertical-align: middle;
-    position: relative;
-    top: -1px;
-  }
-  .portfolio__bulleted-list .portfolio__bulleted-list > li {
-    list-style: none;
-    padding-left: 0.2em;
-  }
-  .portfolio__highlight-gray {
-    background: none !important;
-    color: #888 !important;
-    border-radius: 0;
-    padding: 0;
-    font-weight: 400;
-  }
-  mark.portfolio__highlight-gray {
-    background: none !important;
-    color: #888 !important;
-    border-radius: 0;
-    padding: 0;
   }
   .portfolio__project-group-divider {
     width: 100%;
@@ -180,7 +232,7 @@
     display: block;
   }
   .portfolio__company-title {
-    font-size: 1.69em;
+    font-size: 1.5em;  /* 1.3em → 1.5em으로 크기 증가 */
     font-weight: 700;
     margin-top: 2em;
     margin-bottom: 3em;
@@ -216,14 +268,78 @@
       padding-right: 0;
       margin-bottom: 1em;
     }
-    .portfolio__image {
-      margin: 0.5em 0 1em 0;
+    .portfolio__tabs {
+      flex-wrap: wrap;
+      gap: 0.25rem;
+    }
+    .portfolio__tab {
+      padding: 0.5rem 1rem;
+      font-size: 0.9rem;
+    }
+    .portfolio__feedback-section {
+      gap: 1.5rem;
+      padding: 0 1rem;
+    }
+    .portfolio__feedback-section .portfolio__feedback-gallery {
+      grid-template-columns: 1fr;
+      gap: 1rem;
+    }
+    .portfolio__section-main-title {
+      font-size: 1.1rem;
+    }
+    .portfolio__feedback-text {
+      font-size: 0.7rem;
+    }
+    .portfolio__feedback-gallery {
+      grid-template-columns: 1fr;
+      gap: 1rem;
     }
   }
 
   margin-left: auto;
   margin-right: auto;
-  max-width: 70vw;
+  max-width: 100%;
+}
+
+// Portfolio 페이지 전용 스타일 - max-width 제한 우회
+.portfolio-page {
+  #main {
+    max-width: 100% !important;
+    padding-inline: 0 !important;
+  }
+  
+  .page {
+    width: 100% !important;
+    padding-inline-end: 0 !important;
+  }
+  
+  .page__inner-wrap {
+    width: 100% !important;
+    max-width: 100% !important;
+  }
+  
+  .page__content {
+    width: 100% !important;
+    max-width: 100% !important;
+  }
+  
+  .portfolio-page__wrapper {
+    width: 100%;
+    max-width: 100%;
+  }
+  
+  .portfolio {
+    max-width: 100%;
+    padding-left: 10vw;
+    padding-right: 10vw;
+    margin-left: 0;
+    margin-right: 0;
+    
+    @media (max-width: 700px) {
+      padding-left: 2vw;
+      padding-right: 2vw;
+    }
+  }
 }
 
 // 모든 포트폴리오 섹션(성과 포함) ul/li 동일 스타일 적용
@@ -235,6 +351,7 @@
   margin-bottom: 0.3em !important;
   padding-left: 0;
   line-height: 1.5;
+  font-size: 1.0em;  /* ul, li 글자 크기 증가 */
 }
 
 .portfolio strong {
@@ -242,5 +359,5 @@
 }
 
 .portfolio ul > li {
-  font-size: 0.95em;
+  font-size: 1.0em;  /* 0.95em → 1.1em으로 ul, li 글자 크기 증가 */
 }
