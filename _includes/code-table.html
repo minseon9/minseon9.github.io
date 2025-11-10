@@ -1,0 +1,95 @@
+{% assign tab_array = include.tabs | split: "," %}
+{% assign tab_count = tab_array.size %}
+
+{% if tab_count > 0 %}
+  {% if include.id %}
+    {% assign tab_id = "code-tab-" | append: include.id %}
+  {% else %}
+    {% assign tabs_string = include.tabs | strip | replace: " ", "-" | replace: ",", "-" | downcase %}
+    {% assign tab_id = "code-tab-" | append: tabs_string %}
+  {% endif %}
+
+<div class="code-tab-wrapper" data-tab-id="{{ tab_id }}">
+  <div class="code-tab-header">
+    {% for tab_key in tab_array %}
+      {% assign key = tab_key | strip %}
+      {% assign tab_key_for_data = tab_id | append: "-" | append: key | downcase | replace: " ", "-" %}
+      
+      <button 
+        class="code-tab-button {% if forloop.first %}active{% endif %}" 
+        data-tab="{{ tab_key_for_data }}"
+        onclick="switchCodeTab('{{ tab_id }}', '{{ tab_key_for_data }}')"
+      >
+        {{ key }}
+      </button>
+    {% endfor %}
+  </div>
+  
+  <div class="code-tab-content">
+    {% for tab_key in tab_array %}
+      {% assign key = tab_key | strip %}
+      {% assign content_key = key %}
+      {% assign language_key = key | append: "_language" %}
+      {% assign tab_content = include[content_key] %}
+      {% assign tab_language = include[language_key] | default: key | strip %}
+      {% assign tab_key_for_data = tab_id | append: "-" | append: key | downcase | replace: " ", "-" %}
+
+      <div 
+        class="code-tab-panel {% if forloop.first %}active{% endif %}" 
+        data-tab="{{ tab_key_for_data }}"
+      >
+        {% if tab_content and tab_content != "" %}
+          {% if tab_language != "" %}
+            {% capture code_block %}
+```{{ tab_language }}
+{{ tab_content }}
+```
+            {% endcapture %}
+            {{ code_block | markdownify }}
+          {% else %}
+            {% capture code_block %}
+```
+{{ tab_content }}
+```
+            {% endcapture %}
+            {{ code_block | markdownify }}
+          {% endif %}
+        {% else %}
+          <div class="code-tab-empty">내용 없음</div>
+        {% endif %}
+      </div>
+    {% endfor %}
+  </div>
+</div>
+{% endif %}
+
+<script>
+(function() {
+  if (typeof window.switchCodeTab === 'undefined') {
+    window.switchCodeTab = function(tabId, tabKey) {
+      const wrapper = document.querySelector(`.code-tab-wrapper[data-tab-id="${tabId}"]`);
+      if (!wrapper) return;
+      
+      const buttons = wrapper.querySelectorAll('.code-tab-button');
+      buttons.forEach(btn => {
+        btn.classList.remove('active');
+      });
+      
+      const panels = wrapper.querySelectorAll('.code-tab-panel');
+      panels.forEach(panel => {
+        panel.classList.remove('active');
+      });
+      
+      const activeButton = wrapper.querySelector(`.code-tab-button[data-tab="${tabKey}"]`);
+      if (activeButton) {
+        activeButton.classList.add('active');
+      }
+      
+      const activePanel = wrapper.querySelector(`.code-tab-panel[data-tab="${tabKey}"]`);
+      if (activePanel) {
+        activePanel.classList.add('active');
+      }
+    };
+  }
+})();
+</script>
