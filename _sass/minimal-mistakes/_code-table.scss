@@ -1,0 +1,125 @@
+/* ==========================================================================
+   Code Table (LeetCode Style Tab Viewer)
+   ========================================================================== */
+
+.code-tab-wrapper {
+  margin: 2em 0;
+  border: 1px solid #e1e4e8;
+  border-radius: 6px;
+  background: #fff;
+  overflow: hidden;
+}
+
+.code-tab-header {
+  display: flex;
+  background-color: #f6f8fa;
+  border-bottom: 1px solid #e1e4e8;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+}
+
+.code-tab-button {
+  padding: 12px 16px;
+  font-size: 14px;
+  font-weight: 500;
+  color: #586069;
+  background: transparent;
+  border: none;
+  border-bottom: 2px solid transparent;
+  cursor: pointer;
+  white-space: nowrap;
+  transition: all 0.2s ease;
+  font-family: inherit;
+
+  &:hover {
+    color: #24292e;
+    background-color: rgba(0, 0, 0, 0.03);
+  }
+
+  &.active {
+    color: #0366d6;
+    border-bottom-color: #0366d6;
+    background-color: #fff;
+    font-weight: 600;
+  }
+}
+
+.code-tab-content {
+  position: relative;
+}
+
+.code-tab-panel {
+  display: none;
+  padding: 0;
+
+  &.active {
+    display: block;
+  }
+
+  > div.highlighter-rouge,
+  > figure.highlight {
+    margin: 0;
+    border-radius: 0;
+    border: none;
+  }
+
+  pre {
+    margin: 0;
+    padding: 16px;
+    overflow-x: auto;
+    font-size: 13px;
+    line-height: 1.45;
+  }
+
+  pre code {
+    background: transparent;
+    padding: 0;
+    font-size: inherit;
+    border: none;
+    border-radius: 0;
+  }
+}
+
+.code-tab-empty {
+  padding: 16px;
+  text-align: center;
+  color: #6a737d;
+  font-style: italic;
+}
+
+/* 다크 모드 지원 */
+@media (prefers-color-scheme: dark) {
+  .code-tab-wrapper {
+    border-color: #30363d;
+    background: #0d1117;
+  }
+
+  .code-tab-header {
+    background-color: #161b22;
+    border-bottom-color: #30363d;
+  }
+
+  .code-tab-button {
+    color: #8b949e;
+
+    &:hover {
+      color: #c9d1d9;
+      background-color: rgba(255, 255, 255, 0.05);
+    }
+
+    &.active {
+      color: #58a6ff;
+      border-bottom-color: #58a6ff;
+      background-color: #0d1117;
+    }
+  }
+
+  .code-tab-panel pre {
+    background: #161b22;
+  }
+
+  .code-tab-empty {
+    color: #8b949e;
+  }
+}
+
