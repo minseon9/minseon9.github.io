@@ -100,8 +100,8 @@ Infinity를 사용하거나, 해당 타입이 표현할 수 있는 최대, 최�
 
 
 ## Code
-### Kotlin
-```kotlin
+
+{% capture Kotlin %}
 import java.lang.Exception
 
 class Solution {
@@ -148,10 +148,9 @@ class Solution {
         throw Exception()
     }
 }
-```
+{% endcapture %}
 
-### Python
-```python
+{% capture Python %}
 class Solution:
     def findMedianSortedArrays(self, nums1: List[int], nums2: List[int]) -> float:
         if len(nums1) > len(nums2):
@@ -198,7 +197,13 @@ class Solution:
             ) / 2
         else:
             return max(nums1_left_partition_max, nums2_left_partition_max)
-```
+{% endcapture %}
+
+{% include code-table.html 
+   tabs="kotlin,python"
+   kotlin=Kotlin
+   python=Python
+%}
 
 ## Leetcode Solution Link
 [O(log(min(n, m))) Time Complexity Solution](https://leetcode.com/problems/median-of-two-sorted-arrays/solutions/6857931/ologminn-m-time-complexity-solution-by-l-eo32)

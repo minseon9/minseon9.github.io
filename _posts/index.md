@@ -1,6 +1,9 @@
-# Books
-[[2025-02-09-독서]]
-
-
 # Blog
-[[2025-04-07-전세금 탈환기]]
+[[blog/index.md]]
+
+# Project
+[[project/index.md]]
+
+
+# Wiki
+[[wiki/index.md]]

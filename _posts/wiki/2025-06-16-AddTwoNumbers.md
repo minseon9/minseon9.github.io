@@ -46,8 +46,7 @@ nullable에 대한 고려는 두 Linked List의 길이가 다르다는 점에서
 
 ## Code
 
-### Kotlin
-```kotlin
+{% capture Kotlin %}
 class Solution {
     fun addTwoNumbers(l1: ListNode?, l2: ListNode?): ListNode? {
         val resultNode = ListNode()
@@ -73,10 +72,9 @@ class Solution {
         return resultNode.next
     }
 }
-```
+{% endcapture %}
 
-### Python
-```python
+{% capture Python %}
 class Solution:
     def addTwoNumbers(self, l1: Optional[ListNode], l2: Optional[ListNode]) -> Optional[ListNode]:
         carry = 0
@@ -104,7 +102,13 @@ class Solution:
                 l2 = l2.next
 
         return result_list_node.next
-```
+{% endcapture %}
+
+{% include code-table.html 
+   tabs="kotlin,python"
+   kotlin=Kotlin
+   python=Python
+%}
 
 ## Leetcode Solution Link
 [O(n) Time Complexity Solution](https://leetcode.com/problems/add-two-numbers/solutions/6848503/on-time-complexity-solution-by-leeapple-lye2)

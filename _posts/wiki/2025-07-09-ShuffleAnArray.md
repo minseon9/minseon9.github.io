@@ -60,8 +60,7 @@ Kotlin이나 Python에서 배열을 변수에 그대로 할당하면, reference�
 
 ## Code
 
-### Kotlin
-```kotlin
+{% capture Kotlin %}
 import kotlin.random.Random
 
 class Solution(nums: IntArray) {
@@ -84,10 +83,9 @@ class Solution(nums: IntArray) {
         return nums
     }
 }
-```
+{% endcapture %}
 
-### Python
-```python
+{% capture Python %}
 class Solution:
     __origin_nums: list[int]
     __origin_num_length: int
@@ -108,7 +106,13 @@ class Solution:
             nums[i], nums[random_index] = nums[random_index], nums[i]
 
         return nums
-```
+{% endcapture %}
+
+{% include code-table.html 
+   tabs="kotlin,python"
+   kotlin=Kotlin
+   python=Python
+%}
 
 ## Leetcode Solution Link
 [O(n) Time Complexity Fisher-Yates Shuffle Solution](https://leetcode.com/problems/shuffle-an-array/solutions/6937237/on-time-complexity-fisher-yates-shuffle-qk3rp)

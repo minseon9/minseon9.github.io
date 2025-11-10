@@ -85,8 +85,7 @@ ex) 8-bit에서 -128
 
 ## Code
 
-### Kotlin
-```kotlin
+{% capture Kotlin %}
 import kotlin.math.abs
 
 class Solution {
@@ -119,10 +118,9 @@ class Solution {
         return false
     }
 }
-```
+{% endcapture %}
 
-### Python
-```python
+{% capture Python %}
 class Solution:
     MAX = 2**31 - 1
     MIN = -2**31
@@ -148,7 +146,13 @@ class Solution:
             return x > abs(self.MIN)
         else:
             return x > self.MAX    
-```
+{% endcapture %}
+
+{% include code-table.html 
+   tabs="kotlin,python"
+   kotlin=Kotlin
+   python=Python
+%}
 
 ## Leetcode Solution Link
 [O(logn) Time Complexity Solution](https://leetcode.com/problems/reverse-integer/solutions/6866270/ologn-time-complexity-solution-by-leeapp-n7x3)
