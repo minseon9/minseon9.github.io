@@ -22,7 +22,7 @@ classes: wide
 {% for category in postsInCategory %}
   <section id="{{ category.name }}" class="taxonomy__section">
            <h2 class="archive__subtitle">
-             <a href="/wiki/{{ category.name | downcase }}">{{ category.name }}</a>
+             <a href="/wiki/{{ category.name | downcase | slugify }}">{{ category.name }}</a>
            </h2>
     <div class="entries-{{ entries_layout }}">
       {% for post in category.items %}
