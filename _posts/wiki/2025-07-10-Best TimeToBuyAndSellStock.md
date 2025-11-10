@@ -3,7 +3,7 @@ layout      : single
 title       : Best Time to Buy and Sell Stock(Easy)
 summary     : 
 date        : 2025-07-10 23:09:23 +0900
-updated     : 2025-07-10 23:49:23 +0900
+updated     : 2025-11-10 01:12:17 +0900
 category    : Algorithm
 tags        : ["Problem Solving"]
 toc         : true
@@ -40,8 +40,22 @@ O(n^2) 해결법은 단순하다. 모든 값을 비교하면 된다.
 
 ## Code
 
-### Kotlin
-```kotlin
+{% capture Python %}
+class Solution:
+    def maxProfit(self, prices: List[int]) -> int:
+        mininum_price = inf
+        diff = 0
+        for price in prices:
+            if mininum_price > price:
+                mininum_price = price
+
+            if diff < price - mininum_price:
+                diff = price - mininum_price
+
+        return diff
+{% endcapture %}
+
+{% capture Kotlin %}
 class Solution {
     fun maxProfit(prices: IntArray): Int {
         var minimumPrice = Int.MAX_VALUE
@@ -59,23 +73,13 @@ class Solution {
         return diff
     }
 }
-```
+{% endcapture %}
 
-### Python
-```python
-class Solution:
-    def maxProfit(self, prices: List[int]) -> int:
-        mininum_price = inf
-        diff = 0
-        for price in prices:
-            if mininum_price > price:
-                mininum_price = price
-
-            if diff < price - mininum_price:
-                diff = price - mininum_price
-
-        return diff
-```
+{% include code-table.html 
+   tabs="python,kotlin"
+   python=Python
+   kotlin=Kotlin
+%}
 
 ## Leetcode Solution Link
 [O(n) Time Complexity Solution](https://leetcode.com/problems/best-time-to-buy-and-sell-stock/solutions/6943329/on-time-complexity-solution-by-leeapple-cgaz)

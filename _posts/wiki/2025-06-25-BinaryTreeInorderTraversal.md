@@ -77,8 +77,7 @@ stack은 적절한 위치까지 pop하지 않으면 무한루프를 돌게된다
 
 ## Code
 
-### Kotlin
-```kotlin
+{% capture Kotlin %}
 class Solution {
     fun inorderTraversal(root: TreeNode?): List<Int> {
         if (root == null) {
@@ -110,10 +109,9 @@ class Solution {
         return result
     }
 }
-```
+{% endcapture %}
 
-### Python
-```python
+{% capture Python %}
 class Solution:
     def inorderTraversal(self, root: Optional[TreeNode]) -> List[int]:
         if not root:
@@ -139,7 +137,13 @@ class Solution:
                     break
 
         return results
-```
+{% endcapture %}
+
+{% include code-table.html 
+   tabs="kotlin,python"
+   kotlin=Kotlin
+   python=Python
+%}
 
 ## Leetcode Solution Link
 [O(n) Time Complexity Stack Solution](https://leetcode.com/problems/binary-tree-inorder-traversal/solutions/6882833/on-time-complexity-stack-solution-by-lee-mpp9)

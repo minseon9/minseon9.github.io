@@ -24,12 +24,3 @@
 [[parameter reference]]
 [[Comparison List and Array]]
 
-## Architecture
-[[2025-11-10-TransactrionScript]]
-[[ActiveRecord]]
-[[DomainModel]]
-[[Service Layer]]
-[[HexagonalArchitecture]]
-[[OnionArchitecture]]
-[[CleanArchitecture]]
-

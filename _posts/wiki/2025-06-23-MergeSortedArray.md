@@ -47,8 +47,8 @@ Output: [1]
 대신 크기가 큰 순서대로 **뒤에서부터 정렬하면** 그럴 필요없이 nums1을 그대로 사용할 수 있다.  
 
 ## Code
-### Kotlin
-```kotlin
+
+{% capture Kotlin %}
 class Solution {
 	fun merge(nums1: IntArray, m: Int, nums2: IntArray, n: Int): Unit {
 		var nums1Index = m - 1
@@ -75,9 +75,9 @@ class Solution {
 		}
     }
 }
-```
-### Python
-```python
+{% endcapture %}
+
+{% capture Python %}
 class Solution:
     def merge(self, nums1: List[int], m: int, nums2: List[int], n: int) -> None:
         """
@@ -102,7 +102,13 @@ class Solution:
             nums1[total_index] = nums2[nums2_index]
             nums2_index -= 1
             total_index -= 1
-```
+{% endcapture %}
+
+{% include code-table.html 
+   tabs="kotlin,python"
+   kotlin=Kotlin
+   python=Python
+%}
 
 ## Leetcode Solution Link
 [O(n+m) Time Complexity Solution](https://leetcode.com/problems/merge-sorted-array/solutions/6874652/onm-time-complexity-solution-by-leeapple-urts)

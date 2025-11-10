@@ -65,8 +65,8 @@ substring이라는 점을 잘 고려해야한다. 즉, 연속된 문자열이어
 
 
 ## Code
-### Kotlin
-```kotlin
+
+{% capture Kotlin %}
 class Solution {
     fun lengthOfLongestSubstring(s: String): Int {
         var maxLength = 0 
@@ -89,10 +89,9 @@ class Solution {
         return maxLength
     }
 }
-```
+{% endcapture %}
 
-### Python
-```python
+{% capture Python %}
 class Solution:
     def lengthOfLongestSubstring(self, s: str) -> int:
         max_length = 0
@@ -112,7 +111,13 @@ class Solution:
             max_length = max(max_length, substring_length)
 
         return max_length
-```
+{% endcapture %}
+
+{% include code-table.html 
+   tabs="kotlin,python"
+   kotlin=Kotlin
+   python=Python
+%}
 
 ## Leetcode Solution Link
 [O(n) Time Complexity Sliding Window Solution](https://leetcode.com/problems/longest-substring-without-repeating-characters/solutions/6852496/on-time-complexity-sliding-window-soluti-jhgd)

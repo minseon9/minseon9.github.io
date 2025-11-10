@@ -72,8 +72,8 @@ panlindrome은 길이가 짝수일 수도, 홀수일 수도 있다.
 
 
 ## Code
-### Kotlin
-```kotlin
+
+{% capture Kotlin %}
 class Solution {
     private val DIVIDER = '$'
 
@@ -129,9 +129,9 @@ class Solution {
         return refined.substring(start, end).filter {it != DIVIDER }
     }
 }
-```
-### Python
-```python
+{% endcapture %}
+
+{% capture Python %}
 class Solution:
     DIVIDER = '$'
 
@@ -193,7 +193,13 @@ class Solution:
                 longest_palindrom += char
 
         return longest_palindrom
-```
+{% endcapture %}
+
+{% include code-table.html 
+   tabs="kotlin,python"
+   kotlin=Kotlin
+   python=Python
+%}
 
 ## Leetcode Solution Link
 [O(n) Time Complexity Manacher's Algorithm Solution](https://leetcode.com/problems/longest-palindromic-substring/solutions/6863162/on-time-complexity-manachers-algorithm-s-8rgm)

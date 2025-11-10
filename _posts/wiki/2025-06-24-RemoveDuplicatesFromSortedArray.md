@@ -50,8 +50,8 @@ Output: 2, nums = [1,2,_]
 
 
 ## Code
-### Kotlin
-```kotlin
+
+{% capture Kotlin %}
 class Solution {
     fun removeDuplicates(nums: IntArray): Int {
     	var uniqueNumCount = 1
@@ -67,11 +67,10 @@ class Solution {
         
     }
 }
-```
+{% endcapture %}
 
-### Python
-```python
- class Solution:
+{% capture Python %}
+class Solution:
     def removeDuplicates(self, nums: List[int]) -> int:
         unique_num_count = 1
 
@@ -81,7 +80,13 @@ class Solution {
                 unique_num_count += 1
 
         return unique_num_count
-```
+{% endcapture %}
+
+{% include code-table.html 
+   tabs="kotlin,python"
+   kotlin=Kotlin
+   python=Python
+%}
 
 ## Leetcode Solution Link
 [O(n) Time Complexity Two Pointers Solution](https://leetcode.com/problems/remove-duplicates-from-sorted-array/solutions/6879936/on-time-complexity-two-pointers-solution-artl)
