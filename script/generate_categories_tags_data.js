@@ -49,12 +49,14 @@ dataList.forEach(function collectTagMap(data) {
 
     const category = categoriesTags.Categories.find((item) => item.category === data.category)
     const tags = category.tags
-    for (const tag of data.tags) {
-        if (tags.includes(tag)) {
-            continue;
-        }
+    if (data.tags && Array.isArray(data.tags)) {
+        for (const tag of data.tags) {
+            if (tags.includes(tag)) {
+                continue;
+            }
 
-        category.tags.push(tag)
+            category.tags.push(tag)
+        }
     }
 });
 
@@ -79,27 +81,37 @@ function parseInfo(file, info) {
     obj.fileName = file.name.replace(/\.md$/, '');
     obj.type = file.type;
 
-    const rawData = info.split('\n');
-
-    rawData.forEach(function(str) {
-        const result = /^\s*([^:]+):\s*(.+)\s*$/.exec(str);
-
-        if(result == null) {
-            return;
-        }
-
-        const key = result[1].trim();
-        const val = result[2].trim();
-
-        obj[key] = val;
-    });
+    // YAML 라이브러리를 사용하여 front matter 파싱
+    try {
+        const parsed = YAML.parse(info);
+        Object.assign(obj, parsed);
+    } catch (e) {
+        // 파싱 실패 시 기존 방식으로 폴백
+        const rawData = info.split('\n');
+        rawData.forEach(function(str) {
+            const result = /^\s*([^:]+):\s*(.+)\s*$/.exec(str);
+            if(result == null) {
+                return;
+            }
+            const key = result[1].trim();
+            const val = result[2].trim();
+            obj[key] = val;
+        });
+    }
 
     // obj.url = '/wiki/' + obj.date.replace(/^(\d{4})-(\d{2})-(\d{2}).*$/, '$1/$2/$3/');
     // obj.url += obj.fileName.replace(/^(\d{4}-\d{2}-\d{2}-)?(.*)$/, '$2');
 
-
+    // tags 처리 개선
     if(obj.tags) {
-        obj.tags = obj.tags.split(/\s+/);
+        if(Array.isArray(obj.tags)) {
+            // 이미 배열인 경우 그대로 사용
+            obj.tags = obj.tags;
+        } else if(typeof obj.tags === 'string') {
+            // 문자열인 경우 공백으로 분리하되, 따옴표로 묶인 부분은 하나로 처리
+            obj.tags = obj.tags.match(/(["'])((?:\\?.)*?)\1|(\S+)/g) || [];
+            obj.tags = obj.tags.map(tag => tag.replace(/^["']|["']$/g, ''));
+        }
     }
 
 
