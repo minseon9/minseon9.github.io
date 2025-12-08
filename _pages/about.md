@@ -6,7 +6,7 @@ title: "Minseong Lee (Ian)"
 position: "Backend Engineer"
 email: "dlaepeul@gmail.com"
 github: "https://github.com/minseon9"
-linkedin: "https://www.linkedin.com/in/your-linkedin-id/"
+linkedin: "https://www.linkedin.com/in/miseong-ian/"
 ---
 
 I'm Minseong Lee, also known as Ian. I've been working as a backend engineer since 2021, primarily in B2B SaaS—blockchain infrastructure and HR products.
