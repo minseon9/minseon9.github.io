@@ -25,11 +25,32 @@
 [[Comparison List and Array]]
 
 ## Architecture
+[[2025-12-10-InversionOfControl]]
 [[2025-11-10-TransactrionScript]]
-[[ActiveRecord]]
+[[2025-12-10-ActiveRecord]]
+
+
 [[DomainModel]]
 [[Service Layer]]
 [[HexagonalArchitecture]]
 [[OnionArchitecture]]
 [[CleanArchitecture]]
+
+# Framework
+## Spring
+[[2025-12-10-MockAndTeststrategy]]
+[[2025-12-10-JPAAndHibernate]]
+[[2025-12-10-SecurityFilterChainAndOAuth]]
+
+# CS
+## Network
+[[2025-12-10-StarbuckAndSSH]]
+
+
+## Key Management System
+[[2025-12-10-ShamirSecretShare]]
+[[2025-12-10-MultiPartyComputation]]
+
+## BlockChain
+[[2025-12-10-ProofOfWork]]
 
