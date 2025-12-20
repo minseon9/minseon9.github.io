@@ -527,27 +527,28 @@
 
 /* TOC Divider 스타일 */
 .toc-divider {
-  text-align: center;        /* 중앙 정렬 */
-  margin-bottom: 2m;       /* 하단 여백 */
+  text-align: center;      /* 제목 중앙 정렬 */
+  margin-bottom: 2em;     /* 하단 여백 */
 }
 
 .toc-divider .toc__title {
   margin: 0.5em 0 0.3em 0;
-  font-size: 0.4em;
+  font-size: 0.7em;
   font-weight: 300;          /* 가벼운 폰트 웨이트 */
   color: #a0a0a0;            /* 연한 회색 */
   text-transform: none;
   letter-spacing: normal;
-  text-align: center;        /* 제목 중앙 정렬 */
+  text-align: center;      /* 제목 중앙 정렬 */
 }
 
 .toc__menu {
-  margin: 1em auto 2em auto;
+  margin: 1em 0 2em 0;
   padding: 0;
-  width: fit-content;      /* 내용 크기에 맞춤 */
+  width: 100%;            /* 전체 너비 사용 */
   list-style: none;
   font-size: $type-size-6;
-  display: block;          /* block으로 변경하여 margin: 0 auto가 작동하도록 */
+  display: block;
+  text-align: left;        /* 목차 내용 왼쪽 정렬 */
 
   @include breakpoint($large) {
     font-size: $type-size-7;
