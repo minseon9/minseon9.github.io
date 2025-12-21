@@ -510,6 +510,8 @@
   border-radius: $border-radius;
   -webkit-box-shadow: $box-shadow;
   box-shadow: $box-shadow;
+  width: 60%;
+  max-width: 60%;
 
   .nav__title {
     color: #fff;
@@ -542,13 +544,13 @@
 }
 
 .toc__menu {
-  margin: 1em 0 2em 0;
+  margin: 1em auto 2em auto;  /* 좌우 auto로 중앙 정렬 */
   padding: 0;
-  width: 100%;            /* 전체 너비 사용 */
+  width: 60%;                  /* 너비 지정해야 중앙 정렬 동작 */
   list-style: none;
   font-size: $type-size-6;
   display: block;
-  text-align: left;        /* 목차 내용 왼쪽 정렬 */
+  text-align: left;            /* 목차 내용 왼쪽 정렬 */
 
   @include breakpoint($large) {
     font-size: $type-size-7;
