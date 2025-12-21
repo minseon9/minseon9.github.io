@@ -4,7 +4,6 @@ title       : Array, PrimitiveArray, List, MutableList
 summary     : 
 date        : 2025-07-09 11:21:56 +0900
 updated     : 2025-07-09 14:58:23 +0900
-category    : Language
 tags        : Kotlin
 toc         : true
 public      : true

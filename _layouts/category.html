@@ -4,7 +4,107 @@ layout: archive
 
 {{ content }}
 
+{% assign all_posts = site.posts | where_exp: "item", "item.hidden != true" %}
 {% assign entries_layout = page.entries_layout | default: 'list' %}
-<div class="entries-{{ entries_layout }}">
-  {% include posts-category.html taxonomy=page.taxonomy type=entries_layout %}
-</div>
+
+<!-- page.url에서 카테고리 경로 추출 (빈 문자열 제거) -->
+{% assign url_parts_raw = page.url | split: '/' %}
+{% assign url_parts = "" | split: "" %}
+{% for part in url_parts_raw %}
+  {% if part != "" %}
+    {% assign url_parts = url_parts | push: part %}
+  {% endif %}
+{% endfor %}
+{% assign category_depth = url_parts.size %}
+
+<!-- 직접 포스트들 (이 카테고리가 최하위인 것들) -->
+{% assign direct_posts = "" | split: "" %}
+{% for post in all_posts %}
+  {% assign post_depth = post.categories.size %}
+  
+  <!-- 카테고리 깊이가 같고, 모든 카테고리가 일치해야 함 -->
+  {% if post_depth == category_depth %}
+    {% assign match = true %}
+    {% for i in (0..category_depth) %}
+      {% if i < category_depth %}
+        {% assign url_cat = url_parts[i] | downcase %}
+        {% assign post_cat = post.categories[i] | downcase %}
+        {% unless url_cat == post_cat %}
+          {% assign match = false %}
+          {% break %}
+        {% endunless %}
+      {% endif %}
+    {% endfor %}
+    {% if match %}
+      {% assign direct_posts = direct_posts | push: post %}
+    {% endif %}
+  {% endif %}
+{% endfor %}
+
+{% if direct_posts.size > 0 %}
+  <div class="entries-{{ entries_layout }}">
+    {% for post in direct_posts %}
+      {% include archive-single.html type=entries_layout %}
+    {% endfor %}
+  </div>
+{% endif %}
+
+<!-- 하위 카테고리들 수집 -->
+{% assign sub_categories = "" | split: "" %}
+{% for post in all_posts %}
+  {% assign post_depth = post.categories.size %}
+  
+  <!-- 카테고리 깊이가 더 깊고, 상위 카테고리가 모두 일치해야 함 -->
+  {% if post_depth > category_depth %}
+    {% assign match = true %}
+    {% for i in (0..category_depth) %}
+      {% if i < category_depth %}
+        {% assign url_cat = url_parts[i] | downcase %}
+        {% assign post_cat = post.categories[i] | downcase %}
+        {% unless url_cat == post_cat %}
+          {% assign match = false %}
+          {% break %}
+        {% endunless %}
+      {% endif %}
+    {% endfor %}
+    {% if match %}
+      {% assign sub_cat = post.categories[category_depth] %}
+      {% unless sub_categories contains sub_cat %}
+        {% assign sub_categories = sub_categories | push: sub_cat %}
+      {% endunless %}
+    {% endif %}
+  {% endif %}
+{% endfor %}
+
+{% if sub_categories.size > 0 %}
+  {% for sub in sub_categories %}
+    {% assign sub_count = 0 %}
+    {% for post in all_posts %}
+      {% if post.categories.size > category_depth %}
+        {% assign match = true %}
+        {% for i in (0..category_depth) %}
+          {% if i < category_depth %}
+            {% assign url_cat = url_parts[i] | downcase %}
+            {% assign post_cat = post.categories[i] | downcase %}
+            {% unless url_cat == post_cat %}
+              {% assign match = false %}
+              {% break %}
+            {% endunless %}
+          {% endif %}
+        {% endfor %}
+        {% if match and post.categories[category_depth] == sub %}
+          {% assign sub_count = sub_count | plus: 1 %}
+        {% endif %}
+      {% endif %}
+    {% endfor %}
+    
+    <h3>
+      <a href="{{ page.url }}{{ sub | downcase | slugify }}/">{{ sub }}</a>
+    </h3>
+    <p class="taxonomy__count">하위 카테고리 문서 {{ sub_count }}개</p>
+  {% endfor %}
+{% endif %}
+
+{% if direct_posts.size == 0 and sub_categories.size == 0 %}
+  <p>이 카테고리에 문서가 없습니다.</p>
+{% endif %}

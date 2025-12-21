@@ -4,7 +4,6 @@ title       : Remove Duplicates From Sorted Array(Easy)
 summary     : 
 date        : 2025-06-24 18:23:39 +0900
 updated     : 2025-06-24 18:50:43 +0900
-category    : Algorithm
 tags        : ["Problem Solving"]
 toc         : true
 public      : true

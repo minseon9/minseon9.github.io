@@ -6,13 +6,16 @@ layout: archive
 
 {% if page.title and page.title != 'Posts by Category' %}
   {% assign filtered_posts = "" | split: "" %}
+  {% assign page_title = page.title | downcase %}
   {% for post in site.posts %}
     {% if post.hidden != true %}
-      {% assign post_category = post.category | downcase %}
-      {% assign page_title = page.title | downcase %}
-      {% if post_category == page_title %}
-        {% assign filtered_posts = filtered_posts | push: post %}
-      {% endif %}
+      {% for cat in post.categories %}
+        {% assign cat_downcase = cat | downcase %}
+        {% if cat_downcase == page_title %}
+          {% assign filtered_posts = filtered_posts | push: post %}
+          {% break %}
+        {% endif %}
+      {% endfor %}
     {% endif %}
   {% endfor %}
 {% else %}

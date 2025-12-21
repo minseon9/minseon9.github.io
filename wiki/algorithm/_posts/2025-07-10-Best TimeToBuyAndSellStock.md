@@ -4,7 +4,6 @@ title       : Best Time to Buy and Sell Stock(Easy)
 summary     : 
 date        : 2025-07-10 23:09:23 +0900
 updated     : 2025-11-10 01:12:17 +0900
-category    : Algorithm
 tags        : ["Problem Solving"]
 toc         : true
 public      : true

@@ -157,6 +157,7 @@ include:
   - _pages
   - _career
   - _posts
+  - wiki
 exclude:
   - "*.sublime-project"
   - "*.sublime-workspace"
@@ -293,9 +294,9 @@ tag_archive:
 
 
 # Jekyll Archives Configuration
+# 비활성화 - index.md로 직접 카테고리 페이지 관리
 jekyll-archives:
-  enabled:
-    - categories
+  enabled: []
   layouts:
     category: categories
   permalinks:
@@ -323,36 +324,13 @@ defaults:
       type: posts
     values:
       layout: single
-      author_profile: true
+      author_profile: false
+      classes: wide
       read_time: true
       show_date: true
       comments: true
       share: true
       related: true
-  # _wiki
-  - scope:
-      path: ""
-      type: wiki
-    values:
-      layout: single
-      author_profile: true
-      read_time: true
-      show_date: true
-      comments: true
-      share: true
-      related: true
-  # _projects
-  - scope:
-      path: ""
-      type: projects
-    values:
-      layout: single
-      author_profile: true
-      read_time: true
-      show_date: true
-      comments: true
-      share: true
-      related: true
-      
+
 refergen-plugin:
   collections: ["posts", "wiki"] # Specify which collections to process

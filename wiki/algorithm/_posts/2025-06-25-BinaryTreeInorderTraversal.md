@@ -4,7 +4,6 @@ title       : Binary Tree Inorder Traversal(Med.)
 summary     : 
 date        : 2025-06-25 13:22:27 +0900
 updated     : 2025-06-25 14:07:26 +0900
-category    : Algorithm
 tags        : ["Problem Solving"]
 toc         : true
 public      : true

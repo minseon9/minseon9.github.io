@@ -4,7 +4,6 @@ title       : Kotlin null 처리 문법
 summary     : 
 date        : 2025-06-16 12:40:05 +0900
 updated     : 2025-06-16 13:22:07 +0900
-category    : Language
 tags        : Kotlin
 toc         : true
 public      : true

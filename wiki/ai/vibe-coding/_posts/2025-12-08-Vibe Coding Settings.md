@@ -1,11 +1,10 @@
 ---
 layout		: single
 title		: Vibe Coding Settings (BMAD, vibe-kanban)
-summary	        : 
+summary	    : 
 date		: 2025-11-05 11:11:55 +0900
 updated	: 2025-12-08 19:42:33 +0900
-category	: AI 
-tags		: BMAD vibe-kanban Cursor
+tags		: vibe-coding BMAD vibe-kanban Cursor
 toc		: true
 public		: true
 parent		: 
