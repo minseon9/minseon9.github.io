@@ -5,6 +5,4 @@ permalink: /wiki/framework/
 author_profile: false
 classes: wide
 ---
-
-
-[[django/index]]
+[//]: # ([[django/index]])
