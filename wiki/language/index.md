@@ -7,3 +7,7 @@ classes: wide
 ---
 
 [//]: # ([[kotlin/index]])
+
+
+[//]: # ([[python/index]])
+
