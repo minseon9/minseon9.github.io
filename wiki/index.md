@@ -12,3 +12,5 @@
 
 [[linux/index]]
 
+[[test/index]]
+
